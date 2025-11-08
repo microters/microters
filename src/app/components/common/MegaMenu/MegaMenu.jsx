@@ -33,7 +33,7 @@ const MegaMenu = ({ isVisible, isMobile, setIsVisible }) => {
 
   return (
     <div
-      className={`bg-white shadow-2xs pt-6 border-t border-gray-200 z-40 transition-opacity duration-300 rounded-b-xl overflow-hidden ${
+      className={`bg-white shadow-2xs pt-6 border-t border-gray-200 z-40 transition-opacity duration-300 rounded-b-xl overflow-hidden [box-shadow:0px_13px_34px_0px_rgba(0,0,0,0.35)] ${
         isMobile
           ? "relative shadow-none border-none pt-0"
           : "absolute lg:left-1/2 lg:-translate-x-1/2 top-20 w-full lg:max-w-[1400px]"
