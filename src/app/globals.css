@@ -3,6 +3,9 @@
 :root {
   --color-primary: #f35d36;
   --color-secondary: #212c4a;
+  --color-tertiary: #474799;
+  --color-quaternary: #00bcd4;
+  --color-quinary: #8bc34a;
 
   /* Default Text/Background Colors */
   --background: #ffffff;
