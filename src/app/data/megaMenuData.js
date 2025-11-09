@@ -1,7 +1,8 @@
-import { FaBezierCurve, FaChartLine, FaCode, FaCopy, FaFileCode, FaFileInvoiceDollar, FaFileVideo, FaLaptopCode, FaLink, FaMedkit, FaRobot, FaSearch, FaShopify, FaShoppingBag, FaStarHalf, FaVideo, FaVideoSlash, FaWordpress } from "react-icons/fa";
+import { FaBezierCurve, FaBriefcase, FaChartLine, FaCode, FaCopy, FaFileCode, FaFileInvoiceDollar, FaFileVideo, FaInfoCircle, FaLaptopCode, FaLeaf, FaLink, FaMapMarkerAlt, FaMedkit, FaQuestionCircle, FaRobot, FaSearch, FaShieldAlt, FaShopify, FaShoppingBag, FaStarHalf, FaUsers, FaVideo, FaVideoSlash, FaWordpress } from "react-icons/fa";
 import { FaArrowUpRightFromSquare, FaClapperboard, FaPhotoFilm, FaSquareUpRight, FaWebflow } from "react-icons/fa6";
 import Frame1Image from '@assets/images/Frame1.png'; 
 import Frame19Bg from '@assets/images/Frame-19.png';
+import AboutBannerBg from '@assets/images/We-Are-CTA.png';
 
 const primaryIconBg = '[background-color:var(--color-primary)]'; 
 const secondaryIconBg = '[background-color:var(--color-secondary)]';
@@ -100,4 +101,116 @@ export const MegaMenuData = [
       },
     ],
   },
+  {
+    type: 'banner_about',
+    title: "Hi. We're Microters.",
+    description: 'Microters is A Full-Service Agency Specializing In SEO, Software Development, Digital Marketing, Content Strategy, And Web Design. We Approach Our Work With Passion And Pride In Everything We Do.',
+    buttonText: 'Contact Sales ➔',
+    buttonLink: '#',
+    bannerBgPath: AboutBannerBg,
+    customBgColor: 'bg-gray-100',
+    hasFooter: false,
+  },
+  {
+    type: 'links_about',
+    sections: [
+      {
+        title: 'ABOUT',
+        titleColorName: primaryColorName,
+        iconBgClass: primaryIconBg,
+        links: [
+          { name: 'Our Team ➔', href: '#', Icon: FaUsers },
+          { name: 'About Us ➔', href: '/about', Icon: FaInfoCircle },
+          { name: 'Microters Career ➔', href: '#', Icon: FaBriefcase },
+          { name: 'Microters Culture ➔', href: '#', Icon: FaLeaf },
+        ],
+      },
+      {
+        title: 'MORE',
+        titleColorName: secondaryColorName,
+        iconBgClass: secondaryIconBg,
+        links: [
+          { name: 'Refund Policy ➔', href: '#', Icon: FaShieldAlt },
+          { name: 'Help Center ➔', href: '#', Icon: FaQuestionCircle },
+          { name: 'Locations ➔', href: '#', Icon: FaMapMarkerAlt },
+        ],
+      },
+    ],
+  },
+{
+    type: 'links_tools',
+    sections: [
+        {
+            title: 'SEO TOOLS',
+            titleColorName: primaryColorName,
+            iconBgClass: primaryIconBg,
+            links: [
+                { name: 'Breadcrumb Generator', href: '#', Icon: FaArrowUpRightFromSquare },
+                { name: 'Case Converter Tool', href: '#', Icon: FaCopy },
+                { name: 'Cursive Text Generator', href: '#', Icon: FaBezierCurve },
+                { name: 'Event Schema Generator', href: '#', Icon: FaSearch },
+                { name: 'FAQ Schema Generator', href: '#', Icon: FaQuestionCircle },
+                { name: 'HowTo Schema Generator', href: '#', Icon: FaFileCode },
+                { name: 'Internal Link Analyzer', href: '#', Icon: FaLink },
+                { name: 'Local Business Schema', href: '#', Icon: FaShopify },
+                { name: 'Word Counter', href: '#', Icon: FaWordpress },
+                { name: 'Permalink Generator', href: '#', Icon: FaLink },
+                { name: 'Person Schema Generator', href: '#', Icon: FaUsers },
+                { name: 'Recipe Schema Generator', href: '#', Icon: FaStarHalf },
+                { name: 'Schema Generator', href: '#', Icon: FaSearch },
+                { name: 'Video Schema Generator', href: '#', Icon: FaFileVideo },
+                { name: 'Website Schema Generator', href: '#', Icon: FaLaptopCode },
+            ],
+        },
+        {
+            title: 'DISCLAIMER TOOLS',
+            titleColorName: primaryColorName,
+            iconBgClass: primaryIconBg,
+            links: [
+                { name: 'Disclaimer Generator', href: '#', Icon: FaFileInvoiceDollar },
+                { name: 'Keywords Cluster', href: '#', Icon: FaChartLine },
+                { name: 'XML Sitemap URL Extractor', href: '#', Icon: FaFileCode },
+                { name: 'Google Auto Suggest Keyword', href: '#', Icon: FaSearch },
+                { name: 'Headline Generator', href: '#', Icon: FaCode },
+                { name: 'HTML Heading Checker', href: '#', Icon: FaCode },
+                { name: 'Job Post Schema', href: '#', Icon: FaCode },
+                { name: 'Keyword Grouping', href: '#', Icon: FaSearch },
+                { name: 'Meta Tags Checker', href: '#', Icon: FaCopy },
+                { name: 'Organization Schema', href: '#', Icon: FaShopify },
+                { name: 'Product Schema', href: '#', Icon: FaShoppingBag },
+                { name: 'Product.txt Validator', href: '#', Icon: FaRobot },
+                { name: 'ULK Web Word Counter', href: '#', Icon: FaCode },
+            ],
+        },
+        {
+            title: 'AI WRITING TOOLS',
+            titleColorName: secondaryColorName,
+            iconBgClass: secondaryIconBg,
+            links: [
+                { name: 'Acronym Generator', href: '#', Icon: FaRobot },
+                { name: 'AI Article Generator', href: '#', Icon: FaRobot },
+                { name: 'Conclusion Generator', href: '#', Icon: FaRobot },
+                { name: 'Essay Writer', href: '#', Icon: FaRobot },
+                { name: 'Thesis Statement Generator', href: '#', Icon: FaRobot },
+                { name: 'Sentence Expander', href: '#', Icon: FaRobot },
+                { name: 'Sentence Generator', href: '#', Icon: FaRobot },
+                { name: 'Paragraph Generator', href: '#', Icon: FaRobot },
+                { name: 'Thesis Generator', href: '#', Icon: FaRobot },
+            ],
+        },
+        {
+            title: 'VIDEO TOOLS',
+            titleColorName: secondaryColorName,
+            iconBgClass: secondaryIconBg,
+            links: [
+                { name: 'YouTube Video Downloader', href: '#', Icon: FaVideo },
+                { name: 'Shorts Video Downloader', href: '#', Icon: FaVideo },
+                { name: 'Shorts To MP3 Downloader', href: '#', Icon: FaVideo },
+                { name: 'Shorts To MP4 Downloader', href: '#', Icon: FaVideo },
+                { name: 'YouTube To MP3 Downloader', href: '#', Icon: FaVideo },
+                { name: 'YouTube To MP4 Downloader', href: '#', Icon: FaVideo },
+            ],
+        },
+    ],
+},
 ];

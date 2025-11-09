@@ -6,6 +6,9 @@
   --color-tertiary: #474799;
   --color-quaternary: #00bcd4;
   --color-quinary: #8bc34a;
+  --color-text-paragraph: #6a738e; 
+  --color-text-heading: #212c4a;
+  --color-banner-bg: #fef7f5;
 
   /* Default Text/Background Colors */
   --background: #ffffff;
@@ -21,6 +24,7 @@
 
 body {
   font-family: 'Roboto', sans-serif; 
+  overflow-y: scroll;
 }
 .container {
   @apply mx-auto max-w-[1400px];
