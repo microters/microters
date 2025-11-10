@@ -13,7 +13,10 @@ import GmbIcon from "@assets/images/icons/gnbIcon.png";
 import clutchIcon from "@assets/images/icons/clutchIcon.png";
 import bannerIllustration from "@assets/images/svgviewer-output.svg";
 import BannerForm from "../common/BannerForm";
-const SVG_BACKGROUND = "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1026 318\" fill=\"none\"%3E%3Ccircle opacity=\"0.7\" cx=\"513.09\" cy=\"513.089\" r=\"512.016\" transform=\"rotate(-165 513.09 513.089)\" fill=\"url(%23paint0_linear_385_14)\"/%3E%3Cdefs%3E%3ClinearGradient id=\"paint0_linear_385_14\" x1=\"258.25\" y1=\"104.365\" x2=\"1174.42\" y2=\"-195.117\" gradientUnits=\"userSpaceOnUse\"%3E%3Cstop stop-color=\"%23FEEFEB\" stop-opacity=\"0.8\"/%3E%3Cstop offset=\"1\" stop-color=\"%23FEEFEB\" stop-opacity=\"0\"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E')";
+const SVG_BACKGROUND =
+  'url(\'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1026 318" fill="none"%3E%3Ccircle opacity="0.7" cx="513.09" cy="513.089" r="512.016" transform="rotate(-165 513.09 513.089)" fill="url(%23paint0_linear_385_14)"/%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_385_14" x1="258.25" y1="104.365" x2="1174.42" y2="-195.117" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%23FEEFEB" stop-opacity="0.8"/%3E%3Cstop offset="1" stop-color="%23FEEFEB" stop-opacity="0"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E\')';
+const SVG_BACKGROUND_RIGHT =
+  'url(\'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314 523" fill="none"%3E%3Ccircle opacity="0.7" cx="354" cy="169" r="354" fill="url(%23paint0_linear_363_4158)"/%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_363_4158" x1="177.5" y1="472.5" x2="180" y2="-209" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%23FEEFEB"/%3E%3Cstop offset="1" stop-color="%23FEEFEB" stop-opacity="0"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E\')';
 
 const ratingBadges = [
   {
@@ -51,11 +54,16 @@ const ratingBadges = [
 const HeroBanner = () => {
   return (
     <section
-      className="py-16 md:py-24 relative overflow-hidden"
+      className="group py-16 md:py-24 relative overflow-hidden"
       style={{ backgroundColor: "var(--color-banner-bg)" }}
     >
-    <div 
-        className="absolute bottom-0 w-full h-[318px] transition duration-1000 ease bg-no-repeat -z-10 translate-x-[20%] group-hover:translate-x-[-5%]" style={{backgroundImage: SVG_BACKGROUND, left: '10%',}}
+      <div
+        className="absolute bottom-0 w-full h-[318px] transition duration-1000 ease bg-no-repeat z-10 translate-x-[20%] group-hover:translate-x-[-5%]"
+        style={{ backgroundImage: SVG_BACKGROUND, left: "10%" }}
+      ></div>
+      <div
+        className="absolute right-0 top-0 w-[314px] h-[523px] transition duration-1000 ease bg-no-repeat z-10 group-hover:translate-y-[55%]"
+        style={{ backgroundImage: SVG_BACKGROUND_RIGHT }}
       ></div>
       <div className="px-5">
         <div className="container relative z-10">
@@ -87,12 +95,14 @@ const HeroBanner = () => {
             {/* Rating Badges */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-0 gap-y-0 pt-10 max-w-[800px] lg:max-w-2xl xl:max-w-[800px]">
               {ratingBadges.map((badge, index) => {
-                const isTopRow = index < 3; 
+                const isTopRow = index < 3;
                 const isLastColumnMd = (index + 1) % 3 === 0;
                 return (
                   <div
                     key={index}
-                    className={`group flex items-center gap-2 sm:gap-4 p-4 min-h-[100px] cursor-pointer border-gray-300 border-opacity-70 ${isTopRow ? "md:border-b" : ""} ${!isLastColumnMd ? "md:border-r" : ""}`}
+                    className={`group/badge flex items-center gap-2 sm:gap-4 p-4 min-h-[100px] cursor-pointer border-gray-300 border-opacity-70 ${
+                      isTopRow ? "md:border-b" : ""
+                    } ${!isLastColumnMd ? "md:border-r" : ""}`}
                   >
                     {/* Left Side: Icon and Name/Count Stack */}
                     <div className="flex items-center space-x-3">
@@ -103,7 +113,7 @@ const HeroBanner = () => {
                           alt={`${badge.name} icon`}
                           width={48}
                           height={48}
-                          className="transition duration-700 ease-in-out group-hover:rotate-y-360 "
+                          className="transition duration-700 ease-in-out group-hover/badge:rotate-y-360"
                         />
                       </div>
                     </div>
