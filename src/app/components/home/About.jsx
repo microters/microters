@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image"; 
-import { FaPlayCircle } from "react-icons/fa"; 
+import { MdOutlinePlayCircle } from "react-icons/md";
 import VideoModal from "../common/VideoModal";
 import THUMBNAIL_URL from "@assets/images/microters-company.png";
 import BACKGROUND_SHAPE_URL from "@assets/images/Background-shape.png";
@@ -16,13 +16,13 @@ const AboutSection = () => {
 
     return (
         <>
-            <section className="px-5 py-[76px]">
+            <section className="px-5 py-16 md:py-[76px]">
                 <div className="container">
                     {/* Columns Layout */}
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
                         {/* Left Column: Video Thumbnail */}
                         <div className="w-full max-w-[440px] relative mx-auto lg:mx-0">
-                        <div className="absolute -z-10 bg-no-repeat bg-cover opacity-10 w-[600px] h-[600px] left-[-90px] top-[35px] -rotate-90" style={{backgroundImage: `url(${BACKGROUND_SHAPE_URL.src})`}}></div>
+                        <div className="absolute -z-10 bg-no-repeat bg-cover opacity-10 w-[600px] h-[600px] left-[-90px] top-[35px] -rotate-90 hidden lg:block" style={{backgroundImage: `url(${BACKGROUND_SHAPE_URL.src})`}}></div>
                             {/* Video Cover Wrapper */}
                             <div 
                                 className="relative cursor-pointer group rounded-[20px] overflow-hidden h-[620px] min-w-full max-w-full z-10" 
@@ -51,9 +51,9 @@ const AboutSection = () => {
                                         onClick={(e) => e.preventDefault()}
                                         aria-label="Play video about Microters"
                                     >
-                                        <FaPlayCircle 
+                                        <MdOutlinePlayCircle
                                             size={playIconSize} 
-                                            className="transition duration-300 drop-shadow-lg fill-white group-hover:drop-shadow-xl group-hover:scale-110" 
+                                            className="transition duration-300 drop-shadow-lg fill-white group-hover:drop-shadow-xl group-hover:scale-110 group-hover:fill-(--color-primary)"
                                         />
                                     </Link>
                                 </div>
@@ -66,16 +66,16 @@ const AboutSection = () => {
                                 Let’s Know<br/>
                                 <strong>About Microters!</strong>
                             </h2>
-                            <p className="text-[28px] font-semibold mb-6 leading-normal text-(--color-text-paragraph)">
+                            <p className="text-[28px] font-bold mb-6 leading-normal text-(--color-text-paragraph)">
                                 Not Your Typical Digital Marketing Agency!
                             </p>
-                            <p className="mb-4 text-(--color-text-paragraph)">
+                            <p className="mb-4 app-paragraph">
                                 What happens when your website’s traffic suddenly starts to drop? Or the lead generation campaign you launched is nothing but a waste of time? Getting the first lead or driving traffic to your websites can be challenging– hack, you need a website to begin with!
                             </p>
-                            <p className="mb-4 text-(--color-text-paragraph)">
+                            <p className="mb-4 app-paragraph">
                                 Meet Microters– your all-in-one digital marketing and development assistant. We help businesses, big or small, reach their potential customers and craft web tools catering to diverse business demands. Be it affiliate marketing, lead generation, or simply social media marketing, Microters has got your back.
                             </p>
-                            <p className="mb-8 text-(--color-text-paragraph)">
+                            <p className="mb-8 app-paragraph">
                                 Our digital marketing and software development services are dedicated to meet your specific needs, from SEO and PPC marketing to SaaS development and website maintenance– and whatnot! Contact us today for a free professional consultation and find out how you can bump your business game.
                             </p>
                         </div>

@@ -29,6 +29,11 @@ body {
 .container {
   @apply mx-auto max-w-[1400px];
 }
+.app-paragraph {
+    font-size: 20px;
+    color: var(--color-text-paragraph);
+    line-height: 1.5;
+}
 .btn-primary-custom {
   background-color: var(--color-primary) !important; 
   transition: background-color 300ms ease;
