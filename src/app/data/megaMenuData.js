@@ -11,7 +11,6 @@ const secondaryColorName = 'secondary';
 const tertiaryColorName = 'tertiary';
 const quaternaryColorName = 'quaternary';
 const quinaryColorName = 'quinary';
-
 // Structured data for the Mega Menu
 export const MegaMenuData = [
   {
