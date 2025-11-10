@@ -38,7 +38,6 @@ const AboutSection = () => {
                                     objectFit="cover" 
                                     className="block w-full h-full object-cover object-center rounded-[20px]" 
                                 />
-                                {/* Overlay: Replaced style prop with Tailwind classes (bg-black/0 is fully transparent) */}
                                 <span 
                                     aria-hidden="true" 
                                     className="absolute inset-0 bg-gray-900/0"
