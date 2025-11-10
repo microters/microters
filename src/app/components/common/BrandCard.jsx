@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight, FaCheck } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-
-const HOVER_ORANGE_COLOR = "#f35d36";
 const ICON_SIZE = 84;
 const SMALL_ARROW_SIZE = 16;
 const CHECK_ICON_SIZE = 16;
@@ -22,7 +20,7 @@ const BrandCard = ({ brand }) => {
         href={brand.url}
         target="_blank"
         rel="nofollow noopener"
-        className={`group/card absolute inset-x-0 bottom-0 w-full h-72 rounded-xl bg-[#eaebef] transition-[height,transform,background-color,box-shadow] duration-500 ease-out hover:h-[350px] hover:shadow-2xl hover:bg-[${HOVER_ORANGE_COLOR}] overflow-hidden`}
+        className={`group/card absolute inset-x-0 bottom-0 w-full h-72 rounded-xl bg-[#eaebef] transition-[height,transform,background-color,box-shadow] duration-500 ease-out hover:h-[350px] hover:shadow-2xl hover:bg-[#f35d36] overflow-hidden`}
         style={{ transformOrigin: "bottom center", zIndex: 0 }}
       >
         {/* ---------- Default (collapsed) layer ---------- */}
