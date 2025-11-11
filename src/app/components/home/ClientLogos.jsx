@@ -36,8 +36,8 @@ const ClientsLogosSection = () => {
         const isLastColumn = (index + 1) % TOTAL_COLUMNS === 0;
 
         // Apply borders based on position
-        const horizontalBorder = isTopRow ? `border-b` : ''; 
-        const verticalBorder = !isLastColumn ? `border-r` : '';
+        const horizontalBorder = isTopRow ? `sm:border-b` : ''; 
+        const verticalBorder = !isLastColumn ? `sm:border-r` : '';
 
         const borderClasses = `${horizontalBorder} ${verticalBorder}`;
 
