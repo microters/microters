@@ -31,7 +31,7 @@ const ServicesSection = () => {
         </h2>
 
         <div className="max-w-4xl mb-20">
-          <p className="text-lg lg:text-[22px] text-white">
+          <p className="text-lg lg:text-xl text-white">
             Boost your brand with our data-driven digital marketing. We deliver
             proven results, even if you don’t have the expertise or resources.
           </p>
