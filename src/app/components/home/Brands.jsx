@@ -6,7 +6,7 @@ const BRANDS_BG_SHAPE = "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.or
 const Brands = () => {
     return (
         <section 
-            className="relative bg-[#192138] text-white overflow-hidden px-5 pt-[100px] pb-[250px]" 
+            className="relative bg-[#192138] text-white overflow-hidden px-5 pt-16 sm:pt-[100px] pb-[200px] sm:pb-[250px]" 
         >
             <div
                 className="absolute top-0 right-0 h-full w-full bg-no-repeat bg-contain bg-right z-10 hidden lg:block"
@@ -16,7 +16,7 @@ const Brands = () => {
                 }}
             ></div>
             <div className="container mx-auto relative z-10">
-                <h2 className="text-[72px] font-extrabold mb-4 leading-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-[72px] font-extrabold mb-4 leading-tight">
                     Get to Know<br/>
                     <strong className="font-extrabold">Our Family of Brands</strong>
                 </h2>
