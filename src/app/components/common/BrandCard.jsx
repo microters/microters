@@ -77,7 +77,7 @@ const BrandCard = ({ brand }) => {
                 href={brand.url}
                 target="_blank"
                 rel="nofollow noopener"
-                className="group/button relative flex items-center justify-center h-16 w-16 rounded-full border border-white text-white transition-[width,background-color,border-radius] duration-300 ease-out hover:w-[200px] hover:text-white hover:border-white"
+                className="group/button relative flex items-center justify-center h-16 w-16 rounded-full border border-transparent group-hover/button:border group-hover/button:border-white text-white transition-[width,background-color,border-radius] duration-300 ease-out hover:w-[200px] hover:text-white hover:border-white"
             >
                 {/* 1. "Get Now!" */}
                 <span className="absolute left-9 text-lg font-bold opacity-0 transition-opacity duration-150 group-hover/button:opacity-100 text-white">

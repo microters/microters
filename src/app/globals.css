@@ -42,3 +42,13 @@ body {
 .btn-primary-custom:hover {
   background-color: var(--color-secondary) !important;
 }
+@keyframes timeline-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

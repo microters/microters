@@ -1,4 +1,5 @@
 import AboutSection from "./components/home/About";
+import AchievementsSection from "./components/home/Achievements";
 import Brands from "./components/home/Brands";
 import HeroBanner from "./components/home/HeroBanner";
 import VenturesContent from "./components/home/VenturesContent";
@@ -10,6 +11,7 @@ export default function Home() {
       <AboutSection/>
       <Brands/>
       <VenturesContent/>
+      <AchievementsSection/>
     </div>
   );
 }
