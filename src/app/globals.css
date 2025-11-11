@@ -52,3 +52,44 @@ body {
         opacity: 0;
     }
 }
+.has-border::before,
+.has-border::after{
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    height: 205%;
+    width: 205%;
+    animation: feature-card_rotation360__CkzHm 4s linear infinite;
+    background-image: conic-gradient(transparent, transparent, transparent, #ff4615);
+    content: "";
+    overflow: hidden;
+}
+.has-border .has-border-inner::before{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    content: "";
+    background-color: #29375d;
+    z-index: -1;
+    border-radius: 8px;
+}
+@keyframes feature-card_rotation360__CkzHm{
+    0% {
+    transform: rotate(0);
+}
+100% {
+    transform: rotate(1turn);
+}
+}
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
