@@ -13,6 +13,8 @@ import ProjectSlide from "./ProjectSlide";
 
 const ProjectTabs = () => {
   const [activeTab, setActiveTab] = useState(PROJECT_TABS[0].key);
+  const [isBeginning, setIsBeginning] = useState(true); 
+  const [isEnd, setIsEnd] = useState(false);
 
   const slides = PROJECT_SLIDES[activeTab];
   const totalSlides = slides.length;
@@ -32,7 +34,7 @@ const ProjectTabs = () => {
                 {PROJECT_TABS.map((tab, index) => (
                     <li 
                         key={tab.key}
-                        className={`relative w-full lg:w-1/5 shrink-0 ${index < PROJECT_TABS.length - 1 ? 'border-r border-gray-700' : ''} transition-all duration-300`} 
+                        className={`relative w-full lg:w-1/5 shrink-0 ${index < PROJECT_TABS.length - 1 ? 'border-b border-gray-700 lg:border-r lg:border-b-0' : ''} transition-all duration-300`}
                         role="presentation"
                     >
                         <button
@@ -59,15 +61,23 @@ const ProjectTabs = () => {
       {/* Main Content Body - Swiper Implementation */}
       <div className="relative overflow-hidden">
         <Swiper
-          key={activeTab}
-          modules={[Navigation]}
-          slidesPerView={1}
-          spaceBetween={30}
-          navigation={{
-            nextEl: ".swiper-button-next-custom",
-            prevEl: ".swiper-button-prev-custom",
-          }}
-          className="w-full"
+            key={activeTab} 
+            modules={[Navigation]}
+            slidesPerView={1}
+            spaceBetween={30}
+            onSlideChange={(swiper) => {
+                setIsBeginning(swiper.isBeginning);
+                setIsEnd(swiper.isEnd);
+            }}
+            onInit={(swiper) => {
+                setIsBeginning(swiper.isBeginning);
+                setIsEnd(swiper.isEnd);
+            }}
+            navigation={{
+                nextEl: '.swiper-button-next-custom',
+                prevEl: '.swiper-button-prev-custom',
+            }}
+            className="w-full"
         >
           {slides.map((project, index) => (
             <SwiperSlide key={index}>
@@ -78,22 +88,16 @@ const ProjectTabs = () => {
 
         {/* Navigation Arrows (Custom style to match image) */}
         {totalSlides > 1 && (
-          <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between px-4 z-40">
-            {/* Prev Button */}
-            <div
-              className="swiper-button-prev-custom cursor-pointer p-3 rounded-full transition-colors focus:outline-none"
-              style={{ backgroundColor: NAV_COLOR }}
-            >
-              <FaChevronLeft className="w-4 h-4 text-white" />
+            <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between px-4 z-40">
+                <div className={`swiper-button-prev-custom cursor-pointer p-4 rounded-full transition-all focus:outline-none bg-gray-800/80 ${isBeginning ? 'opacity-30 pointer-events-none' : 'hover:bg-gray-700'}`}>
+                    <FaChevronLeft className="w-5 h-5 text-white" />
+                </div>
+
+                {/* Next Button - Disabled state applied */}
+                <div className={`swiper-button-next-custom cursor-pointer p-4 rounded-full transition-all focus:outline-none bg-gray-800/80 ${isEnd ? 'opacity-30 pointer-events-none' : 'hover:bg-gray-700'}`}>
+                    <FaChevronRight className="w-5 h-5 text-white" />
+                </div>
             </div>
-            {/* Next Button */}
-            <div
-              className="swiper-button-next-custom cursor-pointer p-3 rounded-full transition-colors focus:outline-none"
-              style={{ backgroundColor: NAV_COLOR }}
-            >
-              <FaChevronRight className="w-4 h-4 text-white" />
-            </div>
-          </div>
         )}
       </div>
     </div>
