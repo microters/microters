@@ -3,6 +3,7 @@ import AchievementsSection from "./components/home/Achievements";
 import Brands from "./components/home/Brands";
 import ClientsLogosSection from "./components/home/ClientLogos";
 import HeroBanner from "./components/home/HeroBanner";
+import ProjectsSection from "./components/home/Projects";
 import ServicesSection from "./components/home/Services";
 import VenturesContent from "./components/home/VenturesContent";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <AchievementsSection/>
       <ServicesSection/>
       <ClientsLogosSection/>
+      <ProjectsSection/>
     </div>
   );
 }

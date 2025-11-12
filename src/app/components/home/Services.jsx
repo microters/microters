@@ -22,7 +22,7 @@ const ServicesSection = () => {
         }}
       ></div>
 
-      <div className="container mx-auto relative z-10">
+      <div className="container relative z-10">
         {/* Header */}
         <h2 className="text-4xl md:text-5xl lg:text-[72px] font-extrabold mb-4 leading-tight text-white">
           Discover Our
