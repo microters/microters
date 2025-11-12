@@ -12,10 +12,10 @@ const INFO_ICON_SIZE = 48;
 // --- InfoBox Component ---
 const InfoBox = ({ data, IconComponent }) => {
     return (
-        <div className="p-6 h-full rounded-lg transition-all duration-300 group bg-[#feefeb] hover:bg-[#f35d36] relative overflow-hidden">           
+        <div className="p-10 h-full rounded-lg transition-all duration-300 group bg-[#feefeb] hover:bg-[#f35d36] relative overflow-hidden">           
             {/* 1. Decorative Icon (Absolutely Positioned Top Right) */}
             <div 
-                className="absolute top-6 right-6 opacity-40 transition-opacity duration-300 group-hover:opacity-100" 
+                className="absolute top-9 right-6 opacity-40 transition-opacity duration-300 group-hover:opacity-100" 
                 style={{ color: HIGHLIGHT_COLOR }} 
             >
                 <IconComponent size={INFO_ICON_SIZE} className="transition-colors duration-300 group-hover:text-white" />

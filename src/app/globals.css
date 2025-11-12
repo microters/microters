@@ -75,6 +75,26 @@ body {
     z-index: -1;
     border-radius: 8px;
 }
+
+/* Vertical Accordians */
+.rotated-text-only {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.rotated-text-only span {
+  transform: rotate(-90deg);
+  transform-origin: 0% 0%; 
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg); 
+}
+
 @keyframes feature-card_rotation360__CkzHm{
     0% {
     transform: rotate(0);

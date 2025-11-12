@@ -22,7 +22,6 @@ const ProjectTabs = () => {
   const handleTabChange = (key) => {
     setActiveTab(key);
   };
-  const NAV_COLOR = "#A9AFBE";
 
   return (
     <div className="w-full">

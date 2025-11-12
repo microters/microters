@@ -6,6 +6,7 @@ import HeroBanner from "./components/home/HeroBanner";
 import ProjectsSection from "./components/home/Projects";
 import ServicesSection from "./components/home/Services";
 import VenturesContent from "./components/home/VenturesContent";
+import VerticalAccordion from "./components/home/VerticalAccordion";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ServicesSection/>
       <ClientsLogosSection/>
       <ProjectsSection/>
+      <VerticalAccordion/>
     </div>
   );
 }
