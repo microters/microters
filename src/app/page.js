@@ -1,3 +1,4 @@
+import CtaSection from "./components/common/CTA";
 import AboutSection from "./components/home/About";
 import AchievementsSection from "./components/home/Achievements";
 import Brands from "./components/home/Brands";
@@ -24,6 +25,7 @@ export default function Home() {
       <VerticalAccordion/>
       <ContactFormSection/>
       <ContributionsSection/>
+      <CtaSection/>
     </div>
   );
 }
