@@ -29,7 +29,7 @@ const VerticalAccordion = () => {
         </p>
       </div>
 
-      <div className="hidden lg:flex mt-10 h-[650px] border border-gray-100">
+      <div className="hidden lg:flex mt-10 h-[650px] gap-4">
         {faqData.map((item) => {
           const isActive = item.id === activeIndex;
 
@@ -46,10 +46,13 @@ const VerticalAccordion = () => {
               {/* === ACTIVE CONTENT (Expanded Panel) === */}
               {isActive && (
                 <div
-                  className={`flex flex-col justify-center items-start w-full max-w-[675px] border-r border-[#949bae1a]`}
-                  style={{ paddingLeft: "4rem", paddingRight: "4rem" }}
-                >
-                  <div className={`transition-all duration-700 ease-in-out delay-200 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}`}>
+                    className={`
+                      flex flex-col justify-center items-start border-r border-[#949bae1a]
+                      transition-all duration-700 ease-in-out
+                      ${isActive ? "opacity-100 translate-x-0 max-w-[620px] px-16" : "opacity-0 translate-x-6 max-w-0 px-0"} 
+                      overflow-hidden
+                    `}
+                  >
                     <Image
                       src={item.iconUrl}
                       alt={item.title}
@@ -57,10 +60,15 @@ const VerticalAccordion = () => {
                       height={120}
                       className="w-[120px] h-[120px] mb-6"
                     />
-                    <h3 className={`text-3xl font-bold mb-4 ${item.textHeading}`}>{item.title}</h3>
-                    <p className={`text-xl leading-relaxed ${item.textColor}`}>{item.content}</p>
+
+                    <h3 className={`text-3xl font-bold mb-4 ${item.textHeading}`}>
+                      {item.title}
+                    </h3>
+
+                    <p className={`text-xl leading-relaxed ${item.textColor}`}>
+                      {item.content}
+                    </p>
                   </div>
-                </div>
               )}
               {/* --- 1. COMMON ELEMENTS CONTAINER --- */}
               <div
@@ -125,61 +133,63 @@ const VerticalAccordion = () => {
       </div>
 
       {/* --- MOBILE VIEW ACCORDION (Vertical FAQ) --- */}
-      <div className="lg:hidden mt-10 space-y-4">
-        {faqData.map((item) => {
-          const isActive = item.id === activeIndex;
+    <div className="lg:hidden mt-10 space-y-4">
+      {faqData.map((item) => {
+        const isActive = item.id === activeIndex;
 
-          return (
+        return (
+          <div
+            key={item.id}
+            className={`rounded-xl shadow-md overflow-hidden transition-all duration-300 ${item.bgColor} ${item.textColor}`}
+          >
+            {/* Header/Title Bar */}
             <div
-              key={item.id}
-              className={`rounded-xl shadow-md overflow-hidden transition-all duration-300 ${item.bgColor} ${item.textColor}`}
+              className="flex justify-between items-center p-4 cursor-pointer"
+              onClick={() => handleClick(item.id)}
             >
-              {/* Header/Title Bar */}
-              <div
-                className="flex justify-between items-center p-4 cursor-pointer"
-                onClick={() => handleClick(item.id)}
-              >
-                <div className="flex items-center space-x-3">
-                  <span className="text-xl font-extrabold">{item.number}</span>
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
-                </div>
-                {/* Arrow icon */}
-                <FaChevronDown
-                  size={20}
-                  className={`w-5 h-5 transition-transform duration-300 ${
-                    isActive ? "rotate-180" : "rotate-0"
-                  }`}
-                />
+              <div className="flex items-center space-x-3">
+                <span className="text-xl font-extrabold">{item.number}</span>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
               </div>
 
-              {/* Content Section (using CSS Grid for smooth height transition) */}
+              {/* Arrow icon */}
+              <FaChevronDown
+                size={20}
+                className={`w-5 h-5 transition-transform duration-300 ${
+                  isActive ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </div>
+
+            {/* Content Section (smooth animation) */}
+            <div
+              className={`
+                grid transition-[grid-template-rows] duration-500 ease-in-out
+                ${isActive ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}
+              `}
+            >
               <div
                 className={`
-                  grid transition-[grid-template-rows] duration-500 ease-in-out
-                  ${
-                    isActive
-                      ? "grid-rows-[1fr] p-4 pt-0"
-                      : "grid-rows-[0fr] p-0"
-                  }
+                  overflow-hidden transition-all duration-500 ease-in-out
+                  ${isActive ? "opacity-100 translate-y-0 p-4 pt-0" : "opacity-0 -translate-y-3 p-0"}
                 `}
               >
-                <div className="overflow-hidden">
-                  <div className="pt-4 border-t border-opacity-20 mt-4">
-                    <Image
-                      src={item.iconUrl}
-                      alt={item.title}
-                      width={48}
-                      height={48}
-                      className="w-12 h-12 mb-4"
-                    />
-                    <p className="text-lg opacity-90">{item.content}</p>
-                  </div>
+                <div className="pt-4 border-t border-opacity-20 mt-4">
+                  <Image
+                    src={item.iconUrl}
+                    alt={item.title}
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 mb-4"
+                  />
+                  <p className="text-lg opacity-90">{item.content}</p>
                 </div>
               </div>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
+    </div>
     </div>
     </div>
   );

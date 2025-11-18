@@ -24,7 +24,6 @@
 
 body {
   font-family: 'Roboto', sans-serif; 
-  overflow-y: scroll;
 }
 .container {
   @apply mx-auto max-w-[1400px];

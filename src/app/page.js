@@ -2,6 +2,8 @@ import AboutSection from "./components/home/About";
 import AchievementsSection from "./components/home/Achievements";
 import Brands from "./components/home/Brands";
 import ClientsLogosSection from "./components/home/ClientLogos";
+import ContactFormSection from "./components/home/ContactForm";
+import ContributionsSection from "./components/home/Contributions";
 import HeroBanner from "./components/home/HeroBanner";
 import ProjectsSection from "./components/home/Projects";
 import ServicesSection from "./components/home/Services";
@@ -20,6 +22,8 @@ export default function Home() {
       <ClientsLogosSection/>
       <ProjectsSection/>
       <VerticalAccordion/>
+      <ContactFormSection/>
+      <ContributionsSection/>
     </div>
   );
 }

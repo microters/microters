@@ -27,7 +27,7 @@ export const faqData = [
     textColor: 'text-[#6a738e]',
     textHeading: "text-[#29375d]",
     inactiveBgColor: 'bg-[#feefeb]',
-    inactiveTextColor: 'text-[#15151e]',
+    inactiveTextColor: 'text-[#29375d]',
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ export const faqData = [
     textColor: 'text-[#6a738e]',
     textHeading: "text-[#29375d]",
     inactiveBgColor: 'bg-[#feefeb]',
-    inactiveTextColor: 'text-[#15151e]',
+    inactiveTextColor: 'text-[#29375d]',
   },
   {
     id: 5,
