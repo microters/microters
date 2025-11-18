@@ -94,6 +94,27 @@ body {
   transform: translate(-50%, -50%) rotate(-90deg); 
 }
 
+/* Swiper Slider CSS */
+.swiper-pagination-custom {
+    text-align: center;
+    position: relative;
+    margin-top: 1.5rem;
+}
+.swiper-pagination-custom .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #FFD2C8;
+    opacity: 1;
+    margin: 0 4px;
+    transition: background-color 0.3s;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+    background: #F35D36;
+}
+
 @keyframes feature-card_rotation360__CkzHm{
     0% {
     transform: rotate(0);
