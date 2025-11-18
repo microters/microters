@@ -1,4 +1,5 @@
 import CtaSection from "./components/common/CTA";
+import CtaBeforeFooter from "./components/common/CTABeforeFooter";
 import AboutSection from "./components/home/About";
 import AchievementsSection from "./components/home/Achievements";
 import Brands from "./components/home/Brands";
@@ -28,6 +29,7 @@ export default function Home() {
       <ContributionsSection/>
       <CtaSection/>
       <TestimonialsSection/>
+      <CtaBeforeFooter/>
     </div>
   );
 }
