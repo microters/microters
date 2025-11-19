@@ -21,10 +21,13 @@ const StatCard = ({ number, suffix, label }) => {
   <div className="relative py-14 px-6 text-center overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
     {/* The "Curved Top" Effect */}
     <div className="absolute -top-[95px] left-1/2 -translate-x-1/2 w-full h-[168px] bg-[#FEEFEB] rounded-full" />
+
     {/* --- Content Wrapper --- */}
       <div className="relative z-10 flex flex-col items-center">
+        
         {/* The Counter Number */}
         <div className="text-[#15151e] text-3xl lg:text-[40px] font-bold mb-3 flex items-center leading-none">
+          
           {/* InView triggers the CountUp when the user scrolls to this card */}
           <InView triggerOnce threshold={0.5}>
             {({ inView, ref }) => (
