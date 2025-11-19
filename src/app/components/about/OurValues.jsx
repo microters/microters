@@ -144,7 +144,7 @@ const OurValues = () => {
           <h2 className="text-white text-5xl lg:text-[72px] font-normal leading-tight mb-6">
             <strong>Our Values</strong> <br />A Look into Our Core Principles
           </h2>
-          <p className="text-[#eaebef] text-xl lg:text-[22px]">
+          <p className="text-[#eaebef] text-xl">
             We dream of a digital marketing platform where true talents triumph
             over pretenders.
           </p>
