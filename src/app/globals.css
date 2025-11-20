@@ -51,6 +51,9 @@ body {
         opacity: 0;
     }
 }
+.animate-pulse-ring {
+  animation: timeline-pulse 1.5s ease-out infinite;
+}
 .has-border::before,
 .has-border::after{
     position: absolute;

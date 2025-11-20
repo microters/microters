@@ -111,7 +111,7 @@ const HeaderMain = () => {
                         <div className="flex items-center space-x-4">
                             <div className="hidden lg:block m-0">
                                 <Link
-                                    href="https://microters.com/send-a-proposal/"
+                                    href="/send-a-proposal"
                                     className={buttonClasses}
                                 >
                                     Request A Quote
@@ -209,7 +209,7 @@ const HeaderMain = () => {
                     })}
                     <div className="pt-6">
                         <Link
-                            href="https://microters.com/send-a-proposal/"
+                            href="/send-a-proposal"
                             className={`block w-full text-center ${buttonClasses}`}
                             onClick={() => setIsMenuOpen(false)}
                         >
