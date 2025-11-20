@@ -1,6 +1,7 @@
 import OurValues from "app/components/about/OurValues";
 import StrategicGoals from "app/components/about/StrategicGoals";
 import WhoWeAre from "app/components/about/WhoWeAre";
+import CtaBeforeFooter from "app/components/common/CTABeforeFooter";
 import PageHeader from "app/components/PageHeader";
 
 export default function AboutPage() {
@@ -14,6 +15,7 @@ export default function AboutPage() {
       <WhoWeAre/>
       <OurValues/>
       <StrategicGoals/>
+      <CtaBeforeFooter/>
     </main>
   );
 }

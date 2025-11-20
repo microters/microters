@@ -114,6 +114,10 @@ body {
 .swiper-pagination-custom .swiper-pagination-bullet-active {
     background: #F35D36;
 }
+/* Phone Number */
+input.PhoneInputInput:focus-visible {
+    outline: none;
+}
 
 @keyframes feature-card_rotation360__CkzHm{
     0% {

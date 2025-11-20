@@ -30,8 +30,8 @@ const PageHeader = ({ title, highlight, description }) => {
             />
 
             {/* Title Text */}
-            <h1 className="text-[#212E4A] text-4xl lg:text-[88px] font-extrabold leading-tight">
-              {title}{" "}
+            <h1 className="text-[#212E4A] text-4xl lg:text-7xl font-extrabold leading-tight">
+              {title}{" "}<br/>
               <span className="text-[#f35d36]">{highlight}</span>
             </h1>
           </div>

@@ -95,8 +95,8 @@ const ContactFormSection = () => {
                                 rules={{ required: 'First name is required' }}
                                 render={({ field }) => (
                                     <div>
-                                        <label className="block text-sm font-semibold mb-2">First Name *</label>
-                                        <input {...field} placeholder="First Name" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:border-[#f57d5e] outline-none transition duration-200" />
+                                        <label className="block text-sm font-semibold mb-2">First Name <span className="text-[#f35d36]">*</span></label>
+                                        <input {...field} placeholder="First Name" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200" />
                                         {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>}
                                     </div>
                                 )}
@@ -107,8 +107,8 @@ const ContactFormSection = () => {
                                 rules={{ required: 'Last name is required' }}
                                 render={({ field }) => (
                                     <div>
-                                        <label className="block text-sm font-semibold mb-2">Last Name *</label>
-                                        <input {...field} placeholder="Last Name" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:border-[#f57d5e] outline-none transition duration-200" />
+                                        <label className="block text-sm font-semibold mb-2">Last Name <span className="text-[#f35d36]">*</span></label>
+                                        <input {...field} placeholder="Last Name" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200" />
                                         {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>}
                                     </div>
                                 )}
@@ -123,10 +123,10 @@ const ContactFormSection = () => {
                                 rules={{ required: 'Website URL is required', pattern: { value: /^(ftp|http|https):\/\/[^ "]+$/, message: 'Invalid URL format' } }}
                                 render={({ field }) => (
                                     <div>
-                                        <label className="block text-sm font-semibold mb-2">Website URL *</label>
+                                        <label className="block text-sm font-semibold mb-2">Website URL <span className="text-[#f35d36]">*</span></label>
                                         <div className="relative">
                                             <FaGlobe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                                            <input {...field} placeholder="www.demo.com" className="w-full p-3 pl-10 border border-gray-300 bg-white rounded-lg focus:border-[#f57d5e] outline-none transition duration-200" />
+                                            <input {...field} placeholder="www.demo.com" className="w-full p-3 pl-10 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200" />
                                         </div>
                                         {errors.websiteUrl && <p className="text-red-500 text-sm mt-1">{errors.websiteUrl.message}</p>}
                                     </div>
@@ -138,8 +138,8 @@ const ContactFormSection = () => {
                                 rules={{ required: 'Job Title is required' }}
                                 render={({ field }) => (
                                     <div>
-                                        <label className="block text-sm font-semibold mb-2">Job Title *</label>
-                                        <input {...field} placeholder="SEO Expert" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:border-[#f57d5e] outline-none transition duration-200" />
+                                        <label className="block text-sm font-semibold mb-2">Job Title <span className="text-[#f35d36]">*</span></label>
+                                        <input {...field} placeholder="SEO Expert" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200" />
                                         {errors.jobTitle && <p className="text-red-500 text-sm mt-1">{errors.jobTitle.message}</p>}
                                     </div>
                                 )}
@@ -154,8 +154,8 @@ const ContactFormSection = () => {
                                 rules={{ required: 'Email is required', pattern: { value: /^\S+@\S+$/i, message: 'Invalid email format' } }}
                                 render={({ field }) => (
                                     <div>
-                                        <label className="block text-sm font-semibold mb-2">Work Email *</label>
-                                        <input {...field} placeholder="sample@email.com" type="email" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:border-[#f57d5e] outline-none transition duration-200" />
+                                        <label className="block text-sm font-semibold mb-2">Work Email <span className="text-[#f35d36]">*</span></label>
+                                        <input {...field} placeholder="sample@email.com" type="email" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200" />
                                         {errors.workEmail && <p className="text-red-500 text-sm mt-1">{errors.workEmail.message}</p>}
                                     </div>
                                 )}
@@ -166,13 +166,13 @@ const ContactFormSection = () => {
                                 rules={{ required: 'Phone number is required' }}
                                 render={({ field }) => (
                                     <div>
-                                        <label className="block text-sm font-semibold mb-2">Phone Number *</label>
+                                        <label className="block text-sm font-semibold mb-2">Phone Number <span className="text-[#f35d36]">*</span></label>
                                         <PhoneInput
                                             {...field}
                                             international
                                             defaultCountry="BD"
                                             placeholder="Enter phone number"
-                                            className={`w-full p-3 border border-gray-300 bg-white rounded-lg focus:border-[#f57d5e] outline-none transition duration-200 cursor-not-allowed ${errors.phone ? 'phone-input-error' : ''}`}
+                                            className={`w-full p-3 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200 cursor-not-allowed ${errors.phone ? 'phone-input-error' : ''}`}
                                         />
                                     </div>
                                 )}
@@ -186,8 +186,8 @@ const ContactFormSection = () => {
                             rules={{ required: 'Please select your needs' }}
                             render={({ field }) => (
                                 <div className="relative">
-                                    <label className="block text-sm font-semibold mb-2">Your Needs *</label>
-                                    <select {...field} className="w-full p-3 border border-gray-300 rounded-lg appearance-none focus:border-[#f57d5e] outline-none transition duration-200 bg-white pr-10">
+                                    <label className="block text-sm font-semibold mb-2">Your Needs <span className="text-[#f35d36]">*</span></label>
+                                    <select {...field} className="w-full p-3 border border-gray-300 rounded-lg appearance-none focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200 bg-white pr-10">
                                         {needsOptions.map(option => (
                                             <option key={option.value} value={option.value}>{option.label}</option>
                                         ))}
@@ -205,8 +205,8 @@ const ContactFormSection = () => {
                             rules={{ required: 'Please describe how we can help you' }}
                             render={({ field }) => (
                                 <div>
-                                    <label className="block text-sm font-semibold mb-2">How can we help you? *</label>
-                                    <textarea {...field} placeholder="Enter your question here..." rows="4" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:border-[#f57d5e] outline-none transition duration-200 resize-none"></textarea>
+                                    <label className="block text-sm font-semibold mb-2">How can we help you? <span className="text-[#f35d36]">*</span></label>
+                                    <textarea {...field} placeholder="Enter your question here..." rows="4" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200 resize-none"></textarea>
                                     {errors.helpText && <p className="text-red-500 text-sm mt-1">{errors.helpText.message}</p>}
                                 </div>
                             )}
