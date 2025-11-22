@@ -8,6 +8,12 @@ import { seoProfessionalData } from "app/data/services/servicesData";
 import ServiceGridSection from "app/components/common/ServiceGrid";
 import ClientsLogosSection from "app/components/home/ClientLogos";
 import AchievedSection from "app/components/common/Achieved";
+import WhiteHatSEO from "app/components/WhiteHatSEO";
+import UniqueBlendSection from "app/components/common/UniqueBlendSection";
+import CtaSection from "app/components/common/CTA";
+import ContactFormSection from "app/components/home/ContactForm";
+import CtaBeforeFooter from "app/components/common/CTABeforeFooter";
+import FAQSection from "app/components/common/FAQ";
 
 export default function Home() {
   return (
@@ -48,6 +54,39 @@ export default function Home() {
       />
       <ClientsLogosSection/>
       <AchievedSection/>
+      <WhiteHatSEO/>
+      <UniqueBlendSection
+        title={
+          <>
+            What Makes Us Unique? <br />
+            <strong>Our Blend of New and Traditional SEO</strong>
+          </>
+        }
+        subtitle="What we’re good at is integrating AI and machine learning to our traditional SEO efforts. The result? Maximum visibility and more conversion!"
+        description={[
+          "We use AI’s insights and SEO’s reach, creating a highly-personalized strategy only for your business. AI analysis helps us What kind of content and keywords works for your target audience and SEO helps us reach those people at the right time.",
+          <>
+            There’s more, in addition to traditional SEO tools, we take data from Google Analytics 4 (GA4) to create a full-proof strategy that only leads to one thing-<strong>conversion.</strong>
+          </>
+        ]}
+      />
+         <CtaSection
+            title={<>Ready to Embrace <strong>the Power of Data-driven SEO?</strong></>}
+            description={null}
+            buttonText="Contact Us"
+            buttonLink="/contact"
+        />
+        <div className="py-16 md:py-20">
+            <ContactFormSection/>
+        </div>
+         <CtaSection
+            title={<>Start Your Journey to Success with Professional SEO Services</>}
+            description="Let’s rank your website and increase online sales with proven strategies. You can rest assured, we’ll be with you every step of the way."
+            buttonText="Request A Free Proposal"
+            buttonLink="/send-a-proposal"
+        />
+        <FAQSection/>
+        <CtaBeforeFooter/>
     </div>
   );
 }

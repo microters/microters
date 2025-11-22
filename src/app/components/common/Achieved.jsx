@@ -6,15 +6,15 @@ import graphImage from "@assets/images/achievements-graph.png";
 import { CircularProgress } from "./CircularProgress";
 const AchievedSection = () => {
   return (
-    <section className="w-full py-20 lg:py-[100px] bg-[#192138]">
+    <section className="w-full py-16 lg:py-[100px] bg-[#192138]">
       <div className="container mx-auto px-4 max-w-7xl">
         
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           
           {/* === LEFT SIDE: TEXT & CIRCLES === */}
           <div className="w-full lg:w-1/2">
-            <h2 className="text-white text-4xl md:text-5xl lg:text-[60px] font-normal mb-6 leading-tight">
-              What We <strong>Have Achieved</strong> So Far…
+            <h2 className="text-white text-4xl md:text-5xl lg:text-[60px] mb-6 leading-tight">
+              What We <strong className="font-extrabold">Have Achieved</strong> So Far…
             </h2>
             <p className="text-white text-lg lg:text-xl leading-relaxed mb-10">
               There are hundreds of service providers who claim to be the best in the industry. At Microters, we let numbers speak for themselves.
