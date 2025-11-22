@@ -6,6 +6,8 @@ import WhyChooseSection from "app/components/common/WhyChooseUs";
 import { seoWhyChooseData } from "app/data/whyChooseData";
 import { seoProfessionalData } from "app/data/services/servicesData";
 import ServiceGridSection from "app/components/common/ServiceGrid";
+import ClientsLogosSection from "app/components/home/ClientLogos";
+import AchievedSection from "app/components/common/Achieved";
 
 export default function Home() {
   return (
@@ -44,6 +46,8 @@ export default function Home() {
         description={seoProfessionalData.description}
         services={seoProfessionalData.items}
       />
+      <ClientsLogosSection/>
+      <AchievedSection/>
     </div>
   );
 }
