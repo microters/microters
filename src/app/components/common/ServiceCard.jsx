@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowIcon, CheckIcon } from "app/data/serviceData";
+import { FaCheck } from "react-icons/fa";
 
 const ServiceCard = ({ service, hasBorder = false }) => {
   const BG_COLOR = "#29375d";
@@ -42,17 +43,22 @@ const ServiceCard = ({ service, hasBorder = false }) => {
 
             {/* Features List */}
             <div className="space-y-3 mb-6">
-              {service.items.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center text-white text-sm"
-                >
-                  <span className="mr-3 shrink-0 text-white">
-                    <CheckIcon className="w-4 h-4" />
-                  </span>
-                  <span className="text-lg md:text-xl">{item}</span>
-                </div>
-              ))}
+              {service.description ? (
+              <p className="text-[#eaebef] text-lg leading-7 mb-8 opacity-90">
+                {service.description}
+              </p>
+            ) : (
+              <div className="space-y-3 mb-6">
+                {service.items?.map((item, index) => (
+                  <div key={index} className="flex items-center text-white text-sm">
+                    <span className="mr-3 shrink-0 text-white">
+                      <FaCheck className="w-4 h-4" />
+                    </span>
+                    <span className="text-lg md:text-xl">{item}</span>
+                  </div>
+                ))}
+              </div>
+            )}
             </div>
 
             {/* CTA Button */}

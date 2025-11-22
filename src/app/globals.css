@@ -147,3 +147,14 @@ input.PhoneInputInput:focus-visible {
   .animate-spin-y {
     animation: rotateY 5s infinite linear;
   }
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(15deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  .group:hover .icon-swing {
+    animation: swing 1s ease-in-out infinite;
+  }
