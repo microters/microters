@@ -14,6 +14,9 @@ import CtaSection from "app/components/common/CTA";
 import ContactFormSection from "app/components/home/ContactForm";
 import CtaBeforeFooter from "app/components/common/CTABeforeFooter";
 import FAQSection from "app/components/common/FAQ";
+import ConfidenceSection from "app/components/common/Confidence";
+import WorkProcess from "app/components/common/WorkProcess";
+import PackagesSection from "app/components/common/Packages";
 
 export default function Home() {
   return (
@@ -76,6 +79,9 @@ export default function Home() {
             buttonText="Contact Us"
             buttonLink="/contact"
         />
+        <ConfidenceSection/>
+        <WorkProcess/>
+        <PackagesSection/>
         <div className="py-16 md:py-20">
             <ContactFormSection/>
         </div>

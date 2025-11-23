@@ -121,6 +121,10 @@ body {
 input.PhoneInputInput:focus-visible {
     outline: none;
 }
+.stroke-number {
+  -webkit-text-stroke: 2px #f35d3691;
+  color: transparent;
+}
 
 @keyframes feature-card_rotation360__CkzHm{
     0% {
