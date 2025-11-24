@@ -13,7 +13,7 @@ export const seoWhyChooseData = {
     <>
       Wondering why isn’t your website bringing any traffic even though you’re publishing content consistently?
       <br className="hidden md:block" />
-      Well, bringing traffic to your website is not just about how much content you publish but the quality of the content...
+      Well, bringing traffic to your website is not just about how much content you publish but the quality of the content and how well your website is optimized for the audience– not the search engine! Thinking how that’s done? Well, that’s where we come in.
     </>
   ),
   features: [
@@ -111,6 +111,41 @@ export const ecommerceSeoWhyChooseData = {
       id: 3,
       title: "Highly Personalized SEO",
       description: "More personalization means more traffic. So we created a tailored search result for the unique preferences of each target audience. This includes creating personalized content for customers with specific needs.",
+      icon: planningIcon,
+    },
+  ],
+};
+export const webFlowSeoWhyChooseData = {
+  title: (
+    <>
+       Why Choose <strong className="font-extrabold">Webflow SEO?</strong>
+    </>
+  ),
+  description: (
+    <>
+      <p className="mb-4">
+        Wondering why isn’t your website bringing any traffic even though you’re publishing content consistently?
+        Well, bringing traffic to your website is not just about how much content you publish but the quality of the content and how well your website is optimized for the audience– not the search engine! Thinking how that’s done? Well, that’s where we come in.
+      </p>
+    </>
+  ),
+  features: [
+    {
+      id: 1,
+      title: "Drive More Organic Traffic",
+      description: "No matter what niche you’re in, getting high numbers of organic traffic is the ultimate target of our SEO services. No black-hat technique, guaranteed.",
+      icon: trafficIcon,
+    },
+    {
+      id: 2,
+      title: "Futureproof Your Business Growth",
+      description: "Mark your website safe from Google’s core algorithm updates! We follow proven SEO techniques that have little to no effect on major search engine shifts.",
+      icon: graphIcon,
+    },
+    {
+      id: 3,
+      title: "Data-Driven Custom SEO Strategy",
+      description: "Our SEO strategies are not focused on templates. First, we analyze your business type, and its audience, and then design SEO strategies based on specific findings.",
       icon: planningIcon,
     },
   ],

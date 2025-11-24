@@ -8,11 +8,11 @@ const ServiceGridSection = ({ title, description, services }) => {
     <section className="w-full py-20 bg-[#192138]">
       <div className="container px-4">
         {/* --- Header (Dynamic Content) --- */}
-        <div className="max-w-4xl mb-10">
+        <div className="mb-10">
           <h2 className="text-white text-4xl md:text-5xl lg:text-[56px] font-extrabold mb-6 leading-tight">
             {title}
           </h2>
-          <p className="text-[#eaebef] text-lg lg:text-xl leading-relaxed">
+          <p className="text-[#eaebef] text-lg lg:text-xl leading-relaxed max-w-5xl">
             {description}
           </p>
         </div>

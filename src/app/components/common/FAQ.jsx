@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 
-const faqData = [
+const defaultFaqItems = [
   {
     question: "What services does your digital marketing agency offer?",
     answer:
@@ -30,6 +30,9 @@ const faqData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
 ];
+
+const defaultTitle = "FAQ";
+const defaultDescription = "Morbi commodo quam vitae tellus convallis, et sagittis magna mattis. Aliquam ipsum nisi, fermentum sed placerat at, lacinia et orci. Sed varius orci eu risus faucibus dapibus.";
 
 // --- 2. Single Accordion Item Component ---
 const AccordionItem = ({ item, isOpen, onClick }) => {
@@ -67,7 +70,11 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
   );
 };
 
-const FAQSection = () => {
+const FAQSection = ({ 
+  title = defaultTitle, 
+  description = defaultDescription, 
+  items = defaultFaqItems 
+}) => {
   const [openIndex, setOpenIndex] = useState(0);
 
   const handleToggle = (index) => {
@@ -77,15 +84,13 @@ const FAQSection = () => {
   return (
     <section className="w-full">
       {/* --- Part 1: Dark Header Background --- */}
-      <div className="relative z-10 bg-[#192138] pt-24 pb-48 px-4">
-        <div className="container max-w-4xl">
+     <div className="relative z-10 bg-[#192138] pt-24 pb-48 px-4">
+        <div className="container mx-auto max-w-4xl text-center lg:text-left">
           <h2 className="text-white text-5xl lg:text-[88px] font-bold mb-6">
-            FAQ
+            {title}
           </h2>
-          <p className="text-[#eaebef] text-lg lg:text-xl leading-relaxed max-w-[800px]">
-            Morbi commodo quam vitae tellus convallis, et sagittis magna mattis.
-            Aliquam ipsum nisi, fermentum sed placerat at, lacinia et orci. Sed
-            varius orci eu risus faucibus dapibus.
+          <p className="text-[#eaebef] text-lg lg:text-xl leading-relaxed max-w-[800px] mx-auto lg:mx-0">
+            {description}
           </p>
         </div>
       </div>
@@ -93,7 +98,7 @@ const FAQSection = () => {
       {/* --- Part 2: The Accordion List  --- */}
       <div className="px-4 bg-white pb-24">
         <div className="container mx-auto max-w-5xl -mt-32 relative z-10 shadow-xl rounded-lg overflow-hidden bg-white">
-          {faqData.map((item, index) => (
+          {items.map((item, index) => (
             <AccordionItem
               key={index}
               item={item}

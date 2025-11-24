@@ -150,3 +150,107 @@ export const ecommerceSeoData = {
     },
   ]
 };
+export const shopifySeoData = {
+  title: (
+    <>
+      What You Will Get With <strong>Microters <br className="hidden lg:block" /> Shopify SEO Services</strong>
+    </>
+  ),
+  description: "We offer a total solution to all your Shopify website needs. Let Microters help your online store with cutting-edge Shopify SEO services and see the results yourself.",
+  items: [
+    {
+      id: 1,
+      title: "Shopify Website SEO Audit",
+      description: "We'll go through each and every element of your Shopify website to find rooms for improvement. Our experts will propose actionable recommendations to give website visibility boost within weeks!",
+      color: "#f57d5e", 
+      url: "/services/shopify-seo-audit",
+    },
+    {
+      id: 2,
+      title: "Keyword Research",
+      description: "Our industry-leading SEO experts will perform a thorough keyword analysis. We'll implement keywords that bring traffic, and eventually more sales by ranking your Shopify website higher on the SERPs.",
+      color: "#f57d5e",
+      url: "/services/keyword-research",
+    },
+    {
+      id: 3,
+      title: "Link Building",
+      description: "Our masterful link-building experts will analyze your Shopify website, understand the target audience and bring high DA, Do-follow backlinks that give your business relevancy, authority and trustworthiness.",
+      color: "#f57d5e",
+      url: "/services/link-building",
+    },
+    {
+      id: 4,
+      title: "On-Page and Off-Page",
+      description: "Let our on-page and off-page experts beat your competitors on the search engine rankings. From optimizing content and keywords to building backlinks, we'll combine all our expertise to give you a full-form SEO service.",
+      color: "#f57d5e",
+      url: "/services/on-page-seo",
+    },
+    {
+      id: 5,
+      title: "Technical SEO",
+      description: "To keep your visitors on your website, we'll optimize every product page, by improving site loading speed and site architecture. We'll fix all technical issues and help you index web pages faster.",
+      color: "#f57d5e",
+      url: "/services/technical-seo",
+    },
+    {
+      id: 6,
+      title: "Content Writing",
+      description: "Our content team will craft content for better engagement and search ranking. We'll help you hook your audience and lead them to buying your products by creating content that resonates and delivers.",
+      color: "#f57d5e",
+      url: "/services/content-writing",
+    },
+  ]
+};
+export const webFlowSeoData = {
+  title: (
+    <>
+      Our Proven Webflow SEO Services
+    </>
+  ),
+  description: "We want to make sure we give you a full-fledged Webflow SEO service so that you won’t need to look anywhere else. We help you with",
+  items: [
+    {
+      id: 1,
+      title: "Keyword Research",
+      description: "Identifying the keywords your target audience is searching for is pretty common. We go one step further and find out the actual buyer intention behind these keywords. This allows us to target keywords that truly generate sales for you.",
+      color: "#f57d5e", 
+      url: "/services/keyword-research",
+    },
+    {
+      id: 2,
+      title: "Technical SEO Audit",
+      description: "We have some of the best technical SEO specialists who'll go through each and every element of your website to find any weaknesses. We'll recommend which improvements to make, whether it is increasing site speed or optimizing meta data.",
+      color: "#f57d5e",
+      url: "/services/technical-seo-audit",
+    },
+    {
+      id: 3,
+      title: "Link-building Strategies",
+      description: "We offer some of the most effective link-building strategies that will help your webflow website earn credibility and trustworthiness on Google. Our external link-building experts promise to obtain high DA links for your business.",
+      color: "#f57d5e",
+      url: "/services/link-building",
+    },
+    {
+      id: 4,
+      title: "Content Optimization",
+      description: "Our content team will use SEO best practices into content development. But that's not all, we'll craft content that caters to the buying intent of the audience. We'll make sure each of your content is engaging and eventually brings traffic.",
+      color: "#f57d5e",
+      url: "/services/content-optimization",
+    },
+    {
+      id: 5,
+      title: "Local SEO",
+      description: "Want your business to be in the limelight in your location? Well, we are here for that. Our local SEO techniques will help you get traffic from specific regions, making it easier for your customers to find your company online.",
+      color: "#f57d5e",
+      url: "/services/local-seo",
+    },
+    {
+      id: 6,
+      title: "Dedicated SEO Service",
+      description: "Our team has industry-leading SEO specialists who will create on-demand SEO strategies that bring traffic. Our experts will understand your business requirements and give you a clear-cut SEO plan based on their industry expertise.",
+      color: "#f57d5e",
+      url: "/services/dedicated-seo",
+    },
+  ]
+};

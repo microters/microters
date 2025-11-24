@@ -14,7 +14,7 @@ const WhyChooseSection = ({ title, description, features }) => {
           <h2 className="text-[#15151e] text-4xl md:text-5xl lg:text-[72px] font-normal leading-tight mb-6">
             {title}
           </h2>
-          <div className="text-gray-600 text-lg lg:text-xl leading-relaxed">
+          <div className="text-gray-600 text-lg lg:text-xl leading-relaxed max-w-5xl">
             {description}
           </div>
         </div>
