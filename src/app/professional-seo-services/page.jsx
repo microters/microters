@@ -8,7 +8,6 @@ import { seoProfessionalData } from "app/data/services/servicesData";
 import ServiceGridSection from "app/components/common/ServiceGrid";
 import ClientsLogosSection from "app/components/home/ClientLogos";
 import AchievedSection from "app/components/common/Achieved";
-import WhiteHatSEO from "app/components/WhiteHatSEO";
 import UniqueBlendSection from "app/components/common/UniqueBlendSection";
 import CtaSection from "app/components/common/CTA";
 import ContactFormSection from "app/components/home/ContactForm";
@@ -20,6 +19,7 @@ import PackagesSection from "app/components/common/Packages";
 import SuccessfulProjects from "app/components/common/SuccessfulProjects";
 import ExpectationsSection from "app/components/common/Expectations";
 import TestimonialsSection from "app/components/common/Testimonials";
+import SplitContentSection from "app/components/WhiteHatSEO";
 
 export default function Home() {
   return (
@@ -60,7 +60,7 @@ export default function Home() {
       />
       <ClientsLogosSection/>
       <AchievedSection/>
-      <WhiteHatSEO/>
+      <SplitContentSection />
       <UniqueBlendSection
         title={
           <>

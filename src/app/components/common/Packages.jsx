@@ -46,7 +46,7 @@ const PricingCard = ({ data }) => (
 // --- Main Component ---
 const PackagesSection = () => {
   return (
-    <section className="w-full py-20 lg:py-[100px]">
+    <section className="w-full py-16 lg:py-[100px]">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Header */}
         <div className="mb-12 text-center lg:text-left">

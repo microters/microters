@@ -2,8 +2,18 @@
 
 import React from "react";
 import Image from "next/image";
-import { confidenceData } from "app/data/services/confidenceData";
+import { confidenceData } from "app/data/services/confidenceData"; 
 
+const defaultTitle = (
+  <>
+    Why We’re Confident About <br />
+    <strong>Our Professional SEO</strong> Services
+  </>
+);
+
+const defaultDescription = "Don’t just take our word for it. Discover why people consider us the cream of the crop in digital marketing. Our results speak louder than any claim we could make.";
+
+// --- 2. Background Shape ---
 const BgShape = () => (
   <div className="absolute top-0 right-0 z-0 pointer-events-none hidden lg:block">
     <svg width="467" height="465" viewBox="0 0 467 465" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,28 +24,35 @@ const BgShape = () => (
   </div>
 );
 
-const ConfidenceSection = () => {
+const ConfidenceSection = ({
+  title = defaultTitle,
+  description = defaultDescription,
+  features = confidenceData
+}) => {
   return (
-    <section className="relative w-full py-24 bg-white overflow-hidden">
+    <section className="relative w-full py-16 lg:py-24 bg-white overflow-hidden">
+      
       <BgShape />
+      
       <div className="container px-4 relative z-10">
-        {/* Header */}
+        
+        {/* --- Header (Dynamic) --- */}
         <div className="mb-16">
           <h2 className="text-[#15151e] text-4xl md:text-5xl lg:text-[72px] font-normal leading-tight mb-6">
-            Why We’re Confident About <br />
-            <strong>Our Professional SEO</strong> Services
+            {title}
           </h2>
           <p className="text-gray-600 text-lg lg:text-[18px] leading-relaxed max-w-5xl">
-            Don’t just take our word for it. Discover why people consider us the cream of the crop in digital marketing. Our results speak louder than any claim we could make.
+            {description}
           </p>
         </div>
-        {/* Grid Layout */}
+
+        {/* --- Grid Layout (Dynamic Data) --- */}
         <div className="flex flex-wrap justify-center gap-8">
-          {confidenceData.map((item, index) => (
+          {features.map((item, index) => (
             <div 
-              key={item.id}
+              key={item.id || index}
               className={`
-                w-full md:w-[calc(50%-16px)] 
+                w-full md:w-[calc(50%-16px)]
                 ${index >= 3 ? "lg:w-[calc(50%-16px)]" : "lg:w-[calc(33.333%-22px)]"}
                 `}
             >

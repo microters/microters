@@ -6,7 +6,7 @@ import { processSteps } from "app/data/services/processData";
 
 const WorkProcess = () => {
   return (
-    <section className="w-full py-24 bg-[#192138] overflow-hidden">
+    <section className="w-full py-16 lg:py-24 bg-[#192138] overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         
         {/* --- Header --- */}

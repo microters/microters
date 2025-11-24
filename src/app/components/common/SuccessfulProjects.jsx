@@ -8,7 +8,7 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 
 const SuccessfulProjects = () => {
   return (
-    <section className="w-full py-24 bg-[#192138]">
+    <section className="w-full py-16 lg:py-24 bg-[#192138]">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Header */}
         <div className="mb-16">

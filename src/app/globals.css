@@ -183,3 +183,21 @@ input.PhoneInputInput:focus-visible {
 .group:hover .icon-swing {
   animation: swing 1s ease-in-out infinite;
 }
+@keyframes jumpAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-20px);
+  }
+}
+.group:hover .animate-jump {
+  animation: jumpAnimation 1s ease-in-out infinite;
+}

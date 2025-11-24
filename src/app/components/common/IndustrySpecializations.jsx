@@ -35,7 +35,7 @@ const BgShape = () => (
 // --- 3. Main Component ---
 const IndustrySpecializations = () => {
   return (
-    <section className="relative bg-[#192138] py-20 lg:py-28 overflow-hidden">
+    <section className="relative bg-[#192138] py-16 lg:py-28 overflow-hidden">
       {/* Background Graphic */}
       <BgShape />
       <div className="container mx-auto px-4 relative z-10">

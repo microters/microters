@@ -20,7 +20,7 @@ const UniqueBlendSection = ({
             {title}
           </h2>
           {subtitle && (
-            <p className="text-gray-600 text-lg lg:text-[22px] leading-relaxed">
+            <p className="text-gray-600 text-lg lg:text-xl leading-relaxed">
               {subtitle}
             </p>
           )}
@@ -43,7 +43,7 @@ const UniqueBlendSection = ({
 
           {/* Right: Text Content */}
           <div className="lg:col-span-8">
-            <div className="space-y-6 text-gray-600 text-lg lg:text-[18px] leading-relaxed">
+            <div className="space-y-6 text-gray-600 text-lg lg:text-xl leading-relaxed">
               {Array.isArray(description) ? (
                 description.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
