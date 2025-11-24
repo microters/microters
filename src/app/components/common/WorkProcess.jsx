@@ -11,7 +11,7 @@ const WorkProcess = () => {
         
         {/* --- Header --- */}
         <div className="mb-16">
-          <h2 className="text-white text-4xl md:text-5xl lg:text-[72px] font-bold mb-6">
+          <h2 className="text-white text-4xl md:text-5xl lg:text-[72px] font-extrabold mb-6">
             Our Work Process
           </h2>
           <p className="text-white text-lg lg:text-[22px] leading-relaxed max-w-4xl opacity-90">

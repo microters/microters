@@ -17,6 +17,9 @@ import FAQSection from "app/components/common/FAQ";
 import ConfidenceSection from "app/components/common/Confidence";
 import WorkProcess from "app/components/common/WorkProcess";
 import PackagesSection from "app/components/common/Packages";
+import SuccessfulProjects from "app/components/common/SuccessfulProjects";
+import ExpectationsSection from "app/components/common/Expectations";
+import TestimonialsSection from "app/components/common/Testimonials";
 
 export default function Home() {
   return (
@@ -82,15 +85,18 @@ export default function Home() {
         <ConfidenceSection/>
         <WorkProcess/>
         <PackagesSection/>
+        <SuccessfulProjects/>
         <div className="py-16 md:py-20">
             <ContactFormSection/>
         </div>
+        <ExpectationsSection/>
          <CtaSection
             title={<>Start Your Journey to Success with Professional SEO Services</>}
             description="Let’s rank your website and increase online sales with proven strategies. You can rest assured, we’ll be with you every step of the way."
             buttonText="Request A Free Proposal"
             buttonLink="/send-a-proposal"
         />
+        <TestimonialsSection/>
         <FAQSection/>
         <CtaBeforeFooter/>
     </div>

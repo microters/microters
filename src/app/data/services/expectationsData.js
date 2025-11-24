@@ -1,0 +1,58 @@
+export const expectationsData = [
+  {
+    id: 1,
+    title: "Month 1",
+    description: "The first month is all about laying the groundwork. During this time, we-",
+    features: [
+      "Perform Keyword Research",
+      "Understand Your Target Audience",
+      "Analyze competitor businesses",
+      "Set Up Google Analytics and Google Search Console",
+      "Optimize Site Structure",
+      "Develop effective SEO Strategy",
+      "Design social media strategy",
+    ],
+  },
+  {
+    id: 2,
+    title: "Month 2-3",
+    description: "This is when you start seeing visible outcomes of the background work. During this time, we-",
+    features: [
+      "Create Helpful Content",
+      "Implement On-Page SEO",
+      "Optimize Product Pages",
+      "Utilize Internal Linking",
+      "Improve Site Speed",
+      "Mobile Optimization",
+      "Optimize Page Headers & Meta Tags",
+    ],
+  },
+  {
+    id: 3,
+    title: "Month 5-6",
+    description: "This is a crucial time to keep your traffic steady and website free of any errors. What you can expect includes-",
+    features: [
+      "Implement Technical SEO",
+      "Schema Markup",
+      "Fresh batches of blog content",
+      "XML Sitemap & Robots.txt",
+      "HTTPS and Security",
+      "Fix Crawl Errors",
+      "Enhance On-Site SEO",
+    ],
+  },
+  {
+    id: 4,
+    title: "Month 6+",
+    description: "Almost half a year later, now is when all your investments start to pay off and you start getting consistent results.",
+    features: [
+      "Develop New and User-Generated Content",
+      "Create and Optimize Category Pages",
+      "Implement Local & Off-Site SEO",
+      "Build High-Quality Backlinks",
+      "Analyze Traffic and Conversions",
+      "Better brand recognition",
+      "Monitor and Measure Performance",
+    ],
+  },
+];

@@ -50,7 +50,7 @@ const PackagesSection = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Header */}
         <div className="mb-12 text-center lg:text-left">
-          <h2 className="text-4xl md:text-5xl lg:text-[70px] font-bold mb-4 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-[70px] font-extrabold mb-4 leading-tight">
             Packages
           </h2>
           <p className="text-[#15151e] text-lg lg:text-xl bg-white/5 inline-block rounded p-2 md:bg-transparent md:p-0 max-w-3xl">

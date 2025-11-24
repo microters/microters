@@ -9,9 +9,9 @@ import ContributionsSection from "./components/home/Contributions";
 import HeroBanner from "./components/common/HeroBanner";
 import ProjectsSection from "./components/home/Projects";
 import ServicesSection from "./components/home/Services";
-import TestimonialsSection from "./components/home/Testimonials";
 import VenturesContent from "./components/home/VenturesContent";
 import VerticalAccordion from "./components/home/VerticalAccordion";
+import TestimonialsSection from "./components/common/Testimonials";
 
 export default function Home() {
   return (

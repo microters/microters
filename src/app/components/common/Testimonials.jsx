@@ -9,7 +9,7 @@ import { FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import michaelImage from "../../../assets/images/Michael-Testimonial.png";
 import mattImage from "../../../assets/images/Matt-Price.png";
 import davidImage from "../../../assets/images/David-Foster.png";
-import VideoModal from "../common/VideoModal";
+import VideoModal from "./VideoModal";
 
 // --- Testimonial Data ---
 const testimonials = [
