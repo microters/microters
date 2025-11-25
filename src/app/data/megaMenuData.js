@@ -118,10 +118,10 @@ export const MegaMenuData = [
         titleColorName: primaryColorName,
         iconBgClass: primaryIconBg,
         links: [
-          { name: 'Our Team ➔', href: '#', Icon: FaUsers },
+          { name: 'Our Team ➔', href: '/our-team', Icon: FaUsers },
           { name: 'About Us ➔', href: '/about', Icon: FaInfoCircle },
-          { name: 'Microters Career ➔', href: '#', Icon: FaBriefcase },
-          { name: 'Microters Culture ➔', href: '#', Icon: FaLeaf },
+          { name: 'Microters Career ➔', href: '/microters-career', Icon: FaBriefcase },
+          { name: 'Microters Culture ➔', href: '/microters-culture', Icon: FaLeaf },
         ],
       },
       {

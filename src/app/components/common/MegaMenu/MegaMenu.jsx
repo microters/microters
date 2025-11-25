@@ -24,6 +24,11 @@ const getTextColorClass = (colorName) => {
 
 const MegaMenu = ({ isVisible, isMobile, setIsVisible, type = "services" }) => {
   const isControlled = typeof setIsVisible === "function";
+  const closeMenu = () => {
+    if (isControlled) {
+      setIsVisible(null);
+    }
+  };
 
   if (!isVisible && !isMobile) return null;
 
@@ -77,12 +82,8 @@ const MegaMenu = ({ isVisible, isMobile, setIsVisible, type = "services" }) => {
               opacity: isVisible ? 1 : 0,
             }
       }
-      onMouseEnter={
-        !isMobile && isControlled ? () => setIsVisible(type) : undefined
-      }
-      onMouseLeave={
-        !isMobile && isControlled ? () => setIsVisible(null) : undefined
-      }
+      onMouseEnter={!isMobile && isControlled ? () => setIsVisible(type) : undefined}
+      onMouseLeave={!isMobile && isControlled ? () => setIsVisible(null) : undefined}
     >
       <div>
         <div className={gridClasses}>
@@ -155,7 +156,7 @@ const MegaMenu = ({ isVisible, isMobile, setIsVisible, type = "services" }) => {
                     >
                       {col.description}
                     </p>
-                    <Link href={col.buttonLink} className={bannerButtonClasses}>
+                    <Link href={col.buttonLink} className={bannerButtonClasses} onClick={closeMenu}>
                       {col.buttonText}
                     </Link>
                   </div>
@@ -184,6 +185,7 @@ const MegaMenu = ({ isVisible, isMobile, setIsVisible, type = "services" }) => {
                             key={linkIndex}
                             {...link}
                             iconBgClass={section.iconBgClass}
+                            onClick={closeMenu}
                           />
                         ))}
                       </div>
@@ -204,7 +206,7 @@ const MegaMenu = ({ isVisible, isMobile, setIsVisible, type = "services" }) => {
         >
           <p className="mb-2 sm:mb-0">
             Not sure where to start?{" "}
-            <Link href="#" className="font-bold underline hover:text-primary">
+            <Link href="#" className="font-bold underline hover:text-primary" onClick={closeMenu}>
               Chat with us
             </Link>
           </p>
