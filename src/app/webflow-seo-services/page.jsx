@@ -20,7 +20,7 @@ import ExpectationsSection from "app/components/common/Expectations";
 import TestimonialsSection from "app/components/common/Testimonials";
 import FAQSection from "app/components/common/FAQ";
 import CtaBeforeFooter from "app/components/common/CTABeforeFooter";
-import { shopifySeoFaqData } from "app/data/faq";
+import { webflowSeoFaqData } from "app/data/faq";
 import { expectationsData } from "app/data/services/expectationsData";
 
 export default function Home() {
@@ -119,7 +119,7 @@ export default function Home() {
         <FAQSection
             title="FAQ" 
             description="Got questions? We've got answers! Explore our FAQ section to find solutions to common queries."
-            items={shopifySeoFaqData}
+            items={webflowSeoFaqData}
         />
         <CtaBeforeFooter/>
     </div>

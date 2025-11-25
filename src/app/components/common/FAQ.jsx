@@ -49,7 +49,7 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
         </span>
 
         {/* Question Text */}
-        <span className="text-[#15151e] font-medium text-xl">
+        <span className="text-[#15151e] font-bold text-xl">
           {item.question}
         </span>
       </button>

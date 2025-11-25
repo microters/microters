@@ -22,6 +22,7 @@ import ExpectationsSection from "app/components/common/Expectations";
 import TestimonialsSection from "app/components/common/Testimonials";
 import FAQSection from "app/components/common/FAQ";
 import CtaBeforeFooter from "app/components/common/CTABeforeFooter";
+import { saasSeoFaqData } from "app/data/faq";
 
 export default function Home() {
   return (
@@ -123,7 +124,11 @@ export default function Home() {
             buttonLink="/send-a-proposal"
         />
         <TestimonialsSection/>
-        <FAQSection/>
+         <FAQSection
+            title="FAQ" 
+            description="Got questions? We've got answers! Explore our FAQ section to find solutions to common queries."
+            items={saasSeoFaqData}
+        />
         <CtaBeforeFooter/>
     </div>
   );

@@ -10,9 +10,11 @@ const UniqueBlendSection = ({
   description,
   imageSrc = defaultSeoImage,
   imageAlt = "SEO Illustration",
+  bgColor = "bg-white",
+  padding = "pb-16 lg:pb-24"
 }) => {
   return (
-    <section className="w-full bg-white pb-16 lg:pb-24">
+    <section className={`w-full ${padding} ${bgColor}`}>
       <div className="container px-4">
         {/* --- Header Section --- */}
         <div className="mb-4">

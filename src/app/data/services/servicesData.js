@@ -254,3 +254,148 @@ export const webFlowSeoData = {
     },
   ]
 };
+export const healthcareSeoData = {
+  title: (
+    <>
+      What to Expect From <br className="hidden lg:block" />
+      <strong>Our healthcare SEO Services</strong>
+    </>
+  ),
+  description: "With Microters by your side, you can access all your healthcare SEO services in one place. Here’s how we use our expertise to give you an all-in one-solution for your healthcare business:",
+  items: [
+    {
+      id: 1,
+      title: "Keyword Research",
+      description: "Our keyword experts will figure out the exact keywords patients are using for their health queries. We’ll integrate them into relevant content and also use long tail keywords for higher SEO performance.",
+      color: "#f57d5e",
+      url: "/services/keyword-research",
+    },
+    {
+      id: 2,
+      title: "Link-building",
+      description: "Our link-building masters will bring high DA links from healthcare professionals, doctors and researchers for your business. Our successful link-building help you see a significant traffic boost and establish authority on SERPs.",
+      color: "#f57d5e",
+      url: "/services/link-building",
+    },
+    {
+      id: 3,
+      title: "Content Writing",
+      description: "We’ll use our content team to create content that builds a connection with patients. We’ll not only just craft engaging content but actually build authority in the healthcare industry. You’ll have your own style and tone that represents your brand.",
+      color: "#f57d5e",
+      url: "/services/content-writing",
+    },
+    {
+      id: 4,
+      title: "On-page SEO",
+      description: "Let us take care of your site’s relevance and semantics, you just focus on the results. From images and content, we’ll optimize all aspects of your website and build your authority in the healthcare industry.",
+      color: "#f57d5e",
+      url: "/services/on-page-seo",
+    },
+    {
+      id: 5,
+      title: "Local SEO",
+      description: "Looking to target patients from a specific region? We can help! Our local SEO experts will help you get the top position on local search ranking, making your healthcare business more accessible to local patients.",
+      color: "#f57d5e",
+      url: "/services/local-seo",
+    },
+    {
+      id: 6,
+      title: "Technical SEO",
+      description: "Having technical problems can really hurt your SEO. So we’ll run crawl error reports, remove duplicate content and XML sitemap- every technical aspect of your healthcare website to ensure that your online visibility remains intact.",
+      color: "#f57d5e",
+      url: "/services/technical-seo",
+    },
+  ]
+};
+export const haroBacklinksData = {
+  title: (
+    <>
+      How We help Businesses <br className="hidden lg:block" />
+      <strong>with HARO Backlinks</strong>
+    </>
+  ),
+  description: "So the real question is, how can we scale your business using HARO-link-building strategies? Here’s how:",
+  items: [
+    {
+      id: 1,
+      title: "Domain Authority",
+      description: "One of the main reasons we use the HARO tactics is to increase your domain rating, so that people can find you quickly on the SERPs. Throughout our processes, we apply 100% white hat strategies.",
+      color: "#f57d5e",
+      url: "/services/domain-authority",
+    },
+    {
+      id: 2,
+      title: "Increased Brand Awareness",
+      description: "Getting featured in top-tier websites and publications boosts your online visibility and credibility. This leads to more people recognizing your company, ultimately increasing your brand awareness.",
+      color: "#f57d5e",
+      url: "/services/brand-awareness",
+    },
+    {
+      id: 3,
+      title: "High DR Backlinks",
+      description: "We offer links with only the highest domain rating in our HARO backlink strategy. As a result you’ll get link juice from the world’s most respected websites, which leads to more traffic.",
+      color: "#f57d5e",
+      url: "/services/backlinks",
+    },
+    {
+      id: 4,
+      title: "Improved Search Performance",
+      description: "When we link your business with high DA websites with HARO, Google recognizes you as a trusted source of information. And as a result, you’ll rank way higher in the SERPs and beat your competitors.",
+      color: "#f57d5e",
+      url: "/services/search-performance",
+    },
+    {
+      id: 5,
+      title: "Industry Connections",
+      description: "Our proven HARO link building strategy helps you gain authority in your industry. When you position yourself as a leader, more businesses would want to collaborate and  build long-term relationship.",
+      color: "#f57d5e",
+      url: "/services/industry-connections",
+    },
+    {
+      id: 6,
+      title: "Revenue Opportunities",
+      description: "Linking with top media websites means more online exposure. More people will know your brand, and more clients will reach out to you for acquiring your services.",
+      color: "#f57d5e",
+      url: "/services/revenue",
+    },
+  ]
+};
+export const outreachBacklinkData = {
+  title: (
+    <>
+      How Microters <br className="hidden lg:block" />
+      <strong>Outreach Backlink Service Works</strong>
+    </>
+  ),
+  description: "We offer white label backlinks relevant to your niche. Our surefire working process will not only deliver backlinks, it’ll generate the right traffic that converts. Here’s how we work:",
+  items: [
+    {
+      id: 1,
+      title: "Analyze & Planning",
+      description: "We understand your niche and evaluate your current backlink strategy.",
+      color: "#f57d5e",
+      url: "/services/analyze-planning",
+    },
+    {
+      id: 2,
+      title: "Customized Outreach",
+      description: "We launch our personalized outreach campaign based on your niche.",
+      color: "#f57d5e",
+      url: "/services/customized-outreach",
+    },
+    {
+      id: 3,
+      title: "High-DA Backlinks",
+      description: "We make sure you get 100% genuine backlinks with high DA and DR.",
+      color: "#f57d5e",
+      url: "/services/high-da-backlinks",
+    },
+    {
+      id: 4,
+      title: "Regular Reporting",
+      description: "You’ll get regular performance reports on both new and old backlinks.",
+      color: "#f57d5e",
+      url: "/services/regular-reporting",
+    }
+  ]
+};

@@ -20,6 +20,7 @@ import SuccessfulProjects from "app/components/common/SuccessfulProjects";
 import ExpectationsSection from "app/components/common/Expectations";
 import TestimonialsSection from "app/components/common/Testimonials";
 import SplitContentSection from "app/components/WhiteHatSEO";
+import { professionalSeoFaqData } from "app/data/faq";
 
 export default function Home() {
   return (
@@ -97,7 +98,11 @@ export default function Home() {
             buttonLink="/send-a-proposal"
         />
         <TestimonialsSection/>
-        <FAQSection/>
+        <FAQSection
+            title="FAQ" 
+            description="Got questions? We've got answers! Explore our FAQ section to find solutions to common queries."
+            items={professionalSeoFaqData}
+        />
         <CtaBeforeFooter/>
     </div>
   );
