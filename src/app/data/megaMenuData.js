@@ -129,7 +129,7 @@ export const MegaMenuData = [
         titleColorName: secondaryColorName,
         iconBgClass: secondaryIconBg,
         links: [
-          { name: 'Refund Policy ➔', href: '#', Icon: FaShieldAlt },
+          { name: 'Refund Policy ➔', href: '/refund-policy', Icon: FaShieldAlt },
           { name: 'Help Center ➔', href: '#', Icon: FaQuestionCircle },
           { name: 'Locations ➔', href: '#', Icon: FaMapMarkerAlt },
         ],
