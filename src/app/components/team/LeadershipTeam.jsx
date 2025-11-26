@@ -21,7 +21,7 @@ const BgShape = () => (
 const LeadershipTeam = () => {
   return (
     <section className="w-full py-16 lg:py-20 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container px-4">
         {/* Header */}
         <div className="mb-12 lg:mb-16">
           <h2 className="text-[#15151e] text-4xl md:text-5xl lg:text-[64px] font-bold mb-4">

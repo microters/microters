@@ -1,6 +1,7 @@
 import PageHeader from "app/components/PageHeader";
 import AuthorityTeam from "app/components/team/AuthorityTeam";
 import LeadershipTeam from "app/components/team/LeadershipTeam";
+import MicrotersHeroes from "app/components/team/MicrotersHeroes";
 
 export default function TeamPage() {
   return (
@@ -12,6 +13,7 @@ export default function TeamPage() {
       />
       <LeadershipTeam/>
       <AuthorityTeam/>
+      <MicrotersHeroes/>
     </main>
   );
 }
