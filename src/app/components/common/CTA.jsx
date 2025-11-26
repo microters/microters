@@ -17,7 +17,7 @@ const CtaSection = ({
   title = defaultTitle, 
   description = defaultDesc, 
   buttonText = "Request A Free Proposal", 
-  buttonLink = "https://microters.com/send-a-proposal/" 
+  buttonLink = "/send-a-proposal" 
 }) => {
   return (
     <section className="relative overflow-hidden py-16 lg:py-24 bg-[#feefeb]">
