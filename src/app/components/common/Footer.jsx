@@ -52,19 +52,19 @@ const menuLinks = {
   "Help & Support": [
     {
       title: "Send a Proposal",
-      href: "https://microters.com/send-a-proposal/",
+      href: "/send-a-proposal",
     },
-    { title: "Privacy Policy", href: "https://microters.com/privacy-policy/" },
-    { title: "Refund Policy", href: "https://microters.com/refund-policy/" },
-    { title: "Disclaimer", href: "https://microters.com/disclaimer/" },
+    { title: "Privacy Policy", href: "/privacy-policy" },
+    { title: "Refund Policy", href: "/refund-policy" },
+    { title: "Disclaimer", href: "/disclaimer" },
   ],
   Company: [
-    { title: "About Us", href: "https://microters.com/about-us/" },
-    { title: "Contact Us", href: "https://microters.com/contact-us/" },
-    { title: "Our Team", href: "https://microters.com/our-team/" },
+    { title: "About Us", href: "/about-us" },
+    { title: "Contact Us", href: "/contact-us" },
+    { title: "Our Team", href: "/our-team" },
     {
       title: "Terms & Conditions",
-      href: "https://microters.com/terms-conditions/",
+      href: "/terms-conditions",
     },
   ],
 };
