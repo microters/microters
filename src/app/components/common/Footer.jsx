@@ -59,7 +59,7 @@ const menuLinks = {
     { title: "Disclaimer", href: "/disclaimer" },
   ],
   Company: [
-    { title: "About Us", href: "/about-us" },
+    { title: "About Us", href: "/about" },
     { title: "Contact Us", href: "/contact-us" },
     { title: "Our Team", href: "/our-team" },
     {
