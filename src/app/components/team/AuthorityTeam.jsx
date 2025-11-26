@@ -21,7 +21,7 @@ const AuthorityTeam = () => {
         </div>
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {authorityTeamData.map((member) => (
+          {authorityTeamData.map((member, index) => (
             <div key={member.id} className="w-full h-[453px] relative group perspective-1000">
               
               {/* --- INNER WRAPPER (Flip Container) --- */}
@@ -34,7 +34,6 @@ const AuthorityTeam = () => {
                     <Image
                       src={member.image}
                       alt={member.name}
-                      fill
                       className="object-cover object-top"
                     />
                   </div>
@@ -66,7 +65,6 @@ const AuthorityTeam = () => {
                      <Image
                         src={member.image}
                         alt={member.name}
-                        fill
                         className="object-cover object-top"
                       />
                    </div>

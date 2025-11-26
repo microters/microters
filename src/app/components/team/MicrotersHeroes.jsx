@@ -34,7 +34,6 @@ const MicrotersHeroes = () => {
                     <Image
                       src={member.image}
                       alt={member.name}
-                      fill
                       className="object-cover object-top"
                     />
                   </div>
@@ -66,7 +65,6 @@ const MicrotersHeroes = () => {
                      <Image
                         src={member.image}
                         alt={member.name}
-                        fill
                         className="object-cover object-top"
                       />
                    </div>

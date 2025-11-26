@@ -1,3 +1,4 @@
+import CtaBeforeFooter from "app/components/common/CTABeforeFooter";
 import PageHeader from "app/components/PageHeader";
 import AuthorityTeam from "app/components/team/AuthorityTeam";
 import LeadershipTeam from "app/components/team/LeadershipTeam";
@@ -14,6 +15,7 @@ export default function TeamPage() {
       <LeadershipTeam/>
       <AuthorityTeam/>
       <MicrotersHeroes/>
+      <CtaBeforeFooter/>
     </main>
   );
 }
