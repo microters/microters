@@ -1,6 +1,11 @@
+import ClientsLogos from "app/components/common/ClientsLogos";
+import RelatedToolsSection from "app/components/common/RelatedTools";
+import ToolFeaturesSection from "app/components/common/ToolFeatures";
 import ToolIntroSection from "app/components/common/ToolIntro";
 import ToolStepsSection from "app/components/common/ToolSteps";
 import ArticleSchema from "app/components/tools/ArticleSchema";
+import { schemaGeneratorRelatedToolsData } from "app/data/tools/relatedToolsData";
+import { schemaGeneratorToolFeatures } from "app/data/tools/toolFeatures";
 import { schemaGeneratorToolSteps } from "app/data/tools/toolsData";
 import { schemaGeneratorToolIntro } from "app/data/tools/toolsIntro";
 
@@ -42,6 +47,16 @@ export default function SeoGeneratorPage() {
         useCasesTitle={schemaGeneratorToolIntro.useCasesTitle}
         useCasesIntro={schemaGeneratorToolIntro.useCasesIntro}
         useCases={schemaGeneratorToolIntro.useCases}
+      />
+      <ClientsLogos/>
+      <ToolFeaturesSection
+        title={schemaGeneratorToolFeatures.title}
+        description={schemaGeneratorToolFeatures.description}
+        features={schemaGeneratorToolFeatures.features}
+      />
+       <RelatedToolsSection
+        title={schemaGeneratorRelatedToolsData.title} 
+        tools={schemaGeneratorRelatedToolsData.tools} 
       />
     </main>
   );

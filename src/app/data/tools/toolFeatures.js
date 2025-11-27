@@ -34,3 +34,40 @@ export const acronymToolFeatures = {
     }
   ]
 };
+
+export const schemaGeneratorToolFeatures = {
+  title: "Why Choose ‘Microters’ Schema Generator Tool?",
+  description: "This tool is designed to simplify schema creation, even for non-technical users. Here are a few reasons why it stands out.",
+  features: [
+    {
+      id: 1,
+      title: "Easy to Use",
+      description: "Microters makes schema creation simple with a user-friendly interface. Anyone can create structured data without coding knowledge."
+    },
+    {
+      id: 2,
+      title: "Supports Multiple Schema Types",
+      description: "The tool supports diverse schema types, including articles, products, reviews, and FAQs. This ensures flexibility for different content needs."
+    },
+    {
+      id: 3,
+      title: "Saves Time",
+      description: "By automating schema generation, users save hours they would otherwise spend manually coding structured data."
+    },
+    {
+      id: 4,
+      title: "Free to Use",
+      description: "Microters offers a free version with robust features, making it accessible to all users without hidden costs."
+    },
+    {
+      id: 5,
+      title: "SEO-Friendly Design",
+      description: "The tool ensures compliance with search engine guidelines, helping users achieve better rankings and enhanced SERP features."
+    },
+    {
+      id: 6,
+      title: "Reliable Updates",
+      description: "Offering robust features for free, the tool is ideal for creators looking to enhance their content strategy without extra costs."
+    }
+  ]
+};
