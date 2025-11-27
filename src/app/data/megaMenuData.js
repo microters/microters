@@ -156,7 +156,7 @@ export const MegaMenuData = [
                 { name: 'Permalink Generator', href: '#', Icon: FaLink },
                 { name: 'Person Schema Generator', href: '#', Icon: FaUsers },
                 { name: 'Recipe Schema Generator', href: '#', Icon: FaStarHalf },
-                { name: 'Schema Generator', href: 'seo-tools/schema-generator', Icon: FaSearch },
+                { name: 'Schema Generator', href: '/seo-tools/schema-generator', Icon: FaSearch },
                 { name: 'Video Schema Generator', href: '#', Icon: FaFileVideo },
                 { name: 'Website Schema Generator', href: '#', Icon: FaLaptopCode },
             ],
@@ -186,7 +186,7 @@ export const MegaMenuData = [
             titleColorName: secondaryColorName,
             iconBgClass: secondaryIconBg,
             links: [
-                { name: 'Acronym Generator', href: 'ai-writing-tools/acronym-generator', Icon: FaRobot },
+                { name: 'Acronym Generator', href: '/ai-writing-tools/acronym-generator', Icon: FaRobot },
                 { name: 'AI Article Generator', href: '#', Icon: FaRobot },
                 { name: 'Conclusion Generator', href: '#', Icon: FaRobot },
                 { name: 'Essay Writer', href: '#', Icon: FaRobot },
