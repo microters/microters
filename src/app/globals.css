@@ -143,6 +143,9 @@ input.PhoneInputInput:focus-visible {
   border-radius: 5px;
   background: #f35d36 !important;
 }
+.client-logo-swiper .swiper-wrapper {
+    transition-timing-function: linear;
+  }
 @keyframes fadeIn {
   from {
     opacity: 0;

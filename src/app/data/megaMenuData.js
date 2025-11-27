@@ -186,7 +186,7 @@ export const MegaMenuData = [
             titleColorName: secondaryColorName,
             iconBgClass: secondaryIconBg,
             links: [
-                { name: 'Acronym Generator', href: '#', Icon: FaRobot },
+                { name: 'Acronym Generator', href: 'ai-writing-tools/acronym-generator', Icon: FaRobot },
                 { name: 'AI Article Generator', href: '#', Icon: FaRobot },
                 { name: 'Conclusion Generator', href: '#', Icon: FaRobot },
                 { name: 'Essay Writer', href: '#', Icon: FaRobot },
