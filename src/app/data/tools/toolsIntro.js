@@ -1,4 +1,5 @@
 import acronymToolImg from "@assets/images/tools/acronym-generator.png";
+import schemaToolImg from "@assets/images/tools/schema-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -25,6 +26,35 @@ export const acronymToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can use acronyms to make posts stand out. A clever acronym can turn your campaign into a trending hashtag. It’s also great for building brand recognition, giving your social media content a cohesive, professional edge."
+    }
+  ]
+};
+
+export const schemaGeneratorToolIntro = {
+  title: "What is Schema Generator Tool?",
+  description: [
+    "A Schema Generator Tool is a software or online tool that helps you create structured data markup for your website. This markup makes your content more readable to search engines, enhancing how it appears in search results. For example, it can create snippets for FAQs, reviews, products, and more.",
+    "Using this tool, businesses and creators can boost their organic reach by improving their SERP features. It saves time, ensures accurate markup, and supports different schema types for various website needs."
+  ],
+  image: schemaToolImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Schema Generator Tool",
+  useCasesIntro: "This tool can be helpful for various professionals who aim to optimize their websites or projects:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use schema generators to improve search visibility and drive organic traffic to their campaigns. Structured data ensures content like promotions and product reviews appear prominently in search results. Using the tool saves time by automating technical tasks, enabling marketers to focus on strategic efforts like crafting compelling campaigns and analyzing performance metrics."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers can enhance how their posts appear on search engines by using schemas for articles, how-tos, and FAQs. This improves click-through rates and user engagement. Site owners can also use schemas to display business information like opening hours, addresses, and reviews, ensuring users get relevant details at a glance."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can use the tool to format articles with structured data, making their work more SEO-friendly. This can improve the discoverability of their writing in search results. For freelance writers, the tool provides an edge by offering SEO-rich output for client websites, increasing their project value."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can leverage schema tools to boost visibility for posts linking back to a website. This creates better snippets and previews on SERPs, encouraging clicks. It helps marketers add structured data for promotional offers or events, ensuring they stand out when people search online."
     }
   ]
 };

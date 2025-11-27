@@ -19,3 +19,24 @@ export const acronymToolSteps = {
     }
   ]
 };
+export const schemaGeneratorToolSteps = {
+  title: "How to Use Schema Generator Tool?",
+  description: "Using a Schema Generator Tool is simple and quick. Follow these three easy steps to create structured data for your website.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your Information",
+      description: "Enter the details you want to include in the schema, like product names, ratings, FAQs, or blog data."
+    },
+    {
+      id: 2,
+      title: "Step 2: Choose Schema Type",
+      description: "Select the schema type that matches your content, such as Article, Product, Local Business, or FAQ."
+    },
+    {
+      id: 3,
+      title: "Step 3: Generate and Add to Website",
+      description: "Click generate, copy the schema code, and add it to your website’s HTML or CMS platform."
+    }
+  ]
+};

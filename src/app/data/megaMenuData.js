@@ -156,7 +156,7 @@ export const MegaMenuData = [
                 { name: 'Permalink Generator', href: '#', Icon: FaLink },
                 { name: 'Person Schema Generator', href: '#', Icon: FaUsers },
                 { name: 'Recipe Schema Generator', href: '#', Icon: FaStarHalf },
-                { name: 'Schema Generator', href: '#', Icon: FaSearch },
+                { name: 'Schema Generator', href: 'seo-tools/schema-generator', Icon: FaSearch },
                 { name: 'Video Schema Generator', href: '#', Icon: FaFileVideo },
                 { name: 'Website Schema Generator', href: '#', Icon: FaLaptopCode },
             ],
