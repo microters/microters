@@ -182,11 +182,10 @@ const AcronymTool = () => {
   };
 
   return (
-    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-5 lg:p-8 mb-8 border border-slate-200 shadow-lg shadow-[#ff9a3e]/10">
-      <ToastContainer position="top-right" autoClose={2500} hideProgressBar theme="colored" />
-      
+    <>
+     <ToastContainer position="top-right" autoClose={2500} theme="colored" />  
+      <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-5 lg:p-8 mb-8 border border-slate-200 shadow-lg shadow-[#ff9a3e]/10"> 
       <div className="space-y-8">
-        
         {/* Topic & Goal */}
         <div className="grid grid-cols-1 gap-6">
           <LegendWrapper label="What is your topic?" required>
@@ -319,6 +318,7 @@ const AcronymTool = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
