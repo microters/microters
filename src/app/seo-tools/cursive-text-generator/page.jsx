@@ -10,8 +10,8 @@ import { cursiveTextGeneratorToolSteps } from "app/data/tools/toolsData";
 import { cursiveTextGeneratorToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free Web Word Counter Tool | ULK Online Word & Character Counter",
-  description: "Count words, characters, and keywords effortlessly using the ULK Web Word Counter Tool. Ideal for SEO, content planning, blogging, and keyword clustering.",
+  title: "Cursive Text Generator – Convert Text Into Beautiful Cursive Fonts",
+  description: "Generate fancy cursive text online with our free Cursive Text Generator. Perfect for Instagram bios, social media posts, creative projects, and stylish typography.",
 };
 
 export default function WebWordCounterPage() {
