@@ -12,30 +12,22 @@ import {
   FaGear,
   FaCopy,
   FaWandMagicSparkles,
+  FaBookOpen,
+  FaUserGraduate,
+  FaGem,
+  FaThumbsUp,
 } from "react-icons/fa6";
+import { FaRegSmile, FaRegComments, FaArrowRight } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FaRegSmile } from "react-icons/fa";
 
-// --- DATA ---
-const toneOptions = [
-  { label: "Neutral", value: "neutral", icon: <FaRobot /> },
-  { label: "Formal", value: "formal", icon: <FaHatCowboy /> },
-  { label: "Friendly", value: "friendly", icon: <FaRegSmile /> },
-  { label: "Professional", value: "professional", icon: <FaBriefcase /> },
-  { label: "Diplomatic", value: "diplomatic", icon: <FaHandshake /> },
-  { label: "Academic", value: "academic", icon: <FaGraduationCap /> },
-  { label: "Vivid", value: "vivid", icon: <FaPalette /> },
-  { label: "Custom...", value: "custom", icon: <FaGear /> },
-];
-
+// --- STYLES ---
 const baseInputStyles = `
   w-full bg-white border border-gray-300 rounded-[4px] px-4 py-3 text-gray-700 placeholder-gray-400
   focus:outline-none focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] 
   transition-all duration-300 ease-in-out min-h-[50px]
 `;
 
-// 2. Legend Label Wrapper
 const LegendWrapper = ({ label, required, children }) => (
   <div className="relative mt-2 w-full">
     <label className="absolute -top-2.5 left-3 bg-white px-1 text-sm font-bold text-[#15151e] z-10">
@@ -75,10 +67,27 @@ const customSelectStyles = {
   }),
 };
 
-const AcronymTool = () => {
+// --- TONE OPTIONS (Mapped to Icons) ---
+const toneOptions = [
+  { label: "Neutral", value: "neutral", icon: <FaRobot /> },
+  { label: "Formal", value: "formal", icon: <FaHatCowboy /> },
+  { label: "Friendly", value: "friendly", icon: <FaRegSmile /> },
+  { label: "Casual", value: "casual", icon: <FaRegComments /> },
+  { label: "Professional", value: "professional", icon: <FaBriefcase /> },
+  { label: "Diplomatic", value: "diplomatic", icon: <FaHandshake /> },
+  { label: "Academic", value: "academic", icon: <FaGraduationCap /> },
+  { label: "Simplified", value: "simplified", icon: <FaBookOpen /> },
+  { label: "Vivid", value: "vivid", icon: <FaPalette /> },
+  { label: "Empathetic", value: "empathetic", icon: <FaUserGraduate /> },
+  { label: "Luxury", value: "luxury", icon: <FaGem /> },
+  { label: "Engaging", value: "engaging", icon: <FaThumbsUp /> },
+  { label: "Direct", value: "direct", icon: <FaArrowRight /> },
+  { label: "Custom...", value: "custom", icon: <FaGear /> },
+];
+
+const ConclusionGenerator = () => {
   // State
   const [topic, setTopic] = useState("");
-  const [goal, setGoal] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [tone, setTone] = useState(null);
@@ -87,48 +96,59 @@ const AcronymTool = () => {
   const [country, setCountry] = useState(null);
   const [countries, setCountries] = useState([]);
 
-  // Fetch Data (Countries)
+  // Fetch Countries using fetch() instead of axios
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const countryRes = await fetch(
+        const response = await fetch(
           "https://restcountries.com/v3.1/all?fields=name,flags,languages"
         );
-        if (countryRes.ok) {
-          const countryData = await countryRes.json();
-          const formattedCountries = countryData
-            .sort((a, b) => a.name.common.localeCompare(b.name.common))
-            .map((c) => ({
-              label: c.name.common,
-              value: c.name.common,
-              languages: c.languages
-                ? Object.values(c.languages).join(", ")
-                : "English",
-              flag: c.flags.svg,
-            }));
-          setCountries(formattedCountries);
-        }
+
+        if (!response.ok) throw new Error("Failed to fetch countries");
+
+        const data = await response.json();
+
+        const countryData = data
+          .sort((a, b) => a.name.common.localeCompare(b.name.common))
+          .map((country) => ({
+            label: country.name.common,
+            value: country.name.common,
+            languages: Object.values(country.languages || {}).join(", "),
+            flag: country.flags.svg,
+          }));
+        setCountries(countryData);
       } catch (error) {
-        console.error("Init Error:", error);
+        console.error("Error fetching country data:", error);
       }
     };
     fetchCountries();
   }, []);
 
-  // Generate Logic
   const handleGenerateResults = async () => {
-    if (!topic.trim() || !country || !tone) {
-      toast.warning("Please fill in required fields.");
+    if (!topic.trim()) {
+      toast.warning("Please write a topic before generating conclusions.");
+      return;
+    }
+    if (topic.length > 2000) {
+      toast.warning("The topic must not be greater than 2000 characters.");
+      return;
+    }
+    if (!country) {
+      toast.warning("Please select a language.");
+      return;
+    }
+    if (!tone) {
+      toast.warning("Please select a tone.");
       return;
     }
 
     setLoading(true);
     setResults([]);
 
-    const languageName = country.languages || "English";
+    const language = country.languages || "English";
     const selectedTone = tone.value === "custom" ? customTone : tone.label;
 
-    // --- ACCESS CREDENTIALS FROM ENV ---
+    // --- Access variables from ENV ---
     const apiKey = process.env.NEXT_PUBLIC_AZURE_API_KEY;
     const endpoint = process.env.NEXT_PUBLIC_AZURE_ENDPOINT;
 
@@ -138,19 +158,26 @@ const AcronymTool = () => {
       return;
     }
 
-    const systemPrompt = `Generate 3 acronyms based on the Topic: "${topic}". Goal: "${goal}". Language: ${languageName}. Tone: ${selectedTone}.`;
-    const userPrompt = `Output exactly 3 acronyms. Format: <ACRONYM>: <Title> - <Description>. Separate each result with "###".`;
-
     const body = {
       messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt },
+        {
+          role: "system",
+          content: `You are an assistant that generates Paragraphs for this Topic. The Paragraph should be written in ${language} with a ${selectedTone} tone.`,
+        },
+        {
+          role: "user",
+          content: `Generate three distinct and meaningful Paragraphs based on the following Topic: "${topic}". Separate the conclusions with "###".`,
+        },
       ],
       temperature: 0.7,
-      max_tokens: 1000, // Adjusted mainly for acronyms
+      max_tokens: 1400,
+      top_p: 1,
+      frequency_penalty: 0.5,
+      presence_penalty: 0.5,
     };
 
     try {
+      // --- Using fetch() instead of axios ---
       const response = await fetch(endpoint, {
         method: "POST",
         headers: {
@@ -161,28 +188,24 @@ const AcronymTool = () => {
       });
 
       if (!response.ok) {
-        throw new Error(`API Request Failed: ${response.statusText}`);
+        throw new Error(`API request failed with status ${response.status}`);
       }
 
       const data = await response.json();
 
       if (data?.choices?.length > 0) {
-        const rawText = data.choices[0].message.content.trim();
-        let parsedResults = rawText
+        const generatedText = data.choices[0].message.content.trim();
+        const splitResults = generatedText
           .split("###")
-          .map((r) => r.trim())
+          .map((result) => result.trim())
           .filter((r) => r.length > 0);
-
-        // Fallback if AI didn't use separator perfectly
-        if (parsedResults.length === 0 && rawText.length > 0) {
-          parsedResults = [rawText];
-        }
-
-        setResults(parsedResults);
+        setResults(splitResults);
       }
     } catch (error) {
-      console.error("Generation Error", error);
-      toast.error("Failed to generate results. Please check connection.");
+      console.error("Error generating results:", error);
+      toast.error(
+        "Failed to generate results. Please check your connection or API limit."
+      );
     } finally {
       setLoading(false);
     }
@@ -197,7 +220,7 @@ const AcronymTool = () => {
 
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text);
-    toast.success("Copied!");
+    toast.success("Copied to clipboard!");
   };
 
   return (
@@ -206,30 +229,23 @@ const AcronymTool = () => {
 
       <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-5 lg:p-8 mb-8 border border-slate-200 shadow-lg shadow-[#ff9a3e]/10">
         <div className="space-y-8">
-          {/* Topic & Goal */}
-          <div className="grid grid-cols-1 gap-6">
-            <LegendWrapper label="What is your topic?" required>
-              <textarea
-                className={`${baseInputStyles} h-32 resize-none`}
-                placeholder="e.g. Digital Marketing Strategies for 2025..."
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-              />
-            </LegendWrapper>
+          {/* Topic Input */}
+          <LegendWrapper label="Topic / Essay Content" required>
+            <textarea
+              className={`${baseInputStyles} h-40 resize-y`}
+              placeholder="Paste your essay or topic here..."
+              value={topic}
+              onChange={(e) => setTopic(e.target.value)}
+              maxLength={2000}
+            />
+            <div className="absolute bottom-2 right-3 text-xs text-gray-400">
+              {topic.length}/2000
+            </div>
+          </LegendWrapper>
 
-            <LegendWrapper label="What is your goal?">
-              <input
-                type="text"
-                className={baseInputStyles}
-                placeholder="e.g. To inspire the sales team..."
-                value={goal}
-                onChange={(e) => setGoal(e.target.value)}
-              />
-            </LegendWrapper>
-          </div>
-
-          {/* Tone & Language */}
+          {/* Controls Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Tone Select */}
             <LegendWrapper label="Tone" required>
               <Select
                 options={toneOptions}
@@ -250,6 +266,7 @@ const AcronymTool = () => {
               />
             </LegendWrapper>
 
+            {/* Language/Country Select */}
             <LegendWrapper label="Language" required>
               <Select
                 options={countries}
@@ -280,7 +297,7 @@ const AcronymTool = () => {
             </LegendWrapper>
           </div>
 
-          {/* Submit Button */}
+          {/* Generate Button */}
           <button
             onClick={handleGenerateResults}
             disabled={loading}
@@ -290,19 +307,19 @@ const AcronymTool = () => {
               <span className="animate-pulse">Generating Magic...</span>
             ) : (
               <>
-                <FaWandMagicSparkles /> Generate Acronym
+                <FaWandMagicSparkles /> Generate Conclusion
               </>
             )}
           </button>
         </div>
 
-        {/* Results */}
+        {/* Results Section */}
         {results.length > 0 && (
           <div className="mt-12 border-t border-gray-100 pt-10">
             <h3 className="text-2xl font-bold text-[#15151e] mb-6 text-center">
-              Generated Results
+              Generated Conclusions
             </h3>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-6">
               {results.map((res, idx) => (
                 <div
                   key={idx}
@@ -331,7 +348,7 @@ const AcronymTool = () => {
           </div>
         )}
 
-        {/* Modal */}
+        {/* Custom Tone Modal */}
         {showCustomModal && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
             <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden p-6 animate-fade-in-up">
@@ -342,25 +359,25 @@ const AcronymTool = () => {
                 <input
                   type="text"
                   className={baseInputStyles}
-                  placeholder="e.g. Sarcastic..."
+                  placeholder="e.g. Sarcastic, Poetic..."
                   value={customTone}
                   onChange={(e) => setCustomTone(e.target.value)}
                   autoFocus
                 />
               </LegendWrapper>
 
-              <div className="mt-6 flex justify-end gap-3">
+              <div className="mt-8 flex justify-end gap-3">
                 <button
                   onClick={() => setShowCustomModal(false)}
-                  className="px-5 py-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+                  className="px-5 py-2.5 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors font-medium"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleCustomToneSave}
-                  className="px-5 py-2 bg-[#f35d36] text-white font-bold rounded-lg hover:bg-[#d64d29]"
+                  className="px-5 py-2.5 bg-[#f35d36] text-white font-bold rounded-lg hover:bg-[#d64d29] transition-colors shadow-sm hover:shadow"
                 >
-                  Save
+                  Save Tone
                 </button>
               </div>
             </div>
@@ -371,4 +388,4 @@ const AcronymTool = () => {
   );
 };
 
-export default AcronymTool;
+export default ConclusionGenerator;

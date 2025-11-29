@@ -145,7 +145,7 @@ export const MegaMenuData = [
             iconBgClass: primaryIconBg,
             links: [
                 { name: 'Breadcrumb Generator', href: '/seo-tools/breadcrumb-generator', Icon: FaArrowUpRightFromSquare },
-                { name: 'Case Converter Tool', href: '#', Icon: FaCopy },
+                { name: 'Case Converter Tool', href: '/seo-tools/case-converter', Icon: FaCopy },
                 { name: 'Cursive Text Generator', href: '#', Icon: FaBezierCurve },
                 { name: 'Event Schema Generator', href: '#', Icon: FaSearch },
                 { name: 'FAQ Schema Generator', href: '#', Icon: FaQuestionCircle },
@@ -188,7 +188,7 @@ export const MegaMenuData = [
             links: [
                 { name: 'Acronym Generator', href: '/ai-writing-tools/acronym-generator', Icon: FaRobot },
                 { name: 'AI Article Generator', href: '#', Icon: FaRobot },
-                { name: 'Conclusion Generator', href: '#', Icon: FaRobot },
+                { name: 'Conclusion Generator', href: '/ai-writing-tools/conclusion-generator', Icon: FaRobot },
                 { name: 'Essay Writer', href: '#', Icon: FaRobot },
                 { name: 'Thesis Statement Generator', href: '#', Icon: FaRobot },
                 { name: 'Sentence Expander', href: '#', Icon: FaRobot },

@@ -2,6 +2,8 @@ import acronymToolImg from "@assets/images/tools/acronym-generator.png";
 import schemaToolImg from "@assets/images/tools/schema-generator.png";
 import breadcrumbToolImg from "@assets/images/tools/breadcrumbs-schema.png";
 import ulkWebWordCounterImg from "@assets/images/tools/ulk-web-word-counter.png";
+import caseConverterImg from "@assets/images/tools/case-converter.png";
+import conclusionGeneratorImg from "@assets/images/tools/conclusion-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -115,6 +117,64 @@ export const ulkWebWordCounterToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media managers can use the tool to create engaging hashtags and captions by clustering trending keywords. This leads to higher engagement and reach. The tool also helps analyze audience interests, allowing marketers to align their social content with user preferences."
+    }
+  ]
+};
+
+export const caseConverterToolIntro = {
+  title: "What is Free Case Converter Tool?",
+  description: [
+    "The Free Case Converter Tool is a web-based solution that allows users to transform text formatting with a single click. It supports multiple case styles, including title case, sentence case, lowercase, and uppercase.",
+    "Whether for professional documents, creative writing, or social media posts, this tool ensures your text is consistently formatted. It’s user-friendly, quick, and perfect for anyone needing error-free results."
+  ],
+  image: caseConverterImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free Case Converter Tool",
+  useCasesIntro: "Microters’ Case Converter Tool is versatile and beneficial for many users.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use the tool to create consistent text formatting for emails, ad campaigns, and presentations. This helps maintain a professional tone across different content pieces. Formatted text enhances readability and ensures that marketing materials look polished and engaging."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "Bloggers and website owners can easily reformat content headings, tags, or meta descriptions for their articles. This tool helps them align text formatting with SEO and design preferences. Properly formatted text improves the visual appeal of blog posts and ensures better reader engagement."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can use the tool to transform large volumes of text quickly, ensuring consistency across manuscripts, articles, or reports. It’s especially useful for preparing submission-ready content. By reducing manual effort, this tool saves time while minimizing the risk of formatting errors."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media professionals can create engaging posts with the perfect text formatting. The tool helps them quickly adjust captions, hashtags, or promotional text to match specific styles. Formatted text ensures social media posts stand out, improving readability and interaction rates."
+    }
+  ]
+};
+
+export const conclusionGeneratorToolIntro = {
+  title: "What is Free AI Conclusion Generator?",
+  description: [
+    "A Free AI Conclusion Generator is an online tool designed to help users summarize their content quickly and effectively. Using advanced AI algorithms, it takes your input text and produces a concise, impactful conclusion.",
+    "This tool is versatile and works for various content types, including essays, blogs, reports, and social media posts. With adjustable tones and multilingual support, it’s a must-have for anyone seeking professional-quality results effortlessly."
+  ],
+  image: conclusionGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free AI Conclusion Generator Tool",
+  useCasesIntro: "The Free AI Conclusion Generator is designed for a wide audience. Here are a few specific use cases:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use this tool to create compelling summaries for campaigns, reports, and presentations. It ensures that key points are effectively communicated, making your content resonate with your audience. Additionally, it’s perfect for summarizing data-heavy information into actionable insights, saving time while enhancing communication."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers and website owners can use this tool to craft conclusions that leave a lasting impression on readers. A strong closing paragraph can boost engagement and encourage shares. It’s also handy for creating summaries that improve search engine performance, helping attract and retain more visitors."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Authors and writers can use the Free AI Conclusion Generator to polish their drafts. It ensures that conclusions align with the main content while maintaining a professional tone. This tool is especially helpful when working under tight deadlines, delivering quick, high-quality results."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can benefit by creating concise summaries for posts, captions, and ad copy. It’s ideal for ensuring key messages are communicated within character limits. The multilingual support allows marketers to target global audiences with ease, breaking language barriers effectively."
     }
   ]
 };

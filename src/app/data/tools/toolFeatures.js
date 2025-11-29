@@ -145,3 +145,77 @@ export const ulkWebWordCounterToolFeatures = {
     }
   ]
 };
+
+export const caseConverterToolFeatures = {
+  title: "Why Choose ‘Microters’ Free Case Converter Tool?",
+  description: "Microters makes case conversion fast, easy, and reliable.",
+  features: [
+    {
+      id: 1,
+      title: "Effortless to Use",
+      description: "The tool’s simple interface ensures users can reformat text in seconds without needing technical knowledge. This saves time and reduces the stress of manual text adjustments."
+    },
+    {
+      id: 2,
+      title: "Completely Free",
+      description: "The Free Case Converter Tool is accessible to everyone at no cost. You can use it as many times as needed without any restrictions. It’s a great option for individuals and teams working on tight budgets."
+    },
+    {
+      id: 3,
+      title: "Supports Multiple Case Styles",
+      description: "The tool provides various formatting options, including uppercase, lowercase, sentence case, and title case. This flexibility makes it suitable for diverse writing and design needs."
+    },
+    {
+      id: 4,
+      title: "Perfect for SEO Content",
+      description: "For SEO-focused tasks, the tool ensures headings, tags, and descriptions follow proper formatting rules. This improves the overall appearance and performance of your content in search engine results."
+    },
+    {
+      id: 5,
+      title: "Error-Free Results",
+      description: "By automating the process, the tool eliminates human errors in formatting, delivering clean and consistent text every time. This is especially useful for large-scale projects with strict formatting requirements."
+    },
+    {
+      id: 6,
+      title: "Fast and Reliable",
+      description: "The tool processes text instantly, making it a time-saving solution for busy professionals. It works seamlessly for both short and long text inputs, ensuring reliable performance at all times."
+    }
+  ]
+};
+
+export const conclusionGeneratorToolFeatures = {
+  title: "Why Choose ‘Microters’ Free AI Conclusion Generator Tool?",
+  description: "The Free AI Conclusion Generator offers a range of powerful features. Here’s what makes it stand out:",
+  features: [
+    {
+      id: 1,
+      title: "Cost-Effective",
+      description: "Microters’ AI tool is entirely free, making it an ideal choice for students, professionals, and businesses looking to save on writing-related expenses without sacrificing quality."
+    },
+    {
+      id: 2,
+      title: "Ease of Use",
+      description: "The tool is designed with a user-friendly interface, requiring no technical expertise. You can generate professional-quality conclusions with just a few clicks."
+    },
+    {
+      id: 3,
+      title: "AI-Powered Precision",
+      description: "Leveraging advanced AI algorithms, the tool produces concise, relevant, and engaging conclusions tailored to your content."
+    },
+    {
+      id: 4,
+      title: "Time-Saving",
+      description: "Writing conclusions can be time-consuming. Microters’ AI tool efficiently condenses your content into a summary, saving you valuable time."
+    },
+    {
+      id: 5,
+      title: "Customization",
+      description: "It allows you to adjust the tone and style of the conclusion to match your needs—be it academic, professional, or creative."
+    },
+    {
+      id: 6,
+      title: "Versatility",
+      description: "Whether you’re summarizing a research paper, article, or business report, the tool adapts to a wide range of content formats."
+    }
+  ]
+};

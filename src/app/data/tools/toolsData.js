@@ -82,3 +82,45 @@ export const ulkWebWordCounterToolSteps = {
     }
   ]
 };
+export const caseConverterToolSteps = {
+  title: "How to Use Free Case Converter Tool",
+  description: "Using the Free Case Converter Tool is straightforward and convenient.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Paste Your Text",
+      description: "Enter or paste the text into the tool’s input field."
+    },
+    {
+      id: 2,
+      title: "Step 2: Choose a Case Option",
+      description: "Select from case styles such as lowercase, uppercase, or title case."
+    },
+    {
+      id: 3,
+      title: "Step 3: Copy the Converted Text",
+      description: "Copy the formatted text and use it in your desired application."
+    }
+  ]
+};
+export const conclusionGeneratorToolSteps = {
+  title: "How to Use Free AI Conclusion Generator Tool",
+  description: "Using the Free AI Conclusion Generator is simple and quick. Follow these three easy steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Add your Topic, Paragraphs, or Context",
+      description: "Start by entering your content in the input field. You can paste your topic, paragraphs, or even a brief context to provide the tool with information to work with. This step helps the AI understand what to summarize effectively."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select Your Desired Writing Tone",
+      description: "Choose a writing tone that suits your needs from the dropdown menu. Options range from formal to conversational, ensuring the output aligns with your intended style. This flexibility allows you to tailor your content for different purposes, whether academic, professional, or casual."
+    },
+    {
+      id: 3,
+      title: "Step 3: Pick Your Preferred Language and Click Generate",
+      description: "Select from over 100 languages in the dropdown menu to create conclusions in your chosen language. Once selected, hit the “Generate” button, and the AI will deliver a concise, high-quality conclusion based on your input and preferences."
+    }
+  ]
+};

@@ -10,8 +10,8 @@ import { ulkWebWordCounterToolSteps } from "app/data/tools/toolsData";
 import { ulkWebWordCounterToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free Schema Markup Generator Tool | JSON-LD | Microters",
-  description: "Create structured data for your website instantly. Boost your SEO with our free Schema Generator Tool. Supports Article, FAQ, Product, and more without coding.",
+  title: "Free Web Word Counter Tool | ULK Online Word & Character Counter",
+  description: "Count words, characters, and keywords effortlessly using the ULK Web Word Counter Tool. Ideal for SEO, content planning, blogging, and keyword clustering.",
 };
 
 export default function WebWordCounterPage() {
