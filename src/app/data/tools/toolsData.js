@@ -124,3 +124,24 @@ export const conclusionGeneratorToolSteps = {
     }
   ]
 };
+export const cursiveTextGeneratorToolSteps = {
+  title: "How to Use Cursive Text Generator",
+  description: "Using the Cursive Text Generator is quick and simple.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Type Your Text",
+      description: "Enter your text in the input box provided."
+    },
+    {
+      id: 2,
+      title: "Step 2: Choose a Cursive Style",
+      description: "Browse through the available font options to find one that matches your preferences."
+    },
+    {
+      id: 3,
+      title: "Step 3: Copy and Use",
+      description: "Copy the styled text and paste it into your desired platform or document."
+    }
+  ]
+};

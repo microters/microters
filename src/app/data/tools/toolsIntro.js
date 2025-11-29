@@ -4,6 +4,7 @@ import breadcrumbToolImg from "@assets/images/tools/breadcrumbs-schema.png";
 import ulkWebWordCounterImg from "@assets/images/tools/ulk-web-word-counter.png";
 import caseConverterImg from "@assets/images/tools/case-converter.png";
 import conclusionGeneratorImg from "@assets/images/tools/conclusion-generator.png";
+import cursiveTextGeneratorImg from "@assets/images/tools/cursive-text-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -175,6 +176,35 @@ export const conclusionGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can benefit by creating concise summaries for posts, captions, and ad copy. It’s ideal for ensuring key messages are communicated within character limits. The multilingual support allows marketers to target global audiences with ease, breaking language barriers effectively."
+    }
+  ]
+};
+
+export const cursiveTextGeneratorToolIntro = {
+  title: "What is Cursive Text Generator?",
+  description: [
+    "A Cursive Text Generator is a tool that transforms regular text into beautiful cursive styles. With this tool, you can instantly create decorative fonts for online or offline use without needing design software.",
+    "Whether for social media, blogs, or branding, the tool offers a variety of font styles to suit your needs. It’s a fast, free way to make your text stand out and look polished."
+  ],
+  image: cursiveTextGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Cursive Text Generator Tool",
+  useCasesIntro: "Microters’ Cursive Text Generator Tool is versatile and beneficial for many users.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use cursive text to add a sophisticated touch to promotional materials, presentations, or social media campaigns. This helps grab attention and enhance branding efforts. Stylized text makes ads, banners, and email campaigns more visually appealing, boosting engagement."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "Bloggers and website owners can use cursive fonts to highlight quotes, headings, or special sections on their pages. This creates a professional and artistic look that engages readers. Custom fonts can also help establish a unique brand identity, making websites more memorable."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can use the tool to add flair to manuscripts, invitations, or personal projects. Cursive fonts enhance the overall presentation and readability of creative work. This tool is especially helpful for formatting poetry, short stories, or decorative writing."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media professionals can use cursive text to make captions, bios, or posts more visually appealing. Unique fonts help content stand out in crowded feeds. Stylized text is perfect for creating engaging visuals for Instagram stories, posts, and other digital campaigns."
     }
   ]
 };

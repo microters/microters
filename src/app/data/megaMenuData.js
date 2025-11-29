@@ -146,7 +146,7 @@ export const MegaMenuData = [
             links: [
                 { name: 'Breadcrumb Generator', href: '/seo-tools/breadcrumb-generator', Icon: FaArrowUpRightFromSquare },
                 { name: 'Case Converter Tool', href: '/seo-tools/case-converter', Icon: FaCopy },
-                { name: 'Cursive Text Generator', href: '#', Icon: FaBezierCurve },
+                { name: 'Cursive Text Generator', href: '/seo-tools/cursive-text-generator', Icon: FaBezierCurve },
                 { name: 'Event Schema Generator', href: '#', Icon: FaSearch },
                 { name: 'FAQ Schema Generator', href: '#', Icon: FaQuestionCircle },
                 { name: 'HowTo Schema Generator', href: '#', Icon: FaFileCode },

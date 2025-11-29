@@ -8,7 +8,7 @@ const ToolFeaturesSection = ({ title, description, features }) => {
       <div className="container px-4">
         
         {/* Header */}
-        <div className="text-center mb-16 max-w-5xl mx-auto">
+        <div className="text-center mb-16 max-w-6xl mx-auto">
           <h2 className="text-[#15151e] text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
             {title}
           </h2>
