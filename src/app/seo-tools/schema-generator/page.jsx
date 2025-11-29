@@ -10,8 +10,8 @@ import { schemaGeneratorToolSteps } from "app/data/tools/toolsData";
 import { schemaGeneratorToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "AI Acronym Generator | Microters",
-  description: "Turn complex topics into memorable acronyms instantly.",
+  title: "Free Schema Markup Generator Tool | JSON-LD | Microters",
+  description: "Create structured data for your website instantly. Boost your SEO with our free Schema Generator Tool. Supports Article, FAQ, Product, and more without coding.",
 };
 
 export default function SeoGeneratorPage() {

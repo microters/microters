@@ -71,3 +71,40 @@ export const schemaGeneratorToolFeatures = {
     }
   ]
 };
+
+export const breadcrumbGeneratorToolFeatures = {
+  title: "Why Choose ‘Microters’ Breadcrumb Generator?",
+  description: "It’s efficient, user-friendly, and designed for optimal performance. Here’s why:",
+  features: [
+    {
+      id: 1,
+      title: "SEO Benefits",
+      description: "Breadcrumbs enhance site indexing by search engines, improving rankings and visibility. They also reduce bounce rates, signaling quality content to search engines."
+    },
+    {
+      id: 2,
+      title: "Ease of Use",
+      description: "The tool offers a straightforward interface, making it accessible to users of all technical backgrounds. Customization options allow for tailored breadcrumb structures."
+    },
+    {
+      id: 3,
+      title: "Compatibility",
+      description: "The Breadcrumb-Generator integrates seamlessly with various CMS platforms like WordPress, Shopify, and others."
+    },
+    {
+      id: 4,
+      title: "Free Keyword Clustering",
+      description: "With features like free keyword clustering, the tool ensures your breadcrumb structure aligns with targeted search queries, boosting relevance."
+    },
+    {
+      id: 5,
+      title: "Improved User Experience",
+      description: "Breadcrumbs make navigation intuitive, reducing frustration for users. This leads to higher engagement and conversion rates."
+    },
+    {
+      id: 6,
+      title: "Fast and Reliable",
+      description: "From bloggers to marketers, the tool caters to diverse professionals, providing unique solutions for different use cases."
+    }
+  ]
+};

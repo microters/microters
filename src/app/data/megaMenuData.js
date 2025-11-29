@@ -144,7 +144,7 @@ export const MegaMenuData = [
             titleColorName: primaryColorName,
             iconBgClass: primaryIconBg,
             links: [
-                { name: 'Breadcrumb Generator', href: '#', Icon: FaArrowUpRightFromSquare },
+                { name: 'Breadcrumb Generator', href: '/seo-tools/breadcrumb-generator', Icon: FaArrowUpRightFromSquare },
                 { name: 'Case Converter Tool', href: '#', Icon: FaCopy },
                 { name: 'Cursive Text Generator', href: '#', Icon: FaBezierCurve },
                 { name: 'Event Schema Generator', href: '#', Icon: FaSearch },

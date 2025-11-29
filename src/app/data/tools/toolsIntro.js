@@ -1,5 +1,6 @@
 import acronymToolImg from "@assets/images/tools/acronym-generator.png";
 import schemaToolImg from "@assets/images/tools/schema-generator.png";
+import breadcrumbToolImg from "@assets/images/tools/breadcrumbs-schema.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -55,6 +56,35 @@ export const schemaGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can leverage schema tools to boost visibility for posts linking back to a website. This creates better snippets and previews on SERPs, encouraging clicks. It helps marketers add structured data for promotional offers or events, ensuring they stand out when people search online."
+    }
+  ]
+};
+
+export const breadcrumbGeneratorToolIntro = {
+  title: "What is Breadcrumb Generator?",
+  description: [
+    "A Breadcrumb-Generator is a tool designed to create breadcrumb trails for websites. Breadcrumbs are navigation links that show users their path from the homepage to the current page. They improve website usability and help search engines understand your site’s structure.",
+    "Using breadcrumbs enhances user engagement and boosts SEO. It makes content easily accessible, ensuring users can navigate seamlessly while giving search engines clear context about your site’s layout."
+  ],
+  image: breadcrumbToolImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Breadcrumb Generator Tool",
+  useCasesIntro: "This tool is ideal for professionals seeking better navigation and improved SEO. Let’s explore its applications:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Breadcrumbs improve website navigation, making content easier for visitors to find. This leads to better engagement and conversion rates. Marketers can use breadcrumb navigation to highlight product categories, ensuring users can quickly locate what they need, enhancing overall user satisfaction."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "Bloggers can organize their content effectively using breadcrumbs. This improves the reader’s experience by providing clear navigation paths. Site owners benefit from better site indexing, as search engines use breadcrumbs to understand and rank the site structure efficiently."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can enhance the readability of their content by using breadcrumbs to create logical paths for readers. Breadcrumbs also help structure large writing portfolios, enabling users to navigate through different sections easily."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can link campaigns to specific breadcrumb paths, making it easier for users to find relevant content. Using breadcrumbs improves landing page effectiveness, reducing bounce rates and increasing user retention."
     }
   ]
 };

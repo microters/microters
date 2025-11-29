@@ -40,3 +40,24 @@ export const schemaGeneratorToolSteps = {
     }
   ]
 };
+export const breadcrumbGeneratorToolSteps = {
+  title: "How to Use Breadcrumb Generator",
+  description: "Using the Breadcrumb-Generator is simple and quick. Here’s how:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your Website URL",
+      description: "Enter your website’s URL into the Breadcrumb-Generator tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Customize the Breadcrumbs",
+      description: "Adjust settings like category labels or links to match your website structure."
+    },
+    {
+      id: 3,
+      title: "Step 3: Copy & Paste the Code",
+      description: "Generate the breadcrumb code and paste it into your website’s HTML or CMS editor."
+    }
+  ]
+};
