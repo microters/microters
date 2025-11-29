@@ -1,6 +1,7 @@
 import acronymToolImg from "@assets/images/tools/acronym-generator.png";
 import schemaToolImg from "@assets/images/tools/schema-generator.png";
 import breadcrumbToolImg from "@assets/images/tools/breadcrumbs-schema.png";
+import ulkWebWordCounterImg from "@assets/images/tools/ulk-web-word-counter.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -85,6 +86,35 @@ export const breadcrumbGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can link campaigns to specific breadcrumb paths, making it easier for users to find relevant content. Using breadcrumbs improves landing page effectiveness, reducing bounce rates and increasing user retention."
+    }
+  ]
+};
+
+export const ulkWebWordCounterToolIntro = {
+  title: "What is ULK Web Word Counter Tool?",
+  description: [
+    "The ULK Web Word Counter Tool helps users group and organize keywords effectively. It’s a powerful resource for marketing professionals, bloggers, and writers to structure their content for better SEO results.",
+    "With its free keyword clustering and advanced grouping features, the tool provides an intuitive way to spot keyword patterns, enabling better-targeted campaigns and improved visibility."
+  ],
+  image: ulkWebWordCounterImg,
+  useCasesTitle: "Use Cases of ‘Microters’ ULK Web Word Counter Tool",
+  useCasesIntro: "This tool is designed for professionals who need efficient keyword clustering.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing teams can create targeted keyword clusters for ads and SEO campaigns, ensuring optimal ROI. The tool helps identify opportunities by analyzing keyword gaps. It also simplifies competitor research, making it easier to enhance campaign strategies and boost visibility."
+    },
+    {
+      title: "Bloggers and Website Owners",
+      content: "Bloggers can craft optimized blog titles and meta descriptions by grouping related keywords effectively. This leads to better rankings and increased organic traffic. Website owners can enhance site navigation by aligning keywords with menus and structure, improving the overall user experience."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can create focused, keyword-rich content for articles, enhancing readability and SEO. It’s perfect for maintaining appropriate keyword density without overuse. Freelancers benefit by efficiently generating client-ready, SEO-friendly content in less time."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media managers can use the tool to create engaging hashtags and captions by clustering trending keywords. This leads to higher engagement and reach. The tool also helps analyze audience interests, allowing marketers to align their social content with user preferences."
     }
   ]
 };

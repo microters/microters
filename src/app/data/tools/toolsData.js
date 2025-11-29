@@ -61,3 +61,24 @@ export const breadcrumbGeneratorToolSteps = {
     }
   ]
 };
+export const ulkWebWordCounterToolSteps = {
+  title: "How to Use ULK Web Word Counter Tool?",
+  description: "Using the ULK Web Word Counter Tool is simple and quick.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Enter Keywords",
+      description: "Copy and paste your list of keywords into the input box."
+    },
+    {
+      id: 2,
+      title: "Step 2: Set Preferences",
+      description: "Adjust settings such as grouping thresholds or clustering criteria."
+    },
+    {
+      id: 3,
+      title: "Step 3: View Results",
+      description: "Review the organized keyword clusters and apply them to your content strategy."
+    }
+  ]
+};

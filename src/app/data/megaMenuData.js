@@ -152,7 +152,7 @@ export const MegaMenuData = [
                 { name: 'HowTo Schema Generator', href: '#', Icon: FaFileCode },
                 { name: 'Internal Link Analyzer', href: '#', Icon: FaLink },
                 { name: 'Local Business Schema', href: '#', Icon: FaShopify },
-                { name: 'Word Counter', href: '#', Icon: FaWordpress },
+                { name: 'Word Counter', href: '/seo-tools/word-counter', Icon: FaWordpress },
                 { name: 'Permalink Generator', href: '#', Icon: FaLink },
                 { name: 'Person Schema Generator', href: '#', Icon: FaUsers },
                 { name: 'Recipe Schema Generator', href: '#', Icon: FaStarHalf },
@@ -178,7 +178,7 @@ export const MegaMenuData = [
                 { name: 'Organization Schema', href: '#', Icon: FaShopify },
                 { name: 'Product Schema', href: '#', Icon: FaShoppingBag },
                 { name: 'Product.txt Validator', href: '#', Icon: FaRobot },
-                { name: 'ULK Web Word Counter', href: '#', Icon: FaCode },
+                { name: 'ULK Web Word Counter', href: '/seo-tools/ulk-web-word-counter', Icon: FaCode },
             ],
         },
         {

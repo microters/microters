@@ -108,3 +108,40 @@ export const breadcrumbGeneratorToolFeatures = {
     }
   ]
 };
+
+export const ulkWebWordCounterToolFeatures = {
+  title: "Why Choose Microters ULK Web Word Counter Tool?",
+  description: "This tool offers multiple advantages for anyone looking to simplify their keyword strategy.",
+  features: [
+    {
+      id: 1,
+      title: "Free Keyword Clustering",
+      description: "Enjoy advanced keyword clustering features at no cost, perfect for individuals and small businesses. It saves time and money compared to paid software."
+    },
+    {
+      id: 2,
+      title: "Easy-to-Use Interface",
+      description: "The tool’s user-friendly design ensures it’s accessible to users with any level of technical expertise, making keyword grouping hassle-free."
+    },
+    {
+      id: 3,
+      title: "Improved SEO Results",
+      description: "It organizes keywords effectively, aligning them with SEO best practices to help content rank higher in search engines."
+    },
+    {
+      id: 4,
+      title: "Time-Saving Features",
+      description: "Generate keyword clusters quickly and efficiently, leaving more time for content creation and analysis."
+    },
+    {
+      id: 5,
+      title: "Versatility Across Industries",
+      description: "From marketers to writers, this tool suits a range of professionals, adapting to varied needs effortlessly."
+    },
+    {
+      id: 6,
+      title: "Actionable Insights",
+      description: "Analyze and understand keyword performance trends to make informed decisions and boost campaign success."
+    }
+  ]
+};

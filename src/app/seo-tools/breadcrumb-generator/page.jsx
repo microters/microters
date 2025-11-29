@@ -10,11 +10,11 @@ import { breadcrumbGeneratorToolSteps } from "app/data/tools/toolsData";
 import { breadcrumbGeneratorToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free Schema Markup Generator Tool | JSON-LD | Microters",
-  description: "Create structured data for your website instantly. Boost your SEO with our free Schema Generator Tool. Supports Article, FAQ, Product, and more without coding.",
+  title: "Free Breadcrumb Schema Generator | JSON-LD Markup Tool for SEO",
+  description: "Create breadcrumb structured data in seconds with our free Breadcrumb Schema Generator. Build clean JSON-LD markup, improve site navigation, and boost SEO effortlessly.",
 };
 
-export default function SeoGeneratorPage() {
+export default function BreadcrumbGeneratorPage() {
   return (
     <main>
        <div className="bg-[#fef7f5] pt-16 lg:pt-20">
