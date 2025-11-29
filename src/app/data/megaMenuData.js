@@ -166,7 +166,7 @@ export const MegaMenuData = [
             titleColorName: primaryColorName,
             iconBgClass: primaryIconBg,
             links: [
-                { name: 'Disclaimer Generator', href: '#', Icon: FaFileInvoiceDollar },
+                { name: 'Disclaimer Generator', href: '/seo-tools/disclaimer-generator', Icon: FaFileInvoiceDollar },
                 { name: 'Keywords Cluster', href: '#', Icon: FaChartLine },
                 { name: 'XML Sitemap URL Extractor', href: '#', Icon: FaFileCode },
                 { name: 'Google Auto Suggest Keyword', href: '#', Icon: FaSearch },
