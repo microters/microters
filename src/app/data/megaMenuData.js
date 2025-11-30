@@ -170,7 +170,7 @@ export const MegaMenuData = [
                 { name: 'Keywords Cluster', href: '#', Icon: FaChartLine },
                 { name: 'XML Sitemap URL Extractor', href: '#', Icon: FaFileCode },
                 { name: 'Google Auto Suggest Keyword', href: '#', Icon: FaSearch },
-                { name: 'Headline Generator', href: '#', Icon: FaCode },
+                { name: 'Headline Generator', href: '/seo-tools/headline-generator', Icon: FaCode },
                 { name: 'HTML Heading Checker', href: '#', Icon: FaCode },
                 { name: 'Job Post Schema', href: '#', Icon: FaCode },
                 { name: 'Keyword Grouping', href: '#', Icon: FaSearch },

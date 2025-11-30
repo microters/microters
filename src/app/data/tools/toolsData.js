@@ -229,3 +229,24 @@ export const faqSchemaGeneratorToolSteps = {
     }
   ]
 };
+export const headlineGeneratorToolSteps = {
+  title: "How to Use Free Headline Generator",
+  description: "Using the Free Headline Generator is quick and simple.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Enter Your Keywords",
+      description: "Provide a primary keyword or topic to get started."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select a Headline Style",
+      description: "Choose from various headline styles such as informative, engaging, or question-based."
+    },
+    {
+      id: 3,
+      title: "Step 3: Generate and Use",
+      description: "Click “Generate” to get headline suggestions and pick the one that fits your content."
+    }
+  ]
+};

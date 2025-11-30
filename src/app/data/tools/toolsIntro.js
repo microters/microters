@@ -9,6 +9,7 @@ import disclaimerGeneratorImg from "@assets/images/tools/disclaimer-generator.pn
 import essayWriterImg from "@assets/images/tools/ai-essay-writer.png";
 import eventSchemaGeneratorImg from "@assets/images/tools/event-schema-generator.png";
 import faqSchemaGeneratorImg from "@assets/images/tools/faq-schema-generator.png";
+import headlineGeneratorImg from "@assets/images/tools/headline-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -325,6 +326,35 @@ export const faqSchemaGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers benefit by creating structured FAQ data for campaign-related pages. This ensures that common queries are addressed upfront, improving the user experience. It also integrates seamlessly into broader marketing efforts, driving traffic from social platforms to the targeted web pages with optimized content."
+    }
+  ]
+};
+
+export const headlineGeneratorToolIntro = {
+  title: "What is Free Headline Generator?",
+  description: [
+    "The Free Headline Generator is a tool designed to create compelling headlines for your content. By analyzing keywords, it suggests headlines that capture attention while aligning with SEO best practices.",
+    "This tool simplifies the process of headline creation, ensuring they are both creative and optimized for search engines. It’s ideal for those looking to enhance their content marketing efforts without extra effort."
+  ],
+  image: headlineGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free Headline Generator Tool",
+  useCasesIntro: "Microters’ Free Headline Generator is versatile and supports a wide range of users.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use the tool to create captivating headlines for email campaigns, ads, and landing pages. This helps improve click-through rates and engagement. By aligning headlines with keyword clustering techniques, marketers can reach their target audience effectively and boost conversions."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "Bloggers and website owners can craft catchy blog post titles that attract readers and improve SEO rankings. This tool ensures headlines are not only creative but also optimized for search engines. It also helps generate ideas for trending topics, ensuring consistent and engaging content creation."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can use this tool to generate headlines that complement their articles and stories. With tailored suggestions, it helps create titles that resonate with readers. This ensures their work is more discoverable and impactful in both digital and print formats."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media professionals can create impactful headlines for posts, boosting visibility and engagement on platforms. This tool helps craft attention-grabbing captions that drive traffic. By integrating SEO keywords, social media posts become more discoverable, extending their reach and effectiveness."
     }
   ]
 };
