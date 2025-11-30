@@ -10,6 +10,10 @@ import essayWriterImg from "@assets/images/tools/ai-essay-writer.png";
 import eventSchemaGeneratorImg from "@assets/images/tools/event-schema-generator.png";
 import faqSchemaGeneratorImg from "@assets/images/tools/faq-schema-generator.png";
 import headlineGeneratorImg from "@assets/images/tools/headline-generator.png";
+import jobPostSchemaImg from "@assets/images/tools/job-post-schema.png";
+import internalLinkAnalyzerImg from "@assets/images/tools/internal-link-analyzer.png";
+import keywordGroupingImg from "@assets/images/tools/keyword-grouping.png";
+import keywordClusteringImg from "@assets/images/tools/keyword-clustering-tool.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -355,6 +359,122 @@ export const headlineGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media professionals can create impactful headlines for posts, boosting visibility and engagement on platforms. This tool helps craft attention-grabbing captions that drive traffic. By integrating SEO keywords, social media posts become more discoverable, extending their reach and effectiveness."
+    }
+  ]
+};
+
+export const jobPostingSchemaToolIntro = {
+  title: "What is Job Post Schema?",
+  description: [
+    "Job Post Schema is a type of structured data markup designed to make job listings more accessible and appealing in search engine results. It provides details like job title, description, location, salary, and application process in a structured format that search engines understand.",
+    "Using Job Post Schema improves the chances of your job listing appearing in Google’s job search feature. This leads to more exposure, higher engagement, and faster hiring results for employers."
+  ],
+  image: jobPostSchemaImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Job Post Schema Tool",
+  useCasesIntro: "Microters’ tool is designed for various users. Here’s how it helps different professionals:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing professionals can use the Job Post Schema Tool to promote job openings more effectively. Rich search results attract more candidates and improve application rates. The structured data ensures the job posting aligns with SEO best practices, increasing traffic to the company’s career pages."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers or website owners running job boards or career sections can use this tool to optimize listings. It enhances the credibility and usability of their platform. Schema markup helps site owners rank better in job-related searches, driving more traffic and engagement."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Content writers creating job descriptions for clients can elevate their work with schema. It ensures job postings meet technical SEO standards. The added visibility improves client satisfaction and positions the writer as a knowledgeable professional in the industry."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers often link job openings to increase reach. Adding schema markup to job pages ensures higher visibility and better results in search engines. With better exposure, marketers can drive more qualified traffic to job listings, complementing their social media strategies."
+    }
+  ]
+};
+
+export const internalLinkAnalyzerToolIntro = {
+  title: "What is Free Internal Link Analyzer Tool?",
+  description: [
+    "The Free Internal Link Analyzer Tool is a powerful resource that analyzes the internal links on your website. By providing detailed insights, it helps identify broken links, ensures proper link distribution, and boosts your website’s overall SEO performance.",
+    "With this tool, users can streamline their link-building strategies, making it easier to improve site navigation and enhance page authority. It’s designed for efficiency, catering to professionals who want actionable insights without complicated processes."
+  ],
+  image: internalLinkAnalyzerImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free Internal Link Analyzer Tool",
+  useCasesIntro: "Easily optimize your internal linking with Microters Free Internal Link Checker Tool. Whether you’re a marketer, blogger, or social media strategist, this tool delivers tailored benefits.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "For marketers, the tool simplifies SEO strategies by identifying linking opportunities and ensuring all internal links work efficiently. It helps improve page authority across key pages, boosting overall search engine performance. Additionally, marketers can use insights from the tool to create better user experiences, enhancing navigation and increasing conversion rates on important landing pages."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers can save time by quickly spotting and fixing broken links, ensuring their posts always deliver value. The tool’s clustering feature helps group relevant pages together for a smoother user experience. Site owners benefit from comprehensive reports that highlight linking gaps, helping to maintain a well-structured, professional website."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can use the tool to structure their internal links effectively, supporting their content strategies. Linking related pages improves content value and keeps readers engaged longer. With keyword clustering capabilities, writers can organize their pages by topic, making it easier for users to explore and interact with content."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can utilize the tool to link campaign landing pages strategically, boosting traffic and engagement. A well-linked site ensures visitors easily find information after arriving from social platforms. The tool also identifies key areas to improve link placement, helping marketers create a seamless experience for users coming from social media."
+    }
+  ]
+}
+
+export const keywordGroupingToolIntro = {
+  title: "What is FREE Keyword Grouping Tool?",
+  description: [
+    "The FREE Keyword Grouping Tool is a user-friendly solution for organizing and clustering keywords. It automatically groups keywords based on relevance, ensuring your campaigns target the right audience.",
+    "This tool is ideal for marketers, writers, and bloggers looking to streamline their SEO strategies. It saves time, boosts search engine performance, and provides actionable insights for content optimization."
+  ],
+  image: keywordGroupingImg,
+  useCasesTitle: "Use Cases of ‘Microters’ FREE Keyword Grouping Tool",
+  useCasesIntro: "Microters’ FREE Keyword Grouping Tool is versatile and supports multiple applications.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use the tool to organize keywords for ad campaigns, making it easier to target specific customer segments. Grouped keywords ensure higher ad relevance and better ROI. It also simplifies creating targeted landing pages by aligning content with clustered keyword groups."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "Bloggers and site owners can benefit from keyword clusters to improve their content strategies. By identifying related terms, they can optimize posts for long-tail keywords. This tool helps improve organic traffic by focusing on keywords that resonate with audience interests."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can generate ideas for articles, headlines, and meta descriptions by exploring clustered keywords. It ensures their content remains relevant and focused on specific topics. Using grouped keywords also helps in maintaining consistency and accuracy throughout the content."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media professionals can create tailored campaigns using keyword clusters. It allows them to align posts with trending or niche terms, increasing engagement rates. Grouped keywords help craft targeted hashtags and captions, making posts more discoverable."
+    }
+  ]
+};
+
+export const keywordClusteringToolIntro = {
+  title: "What is Free Keyword Clustering Tool?",
+  description: [
+    "A Free Keyword Clustering Tool is a software solution that groups related keywords into meaningful clusters. This tool is designed to help users identify keyword patterns and trends for more effective content strategies.",
+    "With this tool, you can save time and boost productivity by automating the keyword grouping process. It’s an essential resource for anyone working on SEO, marketing, or content creation."
+  ],
+  image: keywordClusteringImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free Keyword Clustering Tool",
+  useCasesIntro: "The Microters Free Keyword Clustering Tool has a variety of use cases for professionals across industries.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "This tool is ideal for marketers who need to optimize ad campaigns and create targeted content. By organizing keywords into clusters, it becomes easier to identify profitable opportunities. Marketers can also use the tool to improve PPC campaigns, ensuring that ad groups are relevant and cost-effective. It helps drive better engagement and ROI."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers can use the tool to create topic ideas and improve their SEO strategies. By grouping similar keywords, they can plan blog posts that rank higher in search engines. Website owners can also identify keyword trends, ensuring their content aligns with audience needs and boosts site traffic effectively."
+    },
+    {
+      title: "Writing Professionals",
+      content: "For writers, this tool provides a streamlined way to gather ideas. It’s great for creating outlines and writing articles that align with targeted keywords. Professionals can also ensure their work meets SEO guidelines, making their content more discoverable to the intended audience."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can craft better posts and ad campaigns with relevant keywords. The tool helps identify trending terms to target audiences effectively. It also aids in analyzing engagement patterns, ensuring posts are relevant and resonate with followers."
     }
   ]
 };

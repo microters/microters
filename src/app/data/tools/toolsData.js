@@ -250,3 +250,87 @@ export const headlineGeneratorToolSteps = {
     }
   ]
 };
+export const jobPostingSchemaToolSteps = {
+  title: "How to Use Job Post Schema",
+  description: "Adding Job Post Schema is easy with the right tool. Here’s a quick guide:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Enter Job Details",
+      description: "Provide key job information, including title, description, location, salary, and application URL, into the tool’s fields."
+    },
+    {
+      id: 2,
+      title: "Step 2: Generate Schema Markup",
+      description: "Use the tool to create structured data from the input. Review and ensure all details are accurate."
+    },
+    {
+      id: 3,
+      title: "Step 3: Implement on Your Website",
+      description: "Copy the generated schema and paste it into your site’s HTML code. Validate it using Google’s Rich Results Test."
+    }
+  ]
+};
+export const internalLinkAnalyzerToolSteps = {
+  title: "How to Use Internal Link Analyzer Tool?",
+  description: "Getting started is easy! Follow these simple steps to make the most of the Free Internal Link Checker Tool:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Enter Your URL",
+      description: "Input your website’s URL in the tool’s search bar to begin the analysis."
+    },
+    {
+      id: 2,
+      title: "Step 2: Run the Analysis",
+      description: "Click the analyze button and let the tool scan your internal link structure."
+    },
+    {
+      id: 3,
+      title: "Step 3: Review the Results",
+      description: "Examine the detailed report to find broken links, optimize anchor texts, and improve link placement."
+    }
+  ]
+};
+export const keywordGroupingToolSteps = {
+  title: "How to Use FREE Keyword Grouping Tool",
+  description: "Using the tool is simple and quick.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Upload or Enter Keywords",
+      description: "Input a list of keywords manually or upload a file."
+    },
+    {
+      id: 2,
+      title: "Step 2: Run the Tool",
+      description: "Click on the “Group Keywords” button to let the tool analyze and cluster your data."
+    },
+    {
+      id: 3,
+      title: "Step 3: Review and Export",
+      description: "Check the grouped keywords and export the results for your project."
+    }
+  ]
+};
+export const keywordClusteringToolSteps = {
+  title: "How to Use Free Keyword Clustering Tool?",
+  description: "Using the Free Keyword Clustering Tool is quick and simple. Follow these steps to get started:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your Keywords",
+      description: "Start by entering a list of keywords you want to cluster into the provided input box. You can paste them directly or upload a file with the keywords."
+    },
+    {
+      id: 2,
+      title: "Step 2: Run the Clustering Process",
+      description: "Click the “Create Cluster” button to initiate the tool’s algorithm. It will automatically organize your keywords into relevant groups based on their similarity."
+    },
+    {
+      id: 3,
+      title: "Step 3: Download or View the Results",
+      description: "Once the clustering process is complete, you can view the keyword clusters directly on the screen or download the results as a file for further use in your SEO strategy."
+    }
+  ]
+};

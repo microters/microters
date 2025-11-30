@@ -441,3 +441,151 @@ export const headlineGeneratorToolFeatures = {
     }
   ]
 };
+
+export const jobPostingSchemaToolFeatures = {
+  title: "Why Choose ‘Microters’ Job Post Schema?",
+  description: "Microters’ tool is trusted for its simplicity and effectiveness. Here are its key benefits:",
+  features: [
+    {
+      id: 1,
+      title: "Free and Accessible",
+      description: "The tool is available for free, making it an ideal choice for individuals and businesses of all sizes. No hidden costs mean you can fully explore its potential. This accessibility ensures that even small businesses can optimize their job postings without additional expenses."
+    },
+    {
+      id: 2,
+      title: "Easy to Use",
+      description: "Designed for non-technical users, the interface makes schema creation straightforward. Even beginners can generate schema markup without any coding skills. The simplicity saves time and reduces errors, making it a dependable choice for all users."
+    },
+    {
+      id: 3,
+      title: "Boosts Job Post Visibility",
+      description: "By using structured data, your job postings gain a competitive edge in search results. Google and other search engines prioritize structured content. This means more applicants can discover your listings, resulting in faster recruitment."
+    },
+    {
+      id: 4,
+      title: "Supports Multiple Platforms",
+      description: "The tool works seamlessly with popular platforms like WordPress, Wix, and custom-built websites. You can use the generated schema anywhere. This flexibility ensures compatibility, making it ideal for diverse website setups."
+    },
+    {
+      id: 5,
+      title: "Regular Updates",
+      description: "Microters ensures the tool stays up-to-date with Google’s schema guidelines. You can trust that your schema will always be compliant. Staying updated ensures your job listings remain visible and effective in search results."
+    },
+    {
+      id: 6,
+      title: "Time-Saving Automation",
+      description: "The tool automates schema creation, reducing the time required for manual coding. It’s perfect for busy professionals. This efficiency allows you to focus on other tasks while ensuring your job listings are optimized."
+    }
+  ]
+};
+
+export const internalLinkAnalyzerToolFeatures = {
+  title: "Why Choose ‘Microters’ Free Internal Link Analyzer Tool?",
+  description: "This tool offers unmatched value for anyone looking to improve their internal linking strategies. Here are six key benefits:",
+  features: [
+    {
+      id: 1,
+      title: "User-Friendly Interface",
+      description: "With a clean and intuitive design, the tool is easy for beginners and professionals alike. You don’t need technical expertise to get actionable insights."
+    },
+    {
+      id: 2,
+      title: "Fast Analysis",
+      description: "Quickly scan your entire website and receive detailed results in seconds. Time-saving and efficient, it’s perfect for busy schedules."
+    },
+    {
+      id: 3,
+      title: "Detailed Reporting",
+      description: "The tool provides comprehensive reports highlighting broken links, link distribution, and optimization opportunities. These insights are invaluable for improving SEO."
+    },
+    {
+      id: 4,
+      title: "Keyword Clustering Features",
+      description: "Organize your pages by keyword groups to improve content relevancy. Keyword clustering ensures your users find related topics seamlessly."
+    },
+    {
+      id: 5,
+      title: "Free and Reliable",
+      description: "Unlike many tools with hidden fees, this tool is completely free, offering high-quality insights without compromise."
+    },
+    {
+      id: 6,
+      title: "Perfect for All Professionals",
+      description: "From marketers to social media strategists, the tool caters to diverse needs, providing tailored insights to enhance internal link strategies for any industry."
+    }
+  ]
+};
+
+export const keywordGroupingToolFeatures = {
+  title: "Why Choose ‘Microters’ FREE Keyword Grouping Tool?",
+  description: "This tool stands out for its simplicity, accuracy, and efficiency.",
+  features: [
+    {
+      id: 1,
+      title: "Easy to Use",
+      description: "The intuitive interface makes keyword grouping fast and hassle-free, even for beginners. You can generate organized keyword clusters with just a few clicks, saving valuable time."
+    },
+    {
+      id: 2,
+      title: "Completely Free",
+      description: "The tool is available at no cost, offering high-quality keyword clustering without any hidden fees. It’s an ideal solution for small businesses, freelancers, and individuals working on a budget."
+    },
+    {
+      id: 3,
+      title: "Advanced Clustering Algorithms",
+      description: "The tool uses advanced algorithms to group keywords based on search intent and relevance. This ensures precise clustering, making your SEO and content strategies more effective."
+    },
+    {
+      id: 4,
+      title: "Enhances SEO Performance",
+      description: "Well-organized keyword groups help improve your website’s search engine rankings. By focusing on clustered keywords, you can create highly targeted and engaging content."
+    },
+    {
+      id: 5,
+      title: "Exportable Results",
+      description: "The tool allows you to download grouped keywords for use in campaigns, reports, or content plans. This feature ensures seamless integration with your workflow and tools."
+    },
+    {
+      id: 6,
+      title: "Regular Updates",
+      description: "Microters updates the tool regularly to keep it aligned with the latest SEO trends and algorithms. This guarantees accurate results and helps users stay ahead in the competitive digital landscape."
+    }
+  ]
+};
+
+export const keywordClusteringToolFeatures = {
+  title: "Why Choose ‘Microters’ Free Keyword Clustering Tool?",
+  description: "The tool offers various standout features to make keyword clustering seamless and effective.",
+  features: [
+    {
+      id: 1,
+      title: "Free to Use",
+      description: "Unlike many other keyword clustering tools, Microter offers its services for free, making it accessible to businesses of all sizes."
+    },
+    {
+      id: 2,
+      title: "User-Friendly",
+      description: "The tool is designed to be intuitive, allowing users to easily input their keywords and receive organized clusters without a steep learning curve."
+    },
+    {
+      id: 3,
+      title: "Accurate Clustering",
+      description: "Microter’s algorithm efficiently groups similar keywords, improving the precision of SEO and content strategies."
+    },
+    {
+      id: 4,
+      title: "Time-Saving",
+      description: "By automating the keyword clustering process, it saves valuable time compared to manual methods, letting you focus on other important tasks."
+    },
+    {
+      id: 5,
+      title: "Improves SEO Strategy",
+      description: "The tool helps identify keyword relationships, allowing for better content targeting and optimization."
+    },
+    {
+      id: 6,
+      title: "No Sign-Up Required",
+      description: "Users can start using the tool immediately without the hassle of creating an account or providing personal details."
+    }
+  ]
+};

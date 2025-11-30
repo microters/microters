@@ -10,9 +10,9 @@ import { headlineGeneratorToolSteps } from "app/data/tools/toolsData";
 import { headlineGeneratorToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free FAQ Schema Generator – Create JSON-LD FAQ Markup Easily",
+  title: "Free Headline Generator – Create Catchy, High-Impact Headlines Instantly",
   description:
-    "Generate clean, SEO-friendly JSON-LD FAQ Schema markup instantly with our Free FAQ Schema Generator. Improve search visibility and enhance rich results without coding.",
+    "Generate attention-grabbing, SEO-friendly headlines in seconds with our Free Headline Generator. Perfect for blogs, ads, emails, and social media content.",
 };
 
 export default function HeadlineGeneratorPage() {
