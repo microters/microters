@@ -5,6 +5,7 @@ import ulkWebWordCounterImg from "@assets/images/tools/ulk-web-word-counter.png"
 import caseConverterImg from "@assets/images/tools/case-converter.png";
 import conclusionGeneratorImg from "@assets/images/tools/conclusion-generator.png";
 import cursiveTextGeneratorImg from "@assets/images/tools/cursive-text-generator.png";
+import disclaimerGeneratorImg from "@assets/images/tools/disclaimer-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -205,6 +206,35 @@ export const cursiveTextGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media professionals can use cursive text to make captions, bios, or posts more visually appealing. Unique fonts help content stand out in crowded feeds. Stylized text is perfect for creating engaging visuals for Instagram stories, posts, and other digital campaigns."
+    }
+  ]
+};
+
+export const disclaimerGeneratorToolIntro = {
+  title: "What is Free Disclaimer Generator?",
+  description: [
+    "The Free Disclaimer Generator is a tool designed to help users create customized disclaimers for their websites or content. It simplifies the process of drafting disclaimers, ensuring they are compliant with legal requirements.",
+    "This tool is perfect for bloggers, businesses, and social media professionals who need clear, concise, and reliable disclaimers without the hassle of hiring legal experts."
+  ],
+  image: disclaimerGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free Disclaimer Generator Tool",
+  useCasesIntro: "Microters’ Free Disclaimer Generator is versatile and caters to different user needs.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use the tool to create disclaimers for email campaigns, advertisements, or promotional materials. This ensures compliance with legal standards and avoids potential disputes. It helps maintain transparency with customers, fostering trust and credibility for brands."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "Bloggers and website owners can easily draft disclaimers to protect themselves from legal liabilities. Whether it’s a personal blog or an e-commerce site, the tool ensures compliance with relevant regulations. Using disclaimers also helps communicate policies clearly to visitors, enhancing professionalism and trust."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers creating content for clients or websites can include disclaimers to clarify the scope and intent of their work. This safeguards against misinterpretation or legal challenges. The tool provides tailored disclaimers, ensuring writers meet their unique project needs effortlessly."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media professionals can generate disclaimers for posts, campaigns, or sponsored content to meet platform policies. This helps avoid issues related to false claims or endorsements. By using disclaimers, marketers maintain ethical standards and build trust with their audience."
     }
   ]
 };

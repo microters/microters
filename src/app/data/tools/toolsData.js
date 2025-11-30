@@ -145,3 +145,24 @@ export const cursiveTextGeneratorToolSteps = {
     }
   ]
 };
+export const disclaimerGeneratorToolSteps = {
+  title: "How to Use Free Disclaimer Generator",
+  description: "Using this tool is straightforward and requires no special knowledge.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Enter Your Information",
+      description: "Provide details about your website, business, or content."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select Disclaimer Type",
+      description: "Choose from options like general, affiliate, or liability disclaimers."
+    },
+    {
+      id: 3,
+      title: "Step 3: Generate and Copy",
+      description: "Click “Generate” and copy the disclaimer to use on your website or content."
+    }
+  ]
+};

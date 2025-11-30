@@ -256,3 +256,40 @@ export const cursiveTextGeneratorToolFeatures = {
     }
   ]
 };
+
+export const disclaimerGeneratorToolFeatures = {
+  title: "Why Choose ‘Microters’ Free Disclaimer Generator?",
+  description: "This tool simplifies creating disclaimers while ensuring they are professional and reliable.",
+  features: [
+    {
+      id: 1,
+      title: "User-Friendly Design",
+      description: "The interface is intuitive, making it easy for anyone to create a disclaimer in minutes. Even users without legal knowledge can confidently generate disclaimers."
+    },
+    {
+      id: 2,
+      title: "Completely Free",
+      description: "The tool is available at no cost, providing a valuable resource for individuals and businesses. It eliminates the expense of hiring legal services for basic disclaimer needs."
+    },
+    {
+      id: 3,
+      title: "Customizable Options",
+      description: "Users can select from various disclaimer types to suit their specific requirements. This flexibility ensures the generated disclaimers match individual or business needs."
+    },
+    {
+      id: 4,
+      title: "Improves Legal Compliance",
+      description: "Including a disclaimer helps users meet legal requirements and protect themselves from liabilities. Whether for affiliate links, content sharing, or liability issues, this tool ensures comprehensive coverage."
+    },
+    {
+      id: 5,
+      title: "Time-Saving Solution",
+      description: "The tool simplifies the entire process, delivering a ready-to-use disclaimer in seconds. This allows users to focus on their core tasks while staying protected."
+    },
+    {
+      id: 6,
+      title: "Regular Updates",
+      description: "Microters updates the tool to reflect the latest legal standards and requirements. This guarantees that users always have access to accurate and relevant disclaimers."
+    }
+  ]
+};

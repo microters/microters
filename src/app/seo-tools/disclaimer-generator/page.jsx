@@ -5,9 +5,9 @@ import ToolIntroSection from "app/components/common/ToolIntro";
 import ToolStepsSection from "app/components/common/ToolSteps";
 import DisclaimerGenerator from "app/components/tools/DisclaimerGenerator";
 import { schemaGeneratorRelatedToolsData } from "app/data/tools/relatedToolsData";
-import { ulkWebWordCounterToolFeatures } from "app/data/tools/toolFeatures";
-import { ulkWebWordCounterToolSteps } from "app/data/tools/toolsData";
-import { ulkWebWordCounterToolIntro } from "app/data/tools/toolsIntro";
+import { disclaimerGeneratorToolFeatures } from "app/data/tools/toolFeatures";
+import { disclaimerGeneratorToolSteps } from "app/data/tools/toolsData";
+import { disclaimerGeneratorToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
   title: "Free Web Word Counter Tool | ULK Online Word & Character Counter",
@@ -34,24 +34,24 @@ export default function WebWordCounterPage() {
       </div>
       {/* The Steps Section */}
       <ToolStepsSection
-        title={ulkWebWordCounterToolSteps.title}
-        description={ulkWebWordCounterToolSteps.description}
-        steps={ulkWebWordCounterToolSteps.steps}
+        title={disclaimerGeneratorToolSteps.title}
+        description={disclaimerGeneratorToolSteps.description}
+        steps={disclaimerGeneratorToolSteps.steps}
       />
       {/* Tools Intro Section */}
       <ToolIntroSection
-        title={ulkWebWordCounterToolIntro.title}
-        description={ulkWebWordCounterToolIntro.description}
-        image={ulkWebWordCounterToolIntro.image}
-        useCasesTitle={ulkWebWordCounterToolIntro.useCasesTitle}
-        useCasesIntro={ulkWebWordCounterToolIntro.useCasesIntro}
-        useCases={ulkWebWordCounterToolIntro.useCases}
+        title={disclaimerGeneratorToolIntro.title}
+        description={disclaimerGeneratorToolIntro.description}
+        image={disclaimerGeneratorToolIntro.image}
+        useCasesTitle={disclaimerGeneratorToolIntro.useCasesTitle}
+        useCasesIntro={disclaimerGeneratorToolIntro.useCasesIntro}
+        useCases={disclaimerGeneratorToolIntro.useCases}
       />
       <ClientsLogos />
       <ToolFeaturesSection
-        title={ulkWebWordCounterToolFeatures.title}
-        description={ulkWebWordCounterToolFeatures.description}
-        features={ulkWebWordCounterToolFeatures.features}
+        title={disclaimerGeneratorToolFeatures.title}
+        description={disclaimerGeneratorToolFeatures.description}
+        features={disclaimerGeneratorToolFeatures.features}
       />
       <RelatedToolsSection
         title={schemaGeneratorRelatedToolsData.title}
