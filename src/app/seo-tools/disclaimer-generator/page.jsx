@@ -10,11 +10,12 @@ import { disclaimerGeneratorToolSteps } from "app/data/tools/toolsData";
 import { disclaimerGeneratorToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free Web Word Counter Tool | ULK Online Word & Character Counter",
-  description: "Count words, characters, and keywords effortlessly using the ULK Web Word Counter Tool. Ideal for SEO, content planning, blogging, and keyword clustering.",
+  title: "Free Disclaimer Generator – Create Custom Legal Disclaimers Instantly",
+  description:
+    "Generate professional, legally sound disclaimers for blogs, websites, and businesses with our Free Disclaimer Generator. Fast, customizable, and easy to use.",
 };
 
-export default function WebWordCounterPage() {
+export default function DisclaimerGeneratorPage() {
   return (
     <main>
       <div className="bg-[#fef7f5] pt-16 lg:pt-20">

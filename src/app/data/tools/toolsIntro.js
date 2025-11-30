@@ -6,6 +6,7 @@ import caseConverterImg from "@assets/images/tools/case-converter.png";
 import conclusionGeneratorImg from "@assets/images/tools/conclusion-generator.png";
 import cursiveTextGeneratorImg from "@assets/images/tools/cursive-text-generator.png";
 import disclaimerGeneratorImg from "@assets/images/tools/disclaimer-generator.png";
+import essayWriterImg from "@assets/images/tools/ai-essay-writer.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -235,6 +236,35 @@ export const disclaimerGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media professionals can generate disclaimers for posts, campaigns, or sponsored content to meet platform policies. This helps avoid issues related to false claims or endorsements. By using disclaimers, marketers maintain ethical standards and build trust with their audience."
+    }
+  ]
+};
+
+export const essayWriterToolIntro = {
+  title: "What is Free AI Essay Writer?",
+  description: [
+    "A Free AI Essay Writer is an online tool designed to help users create essays on any topic effortlessly. It uses advanced AI to analyze your input and generate structured, coherent essays that fit your needs.",
+    "This tool is perfect for students, professionals, and content creators who want polished, high-quality essays in less time. It’s easy to use and supports various tones and languages to suit different audiences."
+  ],
+  image: essayWriterImg,
+  useCasesTitle: "Use Cases of Free AI Essay Writer Tool",
+  useCasesIntro: "The Free AI Essay Writer is versatile and can be used for various writing needs:",
+  useCases: [
+    {
+      title: "Academic Essays",
+      content: "Students can use the tool to draft essays on various topics for assignments, exams, or coursework in subjects like history, literature, science, and more."
+    },
+    {
+      title: "Research Summaries",
+      content: "Create concise summaries of research papers or articles, ideal for academic reports, reviews, or presentations."
+    },
+    {
+      title: "Professional Reports",
+      content: "Business professionals can use the tool to craft executive summaries, business case studies, or detailed analytical reports."
+    },
+    {
+      title: "Blog Writing",
+      content: "Content creators and bloggers can generate engaging posts on trending or niche topics, saving time on initial drafts."
     }
   ]
 };

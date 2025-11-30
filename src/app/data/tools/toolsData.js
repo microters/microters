@@ -166,3 +166,24 @@ export const disclaimerGeneratorToolSteps = {
     }
   ]
 };
+export const essayWriterToolSteps = {
+  title: "How to Use Free AI Essay Writer Tool",
+  description: "Using the Free AI Essay Writer is simple and fast. Here’s how it works:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Access the Tool",
+      description: "Open the website or platform hosting the Free AI Essay Writer tool. Ensure you have a stable internet connection for seamless usage."
+    },
+    {
+      id: 2,
+      title: "Step 2: Input Your Topic",
+      description: "Enter your desired essay topic or subject into the designated text box. Be as specific as possible to get accurate and relevant results."
+    },
+    {
+      id: 3,
+      title: "Step 3: Choose the Type of Essay",
+      description: "Select the type of essay you need: argumentative, descriptive, narrative, persuasive, or any other format provided by the tool."
+    }
+  ]
+};

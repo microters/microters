@@ -293,3 +293,40 @@ export const disclaimerGeneratorToolFeatures = {
     }
   ]
 };
+
+export const essayWriterToolFeatures = {
+  title: "Why Choose ‘Microters’ Free AI Essay Writer Tool?",
+  description: "The Free AI Essay Writer Tool offers a range of features to make essay writing easier:",
+  features: [
+    {
+      id: 1,
+      title: "Completely Free",
+      description: "No hidden charges or subscription fees—perfect for students, professionals, and writers on a budget."
+    },
+    {
+      id: 2,
+      title: "User-Friendly Interface",
+      description: "Designed for ease of use, even for those with minimal technical skills."
+    },
+    {
+      id: 3,
+      title: "High-Quality Outputs",
+      description: "Produces well-structured and coherent essays tailored to your topic and preferences."
+    },
+    {
+      id: 4,
+      title: "Customizable Options",
+      description: "Adjust tone, length, and style to suit academic, professional, or creative needs."
+    },
+    {
+      id: 5,
+      title: "Time-Efficient",
+      description: "Generates essays in seconds, saving valuable time for brainstorming or editing."
+    },
+    {
+      id: 6,
+      title: "Accessible Anywhere",
+      description: "Use it on any device, anytime, with an internet connection."
+    }
+  ]
+};

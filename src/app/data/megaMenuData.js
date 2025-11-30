@@ -189,7 +189,7 @@ export const MegaMenuData = [
                 { name: 'Acronym Generator', href: '/ai-writing-tools/acronym-generator', Icon: FaRobot },
                 { name: 'AI Article Generator', href: '#', Icon: FaRobot },
                 { name: 'Conclusion Generator', href: '/ai-writing-tools/conclusion-generator', Icon: FaRobot },
-                { name: 'Essay Writer', href: '#', Icon: FaRobot },
+                { name: 'Essay Writer', href: '/ai-writing-tools/essay-writer', Icon: FaRobot },
                 { name: 'Thesis Statement Generator', href: '#', Icon: FaRobot },
                 { name: 'Sentence Expander', href: '#', Icon: FaRobot },
                 { name: 'Sentence Generator', href: '#', Icon: FaRobot },
