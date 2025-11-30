@@ -367,3 +367,40 @@ export const eventSchemaGeneratorToolFeatures = {
     }
   ]
 };
+
+export const faqSchemaGeneratorToolFeatures = {
+  title: "Why Choose ‘Microters’ FAQ Schema Generator?",
+  description: "Effortless and reliable, Microters FAQ Schema Generator offers key benefits:",
+  features: [
+    {
+      id: 1,
+      title: "User-Friendly Design",
+      description: "Manually coding schema markup is tedious. This tool automates the process, saving you hours of work and ensuring accuracy in every recipe."
+    },
+    {
+      id: 2,
+      title: "Time-Saving Automation",
+      description: "The tool automates schema creation, letting you focus on other tasks without worrying about technical details."
+    },
+    {
+      id: 3,
+      title: "Enhanced SEO Performance",
+      description: "Structured data improves search rankings and click-through rates, making your content stand out in search results."
+    },
+    {
+      id: 4,
+      title: "Customizable for Your Needs",
+      description: "Adapt the schema to suit your specific website or content strategy, ensuring compatibility and effectiveness."
+    },
+    {
+      id: 5,
+      title: "Error-Free Functionality",
+      description: "The tool generates accurate schema, avoiding manual errors and ensuring compliance with search engine standards."
+    },
+    {
+      id: 6,
+      title: "Built-In Keyword Integration",
+      description: "With options to integrate keyword clustering, it’s perfect for users aiming to optimize their SEO strategies further."
+    }
+  ]
+};

@@ -8,6 +8,7 @@ import cursiveTextGeneratorImg from "@assets/images/tools/cursive-text-generator
 import disclaimerGeneratorImg from "@assets/images/tools/disclaimer-generator.png";
 import essayWriterImg from "@assets/images/tools/ai-essay-writer.png";
 import eventSchemaGeneratorImg from "@assets/images/tools/event-schema-generator.png";
+import faqSchemaGeneratorImg from "@assets/images/tools/faq-schema-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -295,6 +296,35 @@ export const eventSchemaGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can use the tool to link events directly to campaigns, driving more traffic from search engines. It ensures a cohesive online presence. The Event Schema Generator helps marketers align event pages with promotional strategies, boosting engagement and click-through rates."
+    }
+  ]
+};
+
+export const faqSchemaGeneratorToolIntro = {
+  title: "What is FAQ Schema Generator?",
+  description: [
+    "An FAQ Schema Generator is a tool that allows you to create structured data for FAQs following schema.org guidelines. This structured data enables search engines like Google to display FAQs prominently in search results, improving user experience and click-through rates.",
+    "Using this tool eliminates the need for manual coding. It saves time and ensures your content is accurately formatted for optimal search engine visibility."
+  ],
+  image: faqSchemaGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ FAQ Schema Generator Tool",
+  useCasesIntro: "This tool is versatile and beneficial across different professions. Here’s how it works for various users:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use this tool to enhance the visibility of their campaigns by ensuring FAQs appear prominently in search results. This helps potential customers find quick answers, reducing friction in the decision-making process. It also saves time by automating schema creation, allowing marketers to focus on crafting impactful campaigns and improving ROI."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "For bloggers and website owners, this tool helps structure FAQ content for better ranking and visibility. Optimized FAQs attract more clicks and improve site engagement. By eliminating the need for coding expertise, it enables them to create professional-looking FAQs effortlessly, leaving more time for content development."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can leverage the tool to highlight key details and make their content more search-engine friendly. Structured FAQs improve accessibility, ensuring readers can quickly locate the information they need. This approach builds credibility with the audience and helps writers connect with readers more effectively."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers benefit by creating structured FAQ data for campaign-related pages. This ensures that common queries are addressed upfront, improving the user experience. It also integrates seamlessly into broader marketing efforts, driving traffic from social platforms to the targeted web pages with optimized content."
     }
   ]
 };

@@ -208,3 +208,24 @@ export const eventSchemaGeneratorToolSteps = {
     }
   ]
 };
+export const faqSchemaGeneratorToolSteps = {
+  title: "How to Use FAQ Schema Generator",
+  description: "Using the FAQ Schema Generator is straightforward. Here are the steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your FAQs",
+      description: "Enter your questions and their answers into the tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Generate Schema Code",
+      description: "Click to generate structured data automatically."
+    },
+    {
+      id: 3,
+      title: "Step 3: Add to Your Website",
+      description: "Copy and paste the generated code into your site’s HTML."
+    }
+  ]
+};
