@@ -626,3 +626,40 @@ export const localBusinessSchemaToolFeatures = {
     }
   ]
 };
+
+export const metaTagsCheckerToolFeatures = {
+  title: "Why Choose ‘Microters’ Meta Tags Checker Tool?",
+  description: "This tool is an essential resource for website optimization. Here’s why it stands out:",
+  features: [
+    {
+      id: 1,
+      title: "Ease of Use",
+      description: "The intuitive design allows users of all skill levels to check and improve their meta tags effortlessly. With a simple interface, you can complete your SEO checks in minutes, saving time and effort."
+    },
+    {
+      id: 2,
+      title: "Free and Accessible",
+      description: "The tool is completely free, making advanced meta tag analysis accessible to everyone. You don’t need a subscription or advanced technical knowledge—just enter your URL and start optimizing."
+    },
+    {
+      id: 3,
+      title: "Accurate Keyword Clustering",
+      description: "The tool supports keyword clustering, ensuring your tags align with search trends. By grouping keywords effectively, it enhances the relevance and reach of your content."
+    },
+    {
+      id: 4,
+      title: "Improves SERP Rankings",
+      description: "With proper meta tag optimization, your site can rank higher on search engine results pages (SERPs). Better rankings translate to increased traffic and visibility for your website."
+    },
+    {
+      id: 5,
+      title: "Regular Updates for Accuracy",
+      description: "Microters ensures the tool is regularly updated to match the latest SEO guidelines. This guarantees accurate analysis and helps you stay ahead of algorithm changes."
+    },
+    {
+      id: 6,
+      title: "Comprehensive Reports",
+      description: "The tool generates detailed reports, making it easy to identify areas for improvement. From keyword gaps to description errors, these reports guide your optimization process step by step."
+    }
+  ]
+};

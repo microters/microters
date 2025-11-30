@@ -15,6 +15,7 @@ import internalLinkAnalyzerImg from "@assets/images/tools/internal-link-analyzer
 import keywordGroupingImg from "@assets/images/tools/keyword-grouping.png";
 import keywordClusteringImg from "@assets/images/tools/keyword-clustering-tool.png";
 import localBusinessSchemaImg from "@assets/images/tools/local-business-schema.png";
+import metaTagsCheckerImg from "@assets/images/tools/meta-tags-checker.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -505,6 +506,35 @@ export const localBusinessSchemaToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can enhance local campaigns by incorporating structured data to ensure consistent business information across online channels. Using the tool complements social media strategies by increasing visibility and driving traffic from search engines to social platforms, boosting conversions."
+    }
+  ]
+};
+
+export const metaTagsCheckerToolIntro = {
+  title: "What is Meta Tags Checker Tool?",
+  description: [
+    "Meta Tags Checker Tool is a free, user-friendly tool designed to help you inspect and analyze your website’s meta tags. It provides insights into the structure and quality of meta titles, descriptions, and keywords to ensure optimal SEO performance.",
+    "With this tool, you can identify errors, improve keyword usage, and enhance your website’s relevance for search engines. It’s perfect for anyone aiming to boost online visibility and increase organic traffic."
+  ],
+  image: metaTagsCheckerImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Meta Tags Checker Tool",
+  useCasesIntro: "Microters’ Meta Tags Checker Tool serves diverse users, making SEO optimization accessible to all.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing experts can use this tool to refine their SEO strategies. By analyzing meta tags, marketers can ensure campaigns are targeting the right audience and boosting visibility. For ad campaigns or content strategies, the tool provides data-backed insights to maximize ROI and maintain competitive rankings."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers and site owners can leverage the tool to improve post visibility. By ensuring meta tags include high-performing keywords, they can attract more readers and retain traffic. It also helps them maintain SEO standards, keeping their sites updated with search engine requirements."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can ensure their articles rank well by crafting optimized meta descriptions and titles. The tool provides guidance on using effective keywords and concise tag structures. This ensures that written content aligns with SEO best practices, increasing discoverability."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media professionals can use the tool to create engaging meta descriptions for shared links. This helps improve click-through rates when promoting content across platforms. By optimizing meta tags, marketers can align their social strategies with SEO goals for better audience reach."
     }
   ]
 };

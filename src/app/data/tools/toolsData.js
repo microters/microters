@@ -355,3 +355,24 @@ export const localBusinessSchemaToolSteps = {
     }
   ]
 };
+export const metaTagsCheckerToolSteps = {
+  title: "How to Use Meta Tags Checker Tool",
+  description: "Using the Meta Tags Checker Tool is simple and efficient. Follow these three steps to get started:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Enter Your Website URL",
+      description: "Copy and paste your site’s URL into the tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Analyze Meta Tags",
+      description: "Click “Analyze” to let the tool scan your meta titles, descriptions, and keywords."
+    },
+    {
+      id: 3,
+      title: "Step 3: Review and Optimize",
+      description: "Check the results and make necessary updates to improve your SEO."
+    }
+  ]
+};
