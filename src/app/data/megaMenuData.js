@@ -151,7 +151,7 @@ export const MegaMenuData = [
                 { name: 'FAQ Schema Generator', href: '/seo-tools/faq-schema-generator', Icon: FaQuestionCircle },
                 { name: 'HowTo Schema Generator', href: '#', Icon: FaFileCode },
                 { name: 'Internal Link Analyzer', href: '/seo-tools/internal-link-analyzer', Icon: FaLink },
-                { name: 'Local Business Schema', href: '#', Icon: FaShopify },
+                { name: 'Local Business Schema', href: '/seo-tools/local-business-schema', Icon: FaShopify },
                 { name: 'Word Counter', href: '/seo-tools/word-counter', Icon: FaWordpress },
                 { name: 'Permalink Generator', href: '#', Icon: FaLink },
                 { name: 'Person Schema Generator', href: '#', Icon: FaUsers },

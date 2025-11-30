@@ -14,6 +14,7 @@ import jobPostSchemaImg from "@assets/images/tools/job-post-schema.png";
 import internalLinkAnalyzerImg from "@assets/images/tools/internal-link-analyzer.png";
 import keywordGroupingImg from "@assets/images/tools/keyword-grouping.png";
 import keywordClusteringImg from "@assets/images/tools/keyword-clustering-tool.png";
+import localBusinessSchemaImg from "@assets/images/tools/local-business-schema.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -475,6 +476,35 @@ export const keywordClusteringToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can craft better posts and ad campaigns with relevant keywords. The tool helps identify trending terms to target audiences effectively. It also aids in analyzing engagement patterns, ensuring posts are relevant and resonate with followers."
+    }
+  ]
+};
+
+export const localBusinessSchemaToolIntro = {
+  title: "What is Local Business Schema?",
+  description: [
+    "Local Business Schema is a structured data markup that search engines use to better understand your business details. This includes important information like your name, address, phone number, operating hours, and services.",
+    "Using Local Business Schema increases your visibility in local searches, map results, and knowledge panels. It’s a critical tool for attracting more customers and staying ahead of competitors."
+  ],
+  image: localBusinessSchemaImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Local Business Schema",
+  useCasesIntro: "This tool is useful for various professionals who want to enhance their local SEO efforts.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use this tool to simplify creating structured data for local SEO campaigns. It ensures businesses appear in local search results, driving more engagement and improving campaign effectiveness. By making local business information easily accessible to search engines, marketers can focus on growing visibility and gaining a competitive edge."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers and website owners can use the tool to boost local traffic. The tool helps simplify the technical aspects of schema markup, making it accessible for users of all skill levels. With improved local visibility, websites gain more organic traffic and engagement, ensuring content reaches the intended audience."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Content writers and SEO professionals can leverage this tool to optimize web pages with structured data. This ensures that their content ranks better in search results, driving increased attention and traffic. The tool’s ease of use allows writers to focus on creating engaging content while meeting SEO standards."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can enhance local campaigns by incorporating structured data to ensure consistent business information across online channels. Using the tool complements social media strategies by increasing visibility and driving traffic from search engines to social platforms, boosting conversions."
     }
   ]
 };

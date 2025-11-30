@@ -334,3 +334,24 @@ export const keywordClusteringToolSteps = {
     }
   ]
 };
+export const localBusinessSchemaToolSteps = {
+  title: "How to Use Local Business Schema?",
+  description: "Using the tool is simple and takes just three steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Business Details",
+      description: "Add your business name, address, phone number, and other relevant information into the tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Generate Schema Markup",
+      description: "The tool creates structured data (JSON-LD code) based on the details you provide."
+    },
+    {
+      id: 3,
+      title: "Step 3: Embed and Test",
+      description: "Copy and paste the code into your website and test it using Google’s Structured Data Testing Tool."
+    }
+  ]
+};

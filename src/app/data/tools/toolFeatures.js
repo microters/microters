@@ -589,3 +589,40 @@ export const keywordClusteringToolFeatures = {
     }
   ]
 };
+
+export const localBusinessSchemaToolFeatures = {
+  title: "Why Choose ‘Microters’ Local Business Schema?",
+  description: "Microters Local Business Schema provides unique benefits for businesses and professionals.",
+  features: [
+    {
+      id: 1,
+      title: "Easy to Use",
+      description: "The tool simplifies the process, requiring no technical skills to generate and implement schema markup."
+    },
+    {
+      id: 2,
+      title: "Free Keyword Clustering",
+      description: "Integrated keyword clustering tools help you group and target relevant terms, improving your SEO efforts."
+    },
+    {
+      id: 3,
+      title: "Time-Saving",
+      description: "Automation reduces the need for manual coding, giving you more time to focus on your business goals."
+    },
+    {
+      id: 4,
+      title: "SEO-Compliant Results",
+      description: "The schema markup adheres to SEO best practices, ensuring your business ranks higher in local searches."
+    },
+    {
+      id: 5,
+      title: "Accurate and Reliable",
+      description: "The tool generates precise structured data that meets search engine standards, minimizing errors."
+    },
+    {
+      id: 6,
+      title: "Adaptable for Professionals",
+      description: "Whether you’re a marketer, blogger, or social media expert, this tool meets various professional needs with tailored features."
+    }
+  ]
+};

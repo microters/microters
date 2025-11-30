@@ -10,9 +10,9 @@ import { keywordClusteringToolSteps } from "app/data/tools/toolsData";
 import { keywordClusteringToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free Keyword Grouping Tool – Cluster Keywords by Relevance Instantly",
+  title: "Free Keyword Clustering Tool – Automatically Cluster Keywords by Relevance",
   description:
-    "Group and cluster keywords effortlessly with our Free Keyword Grouping Tool. Improve SEO planning, content strategy, and keyword organization with fast, accurate grouping.",
+    "Cluster keywords instantly with our Free Keyword Clustering Tool. Improve SEO strategy, content planning, and topic organization using fast, accurate keyword clusters.",
 };
 
 export default function KeywordGroupingPage() {
