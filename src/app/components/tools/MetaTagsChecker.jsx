@@ -162,7 +162,7 @@ const MetaTagsChecker = () => {
         {/* Results Section */}
         {metadata && !loading && (
           <div className="animate-fade-in-up">
-            <div className="flex items-center justify-center gap-2 mb-8">
+            <div className="flex items-center justify-center gap-2 my-8">
               <h3 className="text-xl font-bold text-[#15151e]">
                 Analysis Results
               </h3>
