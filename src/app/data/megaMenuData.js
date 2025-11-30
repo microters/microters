@@ -147,7 +147,7 @@ export const MegaMenuData = [
                 { name: 'Breadcrumb Generator', href: '/seo-tools/breadcrumb-generator', Icon: FaArrowUpRightFromSquare },
                 { name: 'Case Converter Tool', href: '/seo-tools/case-converter', Icon: FaCopy },
                 { name: 'Cursive Text Generator', href: '/seo-tools/cursive-text-generator', Icon: FaBezierCurve },
-                { name: 'Event Schema Generator', href: '#', Icon: FaSearch },
+                { name: 'Event Schema Generator', href: '/seo-tools/event-schema-generator', Icon: FaSearch },
                 { name: 'FAQ Schema Generator', href: '#', Icon: FaQuestionCircle },
                 { name: 'HowTo Schema Generator', href: '#', Icon: FaFileCode },
                 { name: 'Internal Link Analyzer', href: '#', Icon: FaLink },

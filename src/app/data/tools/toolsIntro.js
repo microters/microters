@@ -7,6 +7,7 @@ import conclusionGeneratorImg from "@assets/images/tools/conclusion-generator.pn
 import cursiveTextGeneratorImg from "@assets/images/tools/cursive-text-generator.png";
 import disclaimerGeneratorImg from "@assets/images/tools/disclaimer-generator.png";
 import essayWriterImg from "@assets/images/tools/ai-essay-writer.png";
+import eventSchemaGeneratorImg from "@assets/images/tools/event-schema-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -265,6 +266,35 @@ export const essayWriterToolIntro = {
     {
       title: "Blog Writing",
       content: "Content creators and bloggers can generate engaging posts on trending or niche topics, saving time on initial drafts."
+    }
+  ]
+};
+
+export const eventSchemaGeneratorToolIntro = {
+  title: "What is Event Schema Generator?",
+  description: [
+    "An Event Schema Generator is a tool that creates structured data for your event pages. This structured data helps search engines understand the key details of your events, such as date, time, location, and ticketing information. Adding schema markup improves your search engine rankings and makes your events more discoverable.",
+    "Whether you’re promoting a conference, workshop, or concert, the Event Schema Generator ensures your event details are displayed prominently on search results. This boosts traffic and increases engagement with your audience."
+  ],
+  image: eventSchemaGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Event Schema Generator Tool",
+  useCasesIntro: "The Microters Event Schema Generator is versatile, catering to various professional needs.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing professionals can use this tool to increase visibility for events, boosting attendance. It ensures that event details are highlighted in search results, making promotions more effective. It also saves time by automating schema markup creation, allowing marketers to focus on other strategic tasks."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers and site owners can attract more visitors by using structured data to display their events prominently. This tool helps ensure their content reaches the right audience. By enhancing SEO with schema markup, bloggers can improve rankings and keep users informed about upcoming events."
+    },
+    {
+      title: "Writing Professionals",
+      content: "For writers creating event-related content, this tool ensures accuracy and consistency in details. It simplifies the process of integrating schema markup. Writers can also maintain a professional edge by ensuring their event pages meet search engine standards."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can use the tool to link events directly to campaigns, driving more traffic from search engines. It ensures a cohesive online presence. The Event Schema Generator helps marketers align event pages with promotional strategies, boosting engagement and click-through rates."
     }
   ]
 };

@@ -187,3 +187,24 @@ export const essayWriterToolSteps = {
     }
   ]
 };
+export const eventSchemaGeneratorToolSteps = {
+  title: "How to Use Event Schema Generator?",
+  description: "Using the Event Schema Generator is simple. Follow these steps to streamline your process:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your Event Details",
+      description: "Enter details like event name, date, time, location, and ticket information into the tool’s form."
+    },
+    {
+      id: 2,
+      title: "Step 2: Generate Schema Markup",
+      description: "Click the generate button to create structured data based on the information provided."
+    },
+    {
+      id: 3,
+      title: "Step 3: Embed the Markup on Your Site",
+      description: "Copy the generated schema code and paste it into your webpage’s HTML. Validate it using Google’s Rich Results Test to ensure accuracy."
+    }
+  ]
+};
