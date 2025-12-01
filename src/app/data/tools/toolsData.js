@@ -439,3 +439,45 @@ export const permalinkGeneratorToolSteps = {
     }
   ]
 };
+export const personSchemaToolSteps = {
+  title: "How to Use Person Schema Generator?",
+  description: "Using the tool is quick and straightforward. Follow these steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your Information",
+      description: "Enter details such as name, job title, organization, and social media links."
+    },
+    {
+      id: 2,
+      title: "Step 2: Generate the Schema",
+      description: "Click “Generate,” and the tool will create ready-to-use structured data code."
+    },
+    {
+      id: 3,
+      title: "Step 3: Add to Your Website",
+      description: "Copy the code and paste it into your website’s HTML or use a plugin to upload it easily."
+    }
+  ]
+};
+export const productSchemaToolSteps = {
+  title: "How to Use Product Schema?",
+  description: "Using Product Schema is straightforward. Follow these three steps to get started:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Generate Schema Markup",
+      description: "Use a keyword clustering tool or schema generator to create structured data for your product"
+    },
+    {
+      id: 2,
+      title: "Step 2: Embed on Website",
+      description: "Add the schema markup code to your product pages in the website backend."
+    },
+    {
+      id: 3,
+      title: "Step 3: Test and Validate",
+      description: "Use tools like Google’s Structured Data Testing Tool to ensure the schema is working correctly."
+    }
+  ]
+};

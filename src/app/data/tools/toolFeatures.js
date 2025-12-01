@@ -774,3 +774,77 @@ export const permalinkGeneratorToolFeatures = {
     }
   ]
 };
+
+export const personSchemaToolFeatures = {
+  title: "Why Choose ‘Microters’ Person Schema Generator?",
+  description: "This tool is designed for simplicity and efficiency.",
+  features: [
+    {
+      id: 1,
+      title: "User-Friendly Design",
+      description: "The interface is easy to use, even for beginners. You don’t need technical skills to generate schema codes."
+    },
+    {
+      id: 2,
+      title: "Free Keyword Clustering Tool",
+      description: "Integrated keyword clustering helps you group and optimize related terms for better SEO performance."
+    },
+    {
+      id: 3,
+      title: "Improved SEO",
+      description: "Structured data enhances search engine visibility and generates rich snippets, leading to more clicks and traffic."
+    },
+    {
+      id: 4,
+      title: "Time-Saving Automation",
+      description: "The tool automates the schema creation process, letting you focus on your core tasks while it handles the technical work."
+    },
+    {
+      id: 5,
+      title: "Compatibility Across Platforms",
+      description: "The schema is compatible with WordPress, Wix, and custom websites, ensuring smooth integration."
+    },
+    {
+      id: 6,
+      title: "Regular Updates",
+      description: "Frequent updates keep the tool aligned with the latest schema standards, so your data stays relevant."
+    }
+  ]
+};
+
+export const productSchemaToolFeatures = {
+  title: "Why Choose ‘Microters’ Product Schema?",
+  description: "Microters’ Product Schema tool stands out for its efficiency and user-friendly features. Here’s why it’s a top choice:",
+  features: [
+    {
+      id: 1,
+      title: "Ease of Use",
+      description: "Microters simplifies schema generation, saving time and reducing complexity. With intuitive tools, even non-technical users can create schema markup effortlessly."
+    },
+    {
+      id: 2,
+      title: "Improves SEO",
+      description: "The tool enhances product visibility by helping pages rank higher in search results. Rich snippets generated with the schema attract more clicks and boost traffic."
+    },
+    {
+      id: 3,
+      title: "Free and Accessible",
+      description: "Microters offers a cost-free solution, making it ideal for businesses with limited budgets. Its accessibility ensures small businesses can compete with larger enterprises."
+    },
+    {
+      id: 4,
+      title: "Supports Keyword Clustering",
+      description: "The tool integrates seamlessly with keyword grouping strategies. Marketers can pair schema with keyword clusters for better-targeted campaigns."
+    },
+    {
+      id: 5,
+      title: "Reliable Testing Features",
+      description: "With built-in validation options, users can test schema before deploying it. This ensures error-free implementation for smooth operation on search engines."
+    },
+    {
+      id: 6,
+      title: "Enhanced User Engagement",
+      description: "Product details become more appealing with structured data, increasing user trust. This feature improves the likelihood of conversions, boosting revenue."
+    }
+  ]
+};

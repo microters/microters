@@ -19,6 +19,8 @@ import metaTagsCheckerImg from "@assets/images/tools/meta-tags-checker.png";
 import organizationSchemaImg from "@assets/images/tools/organization-schema.png";
 import paragraphGeneratorImg from "@assets/images/tools/paragraph-generator.png";
 import permalinkGeneratorImg from "@assets/images/tools/permalink-generator.png";
+import personSchemaImg from "@assets/images/tools/person-schema-generator.png";
+import productSchemaImg from "@assets/images/tools/product-schema-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -625,6 +627,64 @@ export const permalinkGeneratorToolIntro = {
     {
       title: "Social Media Marketer",
       content: "Social media marketers can create shareable, engaging permalinks with ease. These links ensure clarity and professionalism in posts, leading to better click-through rates. Using keyword-rich permalinks also enhances the reach of campaigns and advertisements, making them more discoverable."
+    }
+  ]
+};
+
+export const personSchemaToolIntro = {
+  title: "What is Person Schema Generator?",
+  description: [
+    "A Person Schema Generator is a tool that helps create structured data about individuals. This data is used by search engines to display rich snippets, including names, job titles, social profiles, and more.",
+    "The tool is perfect for personal branding, professional profiles, and showcasing expertise. It ensures your information is presented clearly, increasing trust and visibility online."
+  ],
+  image: personSchemaImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Person Schema Generator",
+  useCasesIntro: "The tool is valuable for a variety of professionals who want to optimize their online presence.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "This tool highlights your key personal details in search results, helping to build brand recognition. It establishes authority in your field by making critical information easily accessible. Structured data enhances discoverability, ensuring potential clients or collaborators find your profile with ease."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "For bloggers, this tool showcases bios, achievements, and social links prominently in search results. It builds trust and increases credibility with readers. Schema markup can also boost search rankings, driving more organic traffic to your site."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can display their work, affiliations, and awards in search results, making their profiles stand out. Potential clients or readers can find their expertise quickly. Using structured data ensures a professional and trustworthy online presence."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can optimize their profiles for better visibility in search results, attracting potential clients or employers. The tool makes it easy to integrate social media links, creating a unified and accessible online identity."
+    }
+  ]
+};
+
+export const productSchemaToolIntro = {
+  title: "What is Product Schema?",
+  description: [
+    "Product Schema is a type of structured data markup that helps search engines understand product details like price, availability, and reviews. By adding this data to your website, you ensure your products appear prominently in search results with rich snippets.",
+    "Using Product Schema can boost your online visibility and improve click-through rates. It enables search engines to display essential product details directly in search results, making it easier for customers to find what they need."
+  ],
+  image: productSchemaImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Product Schema",
+  useCasesIntro: "Microters’ Product Schema tool has diverse applications for different professionals.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing teams can use the tool to structure product data, improving visibility in search results. This leads to higher click-through rates and increased conversions. It’s a great way to ensure campaigns highlight essential product details, driving customer interest and engagement."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers and website owners can integrate the schema to feature affiliate or own products. It makes product reviews more search-friendly and attracts relevant traffic. For eCommerce site owners, the tool ensures product pages rank higher and deliver more detailed search snippets."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Content writers can create engaging product descriptions with schema markup to improve SEO. Adding structured data makes their work stand out in search results. This tool is an excellent addition to professional writers who aim to add value to their clients’ websites."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can use the tool to showcase product details more effectively in posts linked to websites. It makes social promotions more impactful by driving SEO benefits. It also helps marketers integrate campaigns seamlessly with structured product details for better engagement."
     }
   ]
 };
