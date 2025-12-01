@@ -24,6 +24,7 @@ import productSchemaImg from "@assets/images/tools/product-schema-generator.png"
 import recipeSchemaImg from "@assets/images/tools/recipe-schema-generator.png";
 import robotsTxtValidatorImg from "@assets/images/tools/robots-txt-validator.png";
 import howToSchemaImg from "@assets/images/tools/how-to-schema.png";
+import sentenceExpanderImg from "@assets/images/tools/sentence-expander.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -775,6 +776,35 @@ export const howToSchemaToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can improve engagement by creating search-optimized how-to posts. Adding schema helps their content rank better, increasing visibility and driving more traffic."
+    }
+  ]
+};
+
+export const sentenceExpanderToolIntro = {
+  title: "What is Free AI Sentence Expander?",
+  description: [
+    "A Free AI Sentence Expander is a tool designed to help you improve your writing by adding depth and detail to your sentences. It uses advanced AI technology to rewrite and expand content in a way that sounds natural and professional.",
+    "Whether you’re crafting a blog post, writing a school essay, or working on marketing materials, this tool ensures your sentences are clear, engaging, and impactful without taking extra time."
+  ],
+  image: sentenceExpanderImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free AI Sentence Expander Tool",
+  useCasesIntro: "This tool works for various writing needs and professionals. Here’s how:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Craft compelling ad copy, emails, and promotional content that grabs attention. The expanded text ensures clarity and persuasiveness to connect with your audience. It’s great for improving brand communication, helping you convey your message with more impact while saving time."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Create detailed and engaging blog posts from basic ideas. The expanded sentences make your articles more informative, increasing reader interest. Additionally, it helps you incorporate SEO-friendly keywords seamlessly to improve your site’s ranking on search engines."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Enhance creative or technical writing with ease. For storytellers, it brings life to characters and settings, making your narrative more captivating. For technical documents, it ensures clarity while expanding content to cover necessary details without losing focus."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Generate engaging posts, captions, or tweets effortlessly. The tool expands your content while keeping it concise, perfect for social media platforms. It also allows you to experiment with multiple variations of posts, helping you maximize audience engagement."
     }
   ]
 };

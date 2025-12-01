@@ -544,3 +544,24 @@ export const howToSchemaToolSteps = {
     }
   ]
 };
+export const sentenceExpanderToolSteps = {
+  title: "How to Use Free AI Sentence Expander Tool",
+  description: "This tool is simple and easy to use. Just follow these three steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Add Your Topic or Paragraphs",
+      description: "Enter your text or ideas into the input field. You can copy and paste a sentence, paragraph, or even just keywords. The tool works to expand and enhance your content seamlessly."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select Your Desired Writing Tone",
+      description: "Choose a tone that fits your purpose from the dropdown menu. Options include formal, casual, persuasive, and many more. This helps ensure the expanded text matches your style or audience."
+    },
+    {
+      id: 3,
+      title: "Step 3: Select Your Preferred Language",
+      description: "Pick your language from over 100 options available. Once you’ve selected the language, click “Generate,” and your expanded text will appear instantly."
+    }
+  ]
+};

@@ -959,3 +959,40 @@ export const howToSchemaToolFeatures = {
     }
   ]
 };
+
+export const sentenceExpanderToolFeatures = {
+  title: "Why Choose ‘Microters’ Free AI Sentence Expander Tool?",
+  description: "This powerful tool comes with many features designed to make your writing easier and more effective.",
+  features: [
+    {
+      id: 1,
+      title: "100% AI Generated",
+      description: "The tool generates content entirely with AI, ensuring accuracy and speed. It understands your input and delivers expanded sentences that align perfectly with your needs. It eliminates the need for manual revisions by providing polished, ready-to-use text."
+    },
+    {
+      id: 2,
+      title: "Human Quality",
+      description: "Despite being AI-driven, the output feels like it was written by a person. It uses natural language processing to deliver smooth, engaging, and error-free content. This feature ensures your writing resonates with readers, whether it’s a formal document or casual social media post."
+    },
+    {
+      id: 3,
+      title: "SEO Optimized Paragraphs",
+      description: "The tool expands your sentences while integrating relevant keywords seamlessly. It ensures better search engine rankings without compromising readability. You can create content that meets both search engine requirements and audience expectations in a fraction of the time."
+    },
+    {
+      id: 4,
+      title: "Easy to Use",
+      description: "With a simple interface, the tool is accessible to everyone, regardless of technical skills. Adding text, selecting a tone, and generating results take just a few clicks. Even beginners can produce professional-quality expanded sentences with minimal effort."
+    },
+    {
+      id: 5,
+      title: "Multi-Language Support (100+ Languages)",
+      description: "The tool offers global accessibility by supporting over 100 languages. This is perfect for creating multilingual content for international audiences. Whether you’re writing in English, Spanish, French, or any other language, the tool delivers consistent, high-quality results."
+    },
+    {
+      id: 6,
+      title: "Multi-Writing Tone Support",
+      description: "From persuasive to casual, the tool supports various tones to match your needs. It helps you maintain the right voice for your audience and purpose. Whether you’re working on a business proposal or a fun blog post, you’ll find the perfect tone option."
+    }
+  ]
+};
