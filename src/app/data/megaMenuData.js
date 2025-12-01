@@ -193,7 +193,7 @@ export const MegaMenuData = [
                 { name: 'Thesis Statement Generator', href: '#', Icon: FaRobot },
                 { name: 'Sentence Expander', href: '#', Icon: FaRobot },
                 { name: 'Sentence Generator', href: '#', Icon: FaRobot },
-                { name: 'Paragraph Generator', href: '#', Icon: FaRobot },
+                { name: 'Paragraph Generator', href: '/ai-writing-tools/paragraph-generator', Icon: FaRobot },
                 { name: 'Thesis Generator', href: '#', Icon: FaRobot },
             ],
         },

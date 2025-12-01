@@ -397,3 +397,24 @@ export const organizationSchemaToolSteps = {
     }
   ]
 };
+export const paragraphGeneratorToolSteps = {
+  title: "How to Use Free AI Paragraph Generator",
+  description: "This tool is incredibly easy to use with just three steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Add Your Topic or Context",
+      description: "Enter your topic, context, or ideas into the input field. Whether detailed or brief, the tool tailors content to match your needs."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select Your Writing Tone",
+      description: "Choose a tone that fits your content, such as formal, casual, or creative. The dropdown menu makes selecting a tone quick and simple."
+    },
+    {
+      id: 3,
+      title: "Step 3: Pick Your Language and Click Generate",
+      description: "Choose from over 100 languages, then click the “Generate” button to get your ready-to-use paragraphs in seconds."
+    }
+  ]
+};

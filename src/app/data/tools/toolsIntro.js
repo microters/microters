@@ -17,6 +17,7 @@ import keywordClusteringImg from "@assets/images/tools/keyword-clustering-tool.p
 import localBusinessSchemaImg from "@assets/images/tools/local-business-schema.png";
 import metaTagsCheckerImg from "@assets/images/tools/meta-tags-checker.png";
 import organizationSchemaImg from "@assets/images/tools/organization-schema.png";
+import paragraphGeneratorImg from "@assets/images/tools/paragraph-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -565,6 +566,35 @@ export const organizationSchemaToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can enhance brand consistency by using schema markup to improve how their organization appears in search results. By integrating structured data, marketers can complement social media strategies and drive organic website traffic."
+    }
+  ]
+};
+
+export const paragraphGeneratorToolIntro = {
+  title: "What is Free AI Paragraph Generator?",
+  description: [
+    "The Free AI Paragraph Generator is a smart tool designed to produce structured and high-quality paragraphs instantly. By simply adding a topic or context, the tool generates tailored content, saving time and reducing the effort of manual writing.",
+    "With the ability to choose tones and over 100 languages, this tool adapts to a wide range of writing styles, making it suitable for both professional and creative projects."
+  ],
+  image: paragraphGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free AI Paragraph Generator",
+  useCasesIntro: "This tool is versatile and suits a wide range of users, including:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing teams can use the tool to quickly generate campaign content like promotional emails, social media posts, or product descriptions. Its AI-driven capabilities ensure persuasive and engaging content that grabs attention. Additionally, the ability to select different tones helps marketers tailor messages for diverse audience segments, enhancing the impact of their campaigns."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers can easily create high-quality paragraphs for articles, whether for introductory hooks, detailed sections, or summaries. The tool saves time while maintaining consistency in tone and style. For website owners, it’s a great way to generate optimized content for landing pages, boosting SEO performance and improving visitor engagement."
+    },
+    {
+      title: "Entrepreneurs and Small Business Owners",
+      content: "Small business owners can use this tool to generate professional content for business proposals, marketing materials, or customer communication. It ensures they present their brand in a polished and impactful way. The tool’s speed and efficiency also help save time, allowing entrepreneurs to focus on growing their business rather than worrying about writing tasks."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Create catchy captions, ad copy, and engaging posts tailored to your brand voice. This tool simplifies content creation while ensuring creativity and relevance. It allows social media managers to experiment with various tones and styles to match campaign goals."
     }
   ]
 };
