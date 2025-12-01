@@ -996,3 +996,40 @@ export const sentenceExpanderToolFeatures = {
     }
   ]
 };
+
+export const sentenceGeneratorToolFeatures = {
+  title: "Why Choose ‘Microters’ Free AI Sentence Generator Tool?",
+  description: "The tool offers powerful features that make it a go-to solution for effortless content creation. Here are the highlights:",
+  features: [
+    {
+      id: 1,
+      title: "Effortless Content Creation",
+      description: "Microters’ Free AI Sentence Generator simplifies the process of creating high-quality sentences. It’s designed for speed and ease, allowing users to generate professional content in seconds without any technical skills."
+    },
+    {
+      id: 2,
+      title: "Versatile Features for Diverse Needs",
+      description: "This tool adapts to various writing purposes, whether for marketing, blogging, social media, or professional communication. With options like tone selection, SEO optimization, and multilingual support, it caters to a wide range of users and industries."
+    },
+    {
+      id: 3,
+      title: "High-Quality Output",
+      description: "Despite being AI-driven, the content is natural, human-like, and error-free. It ensures your writing maintains professionalism and engages your audience effectively."
+    },
+    {
+      id: 4,
+      title: "Customizable for Every Audience",
+      description: "With multiple tones and over 100 language options, Microters’ tool helps you tailor your content to fit any audience or platform. Whether formal or casual, local or global, it’s built to meet your specific needs."
+    },
+    {
+      id: 5,
+      title: "Time-Saving and Reliable",
+      description: "Say goodbye to writer’s block and time-consuming edits. The tool delivers polished sentences instantly, making it perfect for tight deadlines or large-scale projects."
+    },
+    {
+      id: 6,
+      title: "Multi-Writing Tone Support",
+      description: "From persuasive to casual, the tool supports various tones to match your needs. It helps you maintain the right voice for your audience and purpose. Whether you’re working on a business proposal or a fun blog post, you’ll find the perfect tone option."
+    }
+  ]
+};

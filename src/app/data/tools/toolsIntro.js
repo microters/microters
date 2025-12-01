@@ -25,6 +25,7 @@ import recipeSchemaImg from "@assets/images/tools/recipe-schema-generator.png";
 import robotsTxtValidatorImg from "@assets/images/tools/robots-txt-validator.png";
 import howToSchemaImg from "@assets/images/tools/how-to-schema.png";
 import sentenceExpanderImg from "@assets/images/tools/sentence-expander.png";
+import sentenceGeneratorImg from "@assets/images/tools/sentence-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -805,6 +806,35 @@ export const sentenceExpanderToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Generate engaging posts, captions, or tweets effortlessly. The tool expands your content while keeping it concise, perfect for social media platforms. It also allows you to experiment with multiple variations of posts, helping you maximize audience engagement."
+    }
+  ]
+};
+
+export const sentenceGeneratorToolIntro = {
+  title: "What is Free AI Sentence Generator?",
+  description: [
+    "A Free AI Sentence Generator is a tool powered by artificial intelligence that creates sentences based on the input you provide. It’s perfect for simplifying writing tasks across industries, whether for marketing campaigns, creative projects, or professional communication.",
+    "This tool saves time by generating polished sentences in seconds, adapting to different tones and styles. With support for multiple languages and a user-friendly design, it’s an indispensable asset for anyone looking to improve their writing efficiency."
+  ],
+  image: sentenceGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free AI Sentence Generator Tool",
+  useCasesIntro: "The Microters Free AI Sentence Generator is versatile and fits various needs. Here’s how it benefits different users:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can craft compelling ad copy, email content, and promotional material in less time. The tool provides persuasive sentences that connect with audiences and drive engagement. With multilingual support and tone flexibility, marketers can easily reach global audiences while maintaining a consistent brand voice."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "For bloggers, this tool simplifies creating engaging headlines, introductions, and content sections. It helps maintain consistency and keeps readers interested. Site owners can rely on it for SEO-optimized paragraphs, boosting their search engine rankings and attracting more visitors to their websites."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can overcome creative blocks and speed up their work by generating sentences tailored to specific styles. It’s helpful for drafting articles, books, or technical documents. The AI adapts to different writing formats, making it a valuable tool for professionals across various genres and industries."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "This tool helps social media marketers produce engaging captions, taglines, and posts. It ensures content resonates with the target audience and increases shareability. The ability to switch between tones and languages makes it ideal for targeting diverse demographics with localized, impactful content."
     }
   ]
 };

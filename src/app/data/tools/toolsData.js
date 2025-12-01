@@ -565,3 +565,24 @@ export const sentenceExpanderToolSteps = {
     }
   ]
 };
+export const sentenceGeneratorToolSteps = {
+  title: "How to Use Free AI Sentence Generator Tool?",
+  description: "Using the Free AI Sentence Generator Tool is simple and convenient. Follow these three easy steps to create high-quality sentences:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Add Your Topic or Context",
+      description: "Input your topic, paragraph, or context in the provided field. Whether it’s a few keywords or a complete thought, the tool will transform it into clear and structured sentences."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select Your Desired Tone",
+      description: "Choose the writing tone that best suits your purpose from the dropdown menu. Options include formal, casual, creative, persuasive, and more, ensuring the content aligns with your audience and intent."
+    },
+    {
+      id: 3,
+      title: "Step 3: Select Your Preferred Language and Generate",
+      description: "Pick your language from a list of over 100 options, then click “Generate.” Within seconds, the tool will deliver polished sentences tailored to your specifications."
+    }
+  ]
+};
