@@ -885,3 +885,40 @@ export const recipeSchemaToolFeatures = {
     }
   ]
 };
+
+export const robotsTxtValidatorToolFeatures = {
+  title: "Why Choose ‘Microters’ Robots.txt Validator and Testing?",
+  description: "Microters provides a reliable and user-friendly tool for managing Robots.txt files efficiently.",
+  features: [
+    {
+      id: 1,
+      title: "Ease of Use",
+      description: "The tool offers an intuitive interface, making it accessible for beginners and experts alike."
+    },
+    {
+      id: 2,
+      title: "Accurate Validation",
+      description: "It detects errors with precision, ensuring compliance with search engine guidelines."
+    },
+    {
+      id: 3,
+      title: "Improved SEO Performance",
+      description: "By resolving issues, the tool enhances your website’s visibility and crawl efficiency."
+    },
+    {
+      id: 4,
+      title: "Regular Updates",
+      description: "The tool keeps up with evolving industry standards to ensure accurate and relevant results."
+    },
+    {
+      id: 5,
+      title: "Free and Accessible",
+      description: "Microters offers advanced features at no cost, making it ideal for small businesses and personal use."
+    },
+    {
+      id: 6,
+      title: "Detailed Insights",
+      description: "With clear and actionable reports, users can quickly address errors and implement fixes."
+    }
+  ]
+};

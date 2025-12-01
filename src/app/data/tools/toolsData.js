@@ -502,3 +502,24 @@ export const recipeSchemaToolSteps = {
     }
   ]
 };
+export const robotsTxtValidatorToolSteps = {
+  title: "How to Use Robots.txt Validator and Testing",
+  description: "Using the Robots.txt Validator and Testing tool is straightforward.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your File",
+      description: "Copy and paste the contents of your Robots.txt file or upload it to the tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Run Validation",
+      description: "Start the validation to check for errors or inconsistencies in the file."
+    },
+    {
+      id: 3,
+      title: "Step 3: Fix and Save",
+      description: "Review the results, correct any issues, and download the updated file to implement it on your website."
+    }
+  ]
+};

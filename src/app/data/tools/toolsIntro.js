@@ -22,6 +22,7 @@ import permalinkGeneratorImg from "@assets/images/tools/permalink-generator.png"
 import personSchemaImg from "@assets/images/tools/person-schema-generator.png";
 import productSchemaImg from "@assets/images/tools/product-schema-generator.png";
 import recipeSchemaImg from "@assets/images/tools/recipe-schema-generator.png";
+import robotsTxtValidatorImg from "@assets/images/tools/robots-txt-validator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -715,6 +716,35 @@ export const recipeSchemaToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can use the tool to optimize recipe content shared across platforms. Rich snippets increase visibility, driving traffic from social platforms back to the website. This approach also makes campaigns more engaging by featuring recipes with attractive previews that captivate audiences."
+    }
+  ]
+};
+
+export const robotsTxtValidatorToolIntro = {
+  title: "What is Robots.txt Validator and Testing?",
+  description: [
+    "Robots.txt Validator and Testing is a tool that verifies the structure and syntax of your Robots.txt file. This file is crucial for guiding search engines on which parts of your site to index or ignore.",
+    "By using the tool, you can detect and resolve issues quickly, ensuring that your site complies with search engine guidelines. This process prevents common mistakes that might block critical pages from being indexed."
+  ],
+  image: robotsTxtValidatorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Robots.txt Validator and Testing Tool",
+  useCasesIntro: "The Microters Robots.txt Validator and Testing tool offers versatile applications for various professionals:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "This tool helps marketers optimize SEO strategies by ensuring search engines prioritize high-value pages. Proper indexing improves traffic to critical pages, enhancing campaign results. Additionally, marketers can use the tool to manage crawling rules effectively, aligning them with their promotional objectives."
+    },
+    {
+      title: "Bloggers and Site Owners",
+      content: "Bloggers and site owners use this tool to exclude unnecessary pages from search engines, maintaining an organized site structure. By addressing errors in Robots.txt files, they can prevent misconfigurations that harm search engine rankings and traffic."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers benefit by controlling the visibility of their portfolios. They can prevent indexing of unfinished drafts or private sections of their websites. This ensures only polished, public-ready content is available to search engines, improving personal branding."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers leverage the tool to control indexing of campaign-specific landing pages. It helps ensure that irrelevant pages are excluded from search results. With better crawl management, they can focus on driving engagement and conversions through active campaigns."
     }
   ]
 };

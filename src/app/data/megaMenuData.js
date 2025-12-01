@@ -177,7 +177,7 @@ export const MegaMenuData = [
                 { name: 'Meta Tags Checker', href: '/seo-tools/meta-tags-checker', Icon: FaCopy },
                 { name: 'Organization Schema', href: '/seo-tools/organization-schema-generator', Icon: FaShopify },
                 { name: 'Product Schema', href: '/seo-tools/product-schema-generator', Icon: FaShoppingBag },
-                { name: 'Product.txt Validator', href: '#', Icon: FaRobot },
+                { name: 'Robots.txt Validator', href: '/seo-tools/robots-txt-validator', Icon: FaRobot },
                 { name: 'ULK Web Word Counter', href: '/seo-tools/ulk-web-word-counter', Icon: FaCode },
             ],
         },
