@@ -149,7 +149,7 @@ export const MegaMenuData = [
                 { name: 'Cursive Text Generator', href: '/seo-tools/cursive-text-generator', Icon: FaBezierCurve },
                 { name: 'Event Schema Generator', href: '/seo-tools/event-schema-generator', Icon: FaSearch },
                 { name: 'FAQ Schema Generator', href: '/seo-tools/faq-schema-generator', Icon: FaQuestionCircle },
-                { name: 'HowTo Schema Generator', href: '#', Icon: FaFileCode },
+                { name: 'HowTo Schema Generator', href: 'how-to-schema-generator', Icon: FaFileCode },
                 { name: 'Internal Link Analyzer', href: '/seo-tools/internal-link-analyzer', Icon: FaLink },
                 { name: 'Local Business Schema', href: '/seo-tools/local-business-schema', Icon: FaShopify },
                 { name: 'Word Counter', href: '/seo-tools/word-counter', Icon: FaWordpress },

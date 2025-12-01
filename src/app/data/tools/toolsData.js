@@ -523,3 +523,24 @@ export const robotsTxtValidatorToolSteps = {
     }
   ]
 };
+export const howToSchemaToolSteps = {
+  title: "How to Use HowTo Schema Generator",
+  description: "Using the HowTo schema generator is quick and simple.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your Content",
+      description: "Add your how-to steps, including titles, descriptions, and optional images, into the tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Generate Schema Code",
+      description: "Click “Generate,” and the tool will create JSON-LD structured data for your content."
+    },
+    {
+      id: 3,
+      title: "Step 3: Add to Your Website",
+      description: "Copy and paste the generated code into the HTML of your webpage to activate rich results."
+    }
+  ]
+};

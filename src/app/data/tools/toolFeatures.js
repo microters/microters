@@ -922,3 +922,40 @@ export const robotsTxtValidatorToolFeatures = {
     }
   ]
 };
+
+export const howToSchemaToolFeatures = {
+  title: "Why Choose ‘Microters’ HowTo Schema Generator?",
+  description: "The Microters HowTo schema generator is designed for simplicity and effectiveness.",
+  features: [
+    {
+      id: 1,
+      title: "Ease of Use",
+      description: "With a user-friendly design, it’s perfect for beginners and advanced users alike. Schema generation is fast and straightforward."
+    },
+    {
+      id: 2,
+      title: "Free Keyword Clustering Integration",
+      description: "It includes free keyword clustering, enabling you to optimize your content for SEO with related keyword groups."
+    },
+    {
+      id: 3,
+      title: "Time-Saving Features",
+      description: "The tool automates schema creation, letting you focus on creating content rather than technical tasks."
+    },
+    {
+      id: 4,
+      title: "Optimized for Rich Results",
+      description: "The structured data meets search engine standards, helping your content qualify for enhanced rich results."
+    },
+    {
+      id: 5,
+      title: "Versatility Across Niches",
+      description: "No matter your industry, the tool helps you create clear, structured how-to guides that attract a wider audience."
+    },
+    {
+      id: 6,
+      title: "Best Free Features",
+      description: "Microters offers free access to its core features, making it a cost-effective solution for small businesses or individuals."
+    }
+  ]
+};

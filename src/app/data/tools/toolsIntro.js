@@ -23,6 +23,7 @@ import personSchemaImg from "@assets/images/tools/person-schema-generator.png";
 import productSchemaImg from "@assets/images/tools/product-schema-generator.png";
 import recipeSchemaImg from "@assets/images/tools/recipe-schema-generator.png";
 import robotsTxtValidatorImg from "@assets/images/tools/robots-txt-validator.png";
+import howToSchemaImg from "@assets/images/tools/how-to-schema.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -745,6 +746,35 @@ export const robotsTxtValidatorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers leverage the tool to control indexing of campaign-specific landing pages. It helps ensure that irrelevant pages are excluded from search results. With better crawl management, they can focus on driving engagement and conversions through active campaigns."
+    }
+  ]
+};
+
+export const howToSchemaToolIntro = {
+  title: "What is HowTo Schema Generator?",
+  description: [
+    "The HowTo schema generator is a tool that helps create structured data for how-to guides. This structured data allows search engines to display your instructions clearly, often appearing as enhanced rich results in search results.",
+    "It’s particularly useful for tutorials, DIY guides, or any step-by-step processes. The tool ensures your content is optimized for better search engine performance, driving more traffic to your site."
+  ],
+  image: howToSchemaImg,
+  useCasesTitle: "Use Cases of ‘Microters’ HowTo Schema Generator Tool",
+  useCasesIntro: "The Microters HowTo schema generator is versatile and suits various professionals.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use this tool to create structured data for guides, tutorials, or campaign instructions, increasing visibility and click-through rates. It simplifies the process of making content SEO-friendly, ensuring better engagement and higher rankings."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers can use the tool to enhance their DIY guides, recipes, or tutorials for better search visibility. Site owners can ensure their step-by-step content stands out in SERPs, attracting more users with clear instructions."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Content writers benefit by saving time on schema creation, focusing more on crafting detailed, high-quality guides. The tool ensures their work meets technical SEO standards, boosting discoverability."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can improve engagement by creating search-optimized how-to posts. Adding schema helps their content rank better, increasing visibility and driving more traffic."
     }
   ]
 };
