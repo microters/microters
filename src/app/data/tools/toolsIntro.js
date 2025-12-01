@@ -18,6 +18,7 @@ import localBusinessSchemaImg from "@assets/images/tools/local-business-schema.p
 import metaTagsCheckerImg from "@assets/images/tools/meta-tags-checker.png";
 import organizationSchemaImg from "@assets/images/tools/organization-schema.png";
 import paragraphGeneratorImg from "@assets/images/tools/paragraph-generator.png";
+import permalinkGeneratorImg from "@assets/images/tools/permalink-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -595,6 +596,35 @@ export const paragraphGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Create catchy captions, ad copy, and engaging posts tailored to your brand voice. This tool simplifies content creation while ensuring creativity and relevance. It allows social media managers to experiment with various tones and styles to match campaign goals."
+    }
+  ]
+};
+
+export const permalinkGeneratorToolIntro = {
+  title: "What is Free Permalink Generator Tool?",
+  description: [
+    "A Free Permalink Generator Tool is an online utility designed to create structured and readable URLs. By turning complicated links into concise, keyword-rich formats, it boosts your site’s search engine visibility and user engagement.",
+    "This tool is especially helpful for bloggers, website owners, and digital marketers aiming to make their content easily accessible and search engine friendly. With automated permalink generation, you save time while maintaining consistency across your pages."
+  ],
+  image: permalinkGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free Permalink Generator Tool",
+  useCasesIntro: "This tool caters to a variety of professionals. Here’s how it helps:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing professionals can rely on this tool to create SEO-friendly URLs that drive more organic traffic. Optimized permalinks improve the visibility of campaigns and landing pages. The tool also helps marketers align their URLs with strategic keywords, ensuring consistency across all digital channels."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "For bloggers and website owners, creating structured URLs becomes effortless. A clean permalink improves search rankings and boosts user experience. Additionally, bloggers can generate engaging, readable URLs that attract readers and encourage sharing across platforms."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers working on SEO-driven content benefit from streamlined URL generation. It saves time and ensures URLs match their content’s tone and purpose. The tool also minimizes the risk of broken or mismatched links, maintaining the integrity of their content."
+    },
+    {
+      title: "Social Media Marketer",
+      content: "Social media marketers can create shareable, engaging permalinks with ease. These links ensure clarity and professionalism in posts, leading to better click-through rates. Using keyword-rich permalinks also enhances the reach of campaigns and advertisements, making them more discoverable."
     }
   ]
 };

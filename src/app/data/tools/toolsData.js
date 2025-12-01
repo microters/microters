@@ -418,3 +418,24 @@ export const paragraphGeneratorToolSteps = {
     }
   ]
 };
+export const permalinkGeneratorToolSteps = {
+  title: "How to Use Free Permalink Generator Tool?",
+  description: "This tool is simple to use and beginner-friendly. Follow these steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Enter Your Keywords",
+      description: "Start by typing the primary keywords or title of your content into the tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Generate Permalink",
+      description: "Click the “Generate” button to create a clean permalink based on your input."
+    },
+    {
+      id: 3,
+      title: "Step 3: Copy and Use",
+      description: "Copy the generated permalink and paste it into your website or platform as needed."
+    }
+  ]
+};
