@@ -9,8 +9,7 @@ import {
   FaGlobe,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaCalendarAlt,
-  FaCheck,
+  FaCalendarAlt
 } from "react-icons/fa";
 import { FaWandMagicSparkles } from "react-icons/fa6";
 import { ToastContainer, toast } from "react-toastify";
@@ -330,7 +329,7 @@ By using ${websiteName}, you consent to this disclaimer and agree to its terms.
               </div>
 
               {/* Content Display */}
-              <div className="flex-grow overflow-auto min-h-[400px] max-h-[70vh] custom-scrollbar bg-white/5 rounded-lg p-4 border border-gray-700">
+              <div className="grow overflow-auto min-h-[400px] max-h-[70vh] custom-scrollbar bg-white/5 rounded-lg p-4 border border-gray-700">
                 {generatedDisclaimer ? (
                   <div className="whitespace-pre-wrap text-gray-300 text-sm leading-relaxed font-mono">
                     {generatedDisclaimer}

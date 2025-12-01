@@ -663,3 +663,40 @@ export const metaTagsCheckerToolFeatures = {
     }
   ]
 };
+
+export const organizationSchemaToolFeatures = {
+  title: "Why Choose ‘Microters’ Organization Schema Generator?",
+  description: "This tool is designed to make schema generation simple and effective. Here are six reasons to choose Microters:",
+  features: [
+    {
+      id: 1,
+      title: "Free and Easy to Use",
+      description: "Microters offers a free platform that anyone can use. The interface is straightforward, allowing users to create schema markup quickly and without hassle."
+    },
+    {
+      id: 2,
+      title: "Time-Efficient",
+      description: "By automating schema creation, this tool saves users hours of manual work. You can focus on other priorities while still ensuring your site is optimized."
+    },
+    {
+      id: 3,
+      title: "SEO-Ready Code",
+      description: "The generated schema adheres to SEO best practices, improving your site’s chances of appearing in rich results and attracting more clicks."
+    },
+    {
+      id: 4,
+      title: "No Technical Skills Required",
+      description: "You don’t need any coding experience to use this tool. Just fill out the fields, and the generator creates a ready-to-use schema."
+    },
+    {
+      id: 5,
+      title: "Advanced Features",
+      description: "Microters allows you to include advanced details like social links and logos, offering flexibility to suit your branding needs."
+    },
+    {
+      id: 6,
+      title: "Trusted by Professionals",
+      description: "Marketers, bloggers, and SEO experts trust Microters for its reliability and user-friendly design. The tool consistently delivers accurate schema markup."
+    }
+  ]
+};

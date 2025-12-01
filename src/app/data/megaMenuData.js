@@ -175,7 +175,7 @@ export const MegaMenuData = [
                 { name: 'Job Post Schema', href: '/seo-tools/job-post-schema', Icon: FaCode },
                 { name: 'Keyword Grouping', href: '/seo-tools/keyword-grouping', Icon: FaSearch },
                 { name: 'Meta Tags Checker', href: '/seo-tools/meta-tags-checker', Icon: FaCopy },
-                { name: 'Organization Schema', href: '#', Icon: FaShopify },
+                { name: 'Organization Schema', href: '/seo-tools/organization-schema-generator', Icon: FaShopify },
                 { name: 'Product Schema', href: '#', Icon: FaShoppingBag },
                 { name: 'Product.txt Validator', href: '#', Icon: FaRobot },
                 { name: 'ULK Web Word Counter', href: '/seo-tools/ulk-web-word-counter', Icon: FaCode },

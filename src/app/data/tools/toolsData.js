@@ -376,3 +376,24 @@ export const metaTagsCheckerToolSteps = {
     }
   ]
 };
+export const organizationSchemaToolSteps = {
+  title: "How to Use Organization Schema Generator?",
+  description: "Using this tool is quick and simple. Here’s how:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your Details",
+      description: "Enter essential organization details like name, address, and contact information."
+    },
+    {
+      id: 2,
+      title: "Step 2: Add Extra Information",
+      description: "Customize by including optional fields such as social media profiles or logos."
+    },
+    {
+      id: 3,
+      title: "Step 3: Generate and Copy",
+      description: "Click the generate button to create your schema code, then add it to your website."
+    }
+  ]
+};

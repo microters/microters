@@ -16,6 +16,7 @@ import keywordGroupingImg from "@assets/images/tools/keyword-grouping.png";
 import keywordClusteringImg from "@assets/images/tools/keyword-clustering-tool.png";
 import localBusinessSchemaImg from "@assets/images/tools/local-business-schema.png";
 import metaTagsCheckerImg from "@assets/images/tools/meta-tags-checker.png";
+import organizationSchemaImg from "@assets/images/tools/organization-schema.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -535,6 +536,35 @@ export const metaTagsCheckerToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media professionals can use the tool to create engaging meta descriptions for shared links. This helps improve click-through rates when promoting content across platforms. By optimizing meta tags, marketers can align their social strategies with SEO goals for better audience reach."
+    }
+  ]
+};
+
+export const organizationSchemaToolIntro = {
+  title: "What is Organization Schema Generator?",
+  description: [
+    "An Organization Schema Generator is a tool that helps create structured data for websites. Schema markup enhances how search engines interpret and display your site in search results, increasing its visibility.",
+    "This tool automates the process, generating schema code tailored to your organization’s needs. Whether you’re a business owner, marketer, or blogger, this tool ensures your schema setup is optimized without requiring technical expertise."
+  ],
+  image: organizationSchemaImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Organization Schema Generator",
+  useCasesIntro: "The Microters Organization Schema Generator has a variety of use cases for professionals across industries.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "This tool is ideal for marketers who need to optimize ad campaigns and create targeted content. By organizing keywords into clusters, it becomes easier to identify profitable opportunities. Marketers can also use the tool to improve PPC campaigns, ensuring that ad groups are relevant and cost-effective. It helps drive better engagement and ROI."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers can use the tool to create topic ideas and improve their SEO strategies. By grouping similar keywords, they can plan blog posts that rank higher in search engines. Website owners can also identify keyword trends, ensuring their content aligns with audience needs and boosts site traffic effectively."
+    },
+    {
+      title: "Writing Professionals",
+      content: "For writers, this tool provides a streamlined way to gather ideas. It’s great for creating outlines and writing articles that align with targeted keywords. Professionals can also ensure their work meets SEO guidelines, making their content more discoverable to the intended audience."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can enhance brand consistency by using schema markup to improve how their organization appears in search results. By integrating structured data, marketers can complement social media strategies and drive organic website traffic."
     }
   ]
 };
