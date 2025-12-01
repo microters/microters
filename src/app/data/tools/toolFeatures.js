@@ -848,3 +848,40 @@ export const productSchemaToolFeatures = {
     }
   ]
 };
+
+export const recipeSchemaToolFeatures = {
+  title: "Why Choose ‘Microters’ Recipe Schema Generator?",
+  description: "Microters’ Recipe Schema Generator offers unmatched simplicity and efficiency for creating structured recipe data.",
+  features: [
+    {
+      id: 1,
+      title: "Saves Time",
+      description: "Manually coding schema markup is tedious. This tool automates the process, saving you hours of work and ensuring accuracy in every recipe."
+    },
+    {
+      id: 2,
+      title: "SEO Optimization",
+      description: "The tool enhances your content’s visibility on search engines. It ensures recipes meet Google’s structured data requirements, helping them appear in rich snippets."
+    },
+    {
+      id: 3,
+      title: "User-Friendly Interface",
+      description: "Even without technical knowledge, anyone can easily use the Recipe Schema Generator. Its intuitive design makes the process hassle-free."
+    },
+    {
+      id: 4,
+      title: "Free Keywords Cluster Integration",
+      description: "The tool supports free keyword clustering, helping users identify and group relevant keywords for their recipes. This boosts discoverability while maintaining high-quality content."
+    },
+    {
+      id: 5,
+      title: "Supports All Recipe Types",
+      description: "Whether it’s a complex gourmet dish or a simple snack, the tool works seamlessly with any recipe format, ensuring consistent results."
+    },
+    {
+      id: 6,
+      title: "Trusted by Professionals",
+      description: "From bloggers to marketers, professionals rely on Microters’ Recipe Schema Generator for its reliability and high-quality outputs."
+    }
+  ]
+};

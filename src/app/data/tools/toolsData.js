@@ -481,3 +481,24 @@ export const productSchemaToolSteps = {
     }
   ]
 };
+export const recipeSchemaToolSteps = {
+  title: "How to Use Recipe Schema Generator?",
+  description: "Using the Recipe Schema Generator is quick and easy. Here’s a step-by-step guide:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Enter Recipe Details",
+      description: "Provide the essential information about your recipe, such as title, ingredients, cooking time, and instructions."
+    },
+    {
+      id: 2,
+      title: "Step 2: Generate Schema Code",
+      description: "Click the generate button to create structured JSON-LD code for your recipe."
+    },
+    {
+      id: 3,
+      title: "Step 3: Embed in Your Website",
+      description: "Copy and paste the generated code into your website’s HTML, and you’re ready to improve your SEO!"
+    }
+  ]
+};

@@ -21,6 +21,7 @@ import paragraphGeneratorImg from "@assets/images/tools/paragraph-generator.png"
 import permalinkGeneratorImg from "@assets/images/tools/permalink-generator.png";
 import personSchemaImg from "@assets/images/tools/person-schema-generator.png";
 import productSchemaImg from "@assets/images/tools/product-schema-generator.png";
+import recipeSchemaImg from "@assets/images/tools/recipe-schema-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -685,6 +686,35 @@ export const productSchemaToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can use the tool to showcase product details more effectively in posts linked to websites. It makes social promotions more impactful by driving SEO benefits. It also helps marketers integrate campaigns seamlessly with structured product details for better engagement."
+    }
+  ]
+};
+
+export const recipeSchemaToolIntro = {
+  title: "What is Recipe Schema Generator?",
+  description: [
+    "A Recipe Schema Generator is a simple tool designed to help you create structured recipe data using schema markup. It ensures your recipes display rich snippets on search engines, such as star ratings, cooking times, and nutritional information.",
+    "This tool is perfect for anyone sharing recipes online, whether on blogs, websites, or social media. It simplifies the technical process of schema markup, allowing even non-technical users to optimize their recipe content for search engines."
+  ],
+  image: recipeSchemaImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Recipe Schema Generator Tool",
+  useCasesIntro: "Microters’ Recipe Schema Generator is versatile, offering benefits for various users. Here’s how different professionals can utilize this tool:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing professionals can use the tool to optimize recipe-related content for SEO. By ensuring recipes appear as rich snippets, they drive higher click-through rates and increase web traffic. This tool also helps marketers streamline campaigns by making recipes more accessible and visually appealing on search engines."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Food bloggers and website owners can use the tool to make their recipes stand out in search results. Schema markup ensures users see detailed information like star ratings and cooking times before clicking. Embedding structured data is also a great way to attract more readers and improve user engagement with professional-looking recipe presentations."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers specializing in recipe content can use this tool to enhance the quality of their work. Structured data makes it easier for users to follow detailed recipes while building credibility with visually appealing snippets. Freelance writers also benefit from delivering SEO-optimized recipes, which makes their services more valuable to clients."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can use the tool to optimize recipe content shared across platforms. Rich snippets increase visibility, driving traffic from social platforms back to the website. This approach also makes campaigns more engaging by featuring recipes with attractive previews that captivate audiences."
     }
   ]
 };
