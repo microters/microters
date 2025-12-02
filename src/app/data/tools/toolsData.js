@@ -607,3 +607,24 @@ export const sitemapExtractorToolSteps = {
     }
   ]
 };
+export const thesisGeneratorToolSteps = {
+  title: "How to Use AI Thesis Generator Tool?",
+  description: "Creating a thesis with this tool is quick and straightforward. Follow these steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Add Your Topic or Paragraphs",
+      description: "Input your desired topic, paragraphs, or any relevant context into the provided text box. This helps the tool understand the core subject of your thesis and craft appropriate content."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select Your Desired Writing Tone",
+      description: "Choose from various writing tones, such as formal, casual, persuasive, or informative. The dropdown menu allows you to tailor the style to suit your specific audience or purpose."
+    },
+    {
+      id: 3,
+      title: "Step 3: Select Your Preferred Language",
+      description: "Pick from over 100 languages in the dropdown menu. Once selected, click the “Generate” button, and the tool will create a thesis in your chosen language and tone instantly."
+    }
+  ]
+};

@@ -27,6 +27,7 @@ import howToSchemaImg from "@assets/images/tools/how-to-schema.png";
 import sentenceExpanderImg from "@assets/images/tools/sentence-expander.png";
 import sentenceGeneratorImg from "@assets/images/tools/sentence-generator.png";
 import sitemapExtractorImg from "@assets/images/tools/sitemap-extractor.png";
+import thesisGeneratorImg from "@assets/images/tools/thesis-generator.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -865,6 +866,35 @@ export const sitemapExtractorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media teams can extract URLs to share specific links on platforms like Twitter, Facebook, or LinkedIn. This ensures their audience gets access to targeted pages that boost engagement. Moreover, social media campaigns can leverage grouped URLs for cross-platform consistency and better analytics tracking."
+    }
+  ]
+};
+
+export const thesisGeneratorToolIntro = {
+  title: "What is AI Thesis Generator?",
+  description: [
+    "An AI Thesis Generator is an innovative tool that uses artificial intelligence to assist in creating well-organized thesis documents. By processing your input, such as a topic or context, the tool produces coherent, research-based content tailored to your needs.",
+    "This tool not only saves time but also ensures precision and quality in writing. It’s an ideal solution for anyone looking to draft theses or other academic documents effortlessly while maintaining professional standards."
+  ],
+  image: thesisGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ AI Thesis Generator Tool",
+  useCasesIntro: "This AI tool is versatile and serves multiple purposes. It’s designed for users across different industries and professions:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "For marketers, the AI Thesis Generator is a game-changer. It helps craft compelling content for presentations or marketing strategies in a structured and engaging format. It also streamlines the process of drafting white papers, market analysis reports, or brand strategy documents, saving valuable time while ensuring high-quality output."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers can use this tool to generate informative, engaging posts on complex topics. It simplifies the research and writing process, delivering structured content with minimal effort. Site owners can benefit by creating SEO-friendly articles, enhancing their website’s search engine visibility and driving more traffic."
+    },
+    {
+      title: "Writing Professionals",
+      content: "From ghostwriters to academic writers, this tool provides high-quality content quickly. It assists in developing thesis statements, outlines, and fully fleshed-out ideas in minutes. Professionals can focus on refining the content while the tool handles the heavy lifting of generating the first draft."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media professionals can utilize this tool to craft engaging, thought-provoking posts or case studies. It ensures consistency in tone and messaging across all platforms. It’s also perfect for creating long-form content like reports or presentations that require well-structured arguments and clarity."
     }
   ]
 };

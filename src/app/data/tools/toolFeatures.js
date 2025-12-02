@@ -1070,3 +1070,40 @@ export const sitemapExtractorToolFeatures = {
     }
   ]
 };
+
+export const thesisGeneratorToolFeatures = {
+  title: "Why Choose ‘Microters’ AI Thesis Generator Tool?",
+  description: "This tool is packed with features to make thesis creation effortless and efficient:",
+  features: [
+    {
+      id: 1,
+      title: "100% AI Generated",
+      description: "AI technology drives the tool, ensuring accurate and relevant thesis generation. The automated process eliminates human error and reduces manual workload. With every thesis being AI-driven, you can trust the tool for consistency and professionalism."
+    },
+    {
+      id: 2,
+      title: "Human Quality",
+      description: "Although powered by AI, the tool produces content that matches human writing quality. Each thesis is logically structured and free of grammatical errors. This ensures that your work stands out, whether it’s for academic submission or professional use."
+    },
+    {
+      id: 3,
+      title: "SEO-Optimized Paragraphs",
+      description: "The AI Thesis Generator creates content that is SEO-friendly, ensuring better visibility on search engines. Each paragraph is crafted with targeted keywords to boost rankings. This feature is especially beneficial for bloggers, researchers, and marketers."
+    },
+    {
+      id: 4,
+      title: "Easy to Use",
+      description: "The tool’s user-friendly interface makes it accessible to everyone. No technical expertise is required to operate it. Its simplicity allows users to focus on content creation without worrying about navigating complex features."
+    },
+    {
+      id: 5,
+      title: "Multi-Language Support (100+ Languages)",
+      description: "The tool supports over 100 languages, making it a valuable resource for global users. Whether it’s English, Spanish, Mandarin, or Arabic, you can generate high-quality theses in your preferred language."
+    },
+    {
+      id: 6,
+      title: "Multi-Writing Tone Support",
+      description: "The AI Thesis Generator offers multiple writing tones to suit different purposes. From academic and professional to casual and persuasive, the tool adapts to your needs. This flexibility allows users to tailor their theses to specific audiences."
+    }
+  ]
+};
