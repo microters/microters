@@ -3,7 +3,6 @@ import RelatedToolsSection from "app/components/common/RelatedTools";
 import ToolFeaturesSection from "app/components/common/ToolFeatures";
 import ToolIntroSection from "app/components/common/ToolIntro";
 import ToolStepsSection from "app/components/common/ToolSteps";
-import YouTubeDownloader from "app/components/tools/YouTubeDownloader";
 import YouTubeToMP3Downloader from "app/components/tools/YouTubeToMP3Downloader";
 import { videoRelatedToolsData } from "app/data/tools/relatedToolsData";
 import { youtubeToMp3DownloaderToolFeatures } from "app/data/tools/toolFeatures";
@@ -11,12 +10,12 @@ import { youtubeToMp3DownloaderToolSteps } from "app/data/tools/toolsData";
 import { youtubeToMp3DownloaderToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free YouTube Video Downloader – Download YouTube Videos Instantly",
+  title: "Free YouTube to MP3 Downloader – Convert Videos to MP3 Safely & Instantly",
   description:
-    "Download YouTube videos quickly and easily with our Free YouTube Video Downloader. Save tutorials, music, and your favorite content for offline viewing in just one click.",
+    "Convert YouTube videos to high-quality MP3 audio instantly with our Free YouTube to MP3 Downloader. Fast, easy, and secure—use only with content you own or have permission to download.",
 };
 
-export default function YouTubeToMP4DownloaderPage() {
+export default function YouTubeToMP3DownloaderPage() {
   return (
     <main>
       <div className="bg-[#fef7f5] pt-16 lg:pt-20">

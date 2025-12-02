@@ -35,6 +35,7 @@ import websiteSchemaImg from "@assets/images/tools/website-schema.png";
 import wordCounterImg from "@assets/images/tools/word-counter.png";
 import youtubeShortsDownloaderImg from "@assets/images/tools/youtube-shorts-downloader.png";
 import youtubeToMp3DownloaderImg from "@assets/images/tools/youtube-to-mp3-downloader.png";
+import youtubeToMp4DownloaderImg from "@assets/images/tools/youtube-to-mp4-downloader.png";
 
 export const acronymToolIntro = { 
   title: "What is Free AI Acronym Generator?",
@@ -1105,6 +1106,35 @@ export const youtubeToMp3DownloaderToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can benefit from this tool by using it to download YouTube audio that aligns with their content strategies. By converting videos to MP3 format, they can easily incorporate music, quotes, and speeches into social media campaigns. This downloader is a time-saver for social media marketers who need quick access to high-quality audio files. It helps them enhance their content and improve audience engagement with compelling audio."
+    }
+  ]
+};
+
+export const youtubeToMp4DownloaderToolIntro = {
+  title: "What is Free YouTube To MP4 Downloader?",
+  description: [
+    "The Free YouTube To MP4 Downloader is a simple tool designed to convert YouTube videos into high-quality MP4 video files. It allows users to save videos for offline viewing, making content accessible anytime, anywhere.",
+    "This tool is perfect for anyone who wants to watch YouTube videos offline in MP4 format. It’s ideal for professionals, content creators, and everyday users."
+  ],
+  image: youtubeToMp4DownloaderImg,
+  useCasesTitle: "Use cases of ‘Microters’ Free YouTube To MP4 Downloader Tool",
+  useCasesIntro: "This tool is designed for anyone who wants to download YouTube videos in MP4 format for offline use. It’s especially helpful for professionals, content creators, and users who love watching videos without interruptions.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing professionals can benefit from the Free YouTube To MP4 Downloader by downloading relevant video content for presentations, ads, and campaigns. This tool helps streamline the process of gathering video resources, ensuring marketing teams have access to quality video content when needed. With MP4 videos on hand, marketers can incorporate engaging visual elements into their materials, ensuring that their content stands out in promotions and social media campaigns."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "Bloggers and site owners often need video content to enhance their posts or add variety to their articles. With the Free YouTube To MP4 Downloader, they can easily download videos that align with their niche and embed them into their blogs or websites. This downloader provides an efficient way to gather content, save time, and increase engagement by offering multimedia content to website visitors in the form of videos."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can use the Free YouTube To MP4 Downloader to access visual content that can help spark creativity or serve as research material for their writing projects. By downloading videos, they have a resource they can refer to without needing a constant internet connection. Writers can incorporate downloaded video clips into their articles, tutorials, or other content types, enriching the material they create and enhancing the storytelling process."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers use video to connect with their audience, and the Free YouTube To MP4 Downloader simplifies this process. By downloading videos, they can incorporate them into social media posts, improving user engagement and content visibility. This tool helps social media marketers quickly grab videos that align with their strategy, allowing them to stay ahead in the fast-paced world of online marketing."
     }
   ]
 };

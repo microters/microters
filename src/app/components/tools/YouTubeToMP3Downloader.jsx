@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
-import { FaArrowRight, FaCircleNotch, FaDownload, FaLink, FaMusic, FaSearch, FaStar, FaYoutube } from "react-icons/fa";
+import { FaArrowRight, FaCircleNotch, FaDownload, FaLink, FaMusic, FaSearch, FaStar} from "react-icons/fa";
 
 // --- STYLES ---
 const baseInputStyles = `
