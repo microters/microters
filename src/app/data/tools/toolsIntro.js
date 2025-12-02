@@ -26,6 +26,7 @@ import robotsTxtValidatorImg from "@assets/images/tools/robots-txt-validator.png
 import howToSchemaImg from "@assets/images/tools/how-to-schema.png";
 import sentenceExpanderImg from "@assets/images/tools/sentence-expander.png";
 import sentenceGeneratorImg from "@assets/images/tools/sentence-generator.png";
+import sitemapExtractorImg from "@assets/images/tools/sitemap-extractor.png";
 
 export const acronymToolIntro = {
   title: "What is Free AI Acronym Generator?",
@@ -835,6 +836,35 @@ export const sentenceGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "This tool helps social media marketers produce engaging captions, taglines, and posts. It ensures content resonates with the target audience and increases shareability. The ability to switch between tones and languages makes it ideal for targeting diverse demographics with localized, impactful content."
+    }
+  ]
+};
+
+export const sitemapExtractorToolIntro = {
+  title: "What is Free XML Sitemap URL Extractor?",
+  description: [
+    "The Free XML Sitemap URL Extractor is a web-based tool that scans XML sitemaps to retrieve a list of URLs. It’s an essential utility for SEO professionals, marketers, and content creators who need to organize and analyze site URLs effectively.",
+    "This tool streamlines the process of extracting URLs, saving time and effort while enabling better keyword grouping and SEO strategies. It’s free to use and compatible with most XML sitemaps, making it accessible for everyone."
+  ],
+  image: sitemapExtractorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free XML Sitemap URL Extractor Tool",
+  useCasesIntro: "This tool offers value across multiple user groups:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing teams can extract URLs to structure keyword clusters and target specific pages more effectively. With organized URLs, campaigns can focus on high-value content and improve search rankings. Additionally, this tool simplifies analyzing competitors’ XML sitemaps, enabling marketers to refine their strategies."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "Bloggers can use the tool to manage content URLs and group them by topics for better visibility. It helps in organizing blog archives and identifying underperforming posts. Site owners can also optimize internal linking strategies by analyzing all site URLs in one place."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can benefit by aligning their content topics with extracted URLs for improved keyword relevance. This ensures that their work is strategically placed to drive organic traffic. Content creators can use URL clusters to plan and prioritize writing schedules based on SEO trends."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media teams can extract URLs to share specific links on platforms like Twitter, Facebook, or LinkedIn. This ensures their audience gets access to targeted pages that boost engagement. Moreover, social media campaigns can leverage grouped URLs for cross-platform consistency and better analytics tracking."
     }
   ]
 };

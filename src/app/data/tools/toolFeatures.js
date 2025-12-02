@@ -1033,3 +1033,40 @@ export const sentenceGeneratorToolFeatures = {
     }
   ]
 };
+
+export const sitemapExtractorToolFeatures = {
+  title: "Why Choose ‘Microters’ Free XML Sitemap URL Extractor",
+  description: "The Microters Free XML Sitemap URL Extractor stands out because of its simplicity and effectiveness.",
+  features: [
+    {
+      id: 1,
+      title: "Fast and User-Friendly",
+      description: "This tool is designed for all users, offering a clean interface and lightning-fast URL extraction. No technical expertise is required."
+    },
+    {
+      id: 2,
+      title: "Free of Cost",
+      description: "Enjoy full access to this feature-packed tool without any hidden charges or subscriptions."
+    },
+    {
+      id: 3,
+      title: "Secure and Reliable",
+      description: "Microters prioritizes data security. Your sitemap data is processed securely, ensuring no unauthorized access."
+    },
+    {
+      id: 4,
+      title: "Supports SEO Efforts",
+      description: "Extracting URLs simplifies tasks like keyword clustering, improving rankings and visibility on search engines."
+    },
+    {
+      id: 5,
+      title: "Flexible and Versatile",
+      description: "Compatible with a wide range of XML sitemaps, the tool works seamlessly for different site structures."
+    },
+    {
+      id: 6,
+      title: "Built for All Users",
+      description: "Whether you’re a marketer, writer, or social media expert, this tool adapts to meet your needs."
+    }
+  ]
+};

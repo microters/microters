@@ -15,7 +15,7 @@ export const metadata = {
     "Generate unique, high-quality sentences instantly with our Free AI Sentence Generator. Perfect for blogs, marketing, essays, and social media—customize tone, style, and language effortlessly with AI.",
 };
 
-export default function SentenceExpanderPage() {
+export default function SentenceGeneratorPage() {
   return (
     <main>
       <div className="bg-[#fef7f5] pt-16 lg:pt-20">

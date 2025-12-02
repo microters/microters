@@ -586,3 +586,24 @@ export const sentenceGeneratorToolSteps = {
     }
   ]
 };
+export const sitemapExtractorToolSteps = {
+  title: "How to Use Free XML Sitemap URL Extractor?",
+  description: "Using the Free XML Sitemap URL Extractor is quick and simple. Follow these three steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Upload Your Sitemap",
+      description: "Copy and paste your XML sitemap URL into the tool’s input box."
+    },
+    {
+      id: 2,
+      title: "Step 2: Extract URLs",
+      description: "Click on the “Extract” button to process the sitemap and generate a list of URLs."
+    },
+    {
+      id: 3,
+      title: "Step 3: Download and Use",
+      description: "Save the extracted URLs as a file or copy them for your SEO and keyword grouping tasks."
+    }
+  ]
+};
