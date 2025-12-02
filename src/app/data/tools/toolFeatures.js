@@ -1181,3 +1181,77 @@ export const titleGeneratorToolFeatures = {
     }
   ]
 };
+
+export const videoSchemaToolFeatures = {
+  title: "Why Choose ‘Microters’ Video Schema Generator?",
+  description: "Make your video SEO efforts seamless and effective. Here’s why Microters stands out:",
+  features: [
+    {
+      id: 1,
+      title: "Free Keywords Cluster for Better Targeting",
+      description: "Microters includes a free keyword clustering tool to optimize schema for the right audience. It identifies related terms, improving your video’s relevance in search results."
+    },
+    {
+      id: 2,
+      title: "Easy-to-Use Interface",
+      description: "Designed for simplicity, even beginners can use this tool without prior experience. Its intuitive layout reduces the time spent generating schema codes."
+    },
+    {
+      id: 3,
+      title: "Improves Rich Search Results",
+      description: "Structured data created by Microters ensures your videos are displayed with rich snippets, boosting user engagement and click-through rates."
+    },
+    {
+      id: 4,
+      title: "Works with All Websites",
+      description: "Microters supports integration with all major CMS platforms, making it versatile for websites big and small."
+    },
+    {
+      id: 5,
+      title: "Keyword Clustering Examples for Guidance",
+      description: "The tool provides keyword clustering examples, ensuring effective targeting for your content. These examples help users refine their strategy."
+    },
+    {
+      id: 6,
+      title: "Free SERP Keyword Clustering Tool Integration",
+      description: "The integration with free SERP keyword clustering tools ensures your schema aligns with top-ranking keywords, maximizing visibility."
+    }
+  ]
+};
+
+export const websiteSchemaToolFeatures = {
+  title: "Why Choose ‘Microters’ Website Schema Generator?",
+  description: "This tool is packed with features to make schema generation effortless and effective:",
+  features: [
+    {
+      id: 1,
+      title: "Easy to Use",
+      description: "The tool is designed for all skill levels, offering a simple and intuitive interface that makes schema generation a breeze. It eliminates the need for technical coding knowledge, saving time and effort for users."
+    },
+    {
+      id: 2,
+      title: "Free Keywords Cluster",
+      description: "Microters’ tool includes a built-in keyword clustering feature, helping you optimize your schema with relevant terms. This improves the chances of ranking higher in search results. Keyword clustering ensures your content remains aligned with SEO strategies."
+    },
+    {
+      id: 3,
+      title: "SEO-Optimized",
+      description: "The schema generator ensures that all structured data follows SEO best practices. This helps your website perform better on search engines and attract more organic traffic. Properly optimized schema improves the chances of appearing in rich search snippets."
+    },
+    {
+      id: 4,
+      title: "Multi-Schema Support",
+      description: "You can create multiple types of schema, from product listings to local businesses and FAQs, all in one tool. This flexibility suits diverse needs and ensures comprehensive coverage. Multi-schema support ensures your website stays ahead in SEO practices."
+    },
+    {
+      id: 5,
+      title: "Supports Multiple Industries",
+      description: "Whether you’re in e-commerce, blogging, marketing, or writing, this tool caters to your specific industry needs. It provides tailored solutions to improve online visibility. Industry-specific features ensure a personalized approach to schema generation."
+    },
+    {
+      id: 6,
+      title: "Free Tool with Premium Features",
+      description: "Despite being a free tool, it offers premium-quality features, rivaling paid alternatives. Generate unlimited schemas without worrying about subscription fees. This makes it accessible for startups, small businesses, and individuals looking to optimize their websites effectively."
+    }
+  ]
+};

@@ -30,6 +30,8 @@ import sitemapExtractorImg from "@assets/images/tools/sitemap-extractor.png";
 import thesisGeneratorImg from "@assets/images/tools/thesis-generator.png";
 import thesisStatementGeneratorImg from "@assets/images/tools/thesis-statement-generator.png";
 import titleGeneratorImg from "@assets/images/tools/title-generator.png";
+import videoSchemaImg from "@assets/images/tools/video-schema.png";
+import websiteSchemaImg from "@assets/images/tools/website-schema.png";
 
 export const acronymToolIntro = { 
   title: "What is Free AI Acronym Generator?",
@@ -955,6 +957,64 @@ export const titleGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can create catchy headlines for posts, captions, and ads. These titles help improve engagement rates and attract clicks. The multilingual feature ensures social media campaigns are localized effectively, making it easier to connect with diverse audiences globally."
+    }
+  ]
+};
+
+export const videoSchemaToolIntro = {
+  title: "What is a Video Schema Generator?",
+  description: [
+    "A video schema generator helps create structured data for videos, making them easier for search engines to understand. It generates schema markup in JSON-LD format, which you can embed directly into your website’s HTML.",
+    "Using this tool ensures your videos appear in search engine results with rich snippets, increasing click-through rates and overall user engagement."
+  ],
+  image: videoSchemaImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Video Schema Generator Tool",
+  useCasesIntro: "From marketing to blogging, this tool fits diverse needs. Here’s how it benefits different professionals:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Video schema generator tools are invaluable for marketing professionals aiming to increase visibility. Structured data ensures videos appear prominently in search results, driving more organic traffic. It also supports campaigns by offering better tracking of video performance through enhanced metadata integration."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers can optimize their video tutorials or reviews for rich search results. The schema generator makes videos more discoverable, bringing consistent traffic to blogs. Embedding structured data improves the overall ranking of the website, ensuring higher visibility across competitive niches."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers creating educational or promotional video content can use schema tools to improve engagement. Enhanced snippets attract a wider audience, ensuring the content gets the attention it deserves. It’s also a time-saver, allowing professionals to focus more on creating quality content and less on technical details."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can boost campaigns by ensuring videos rank higher in search results. This tool increases the reach of video content across platforms. Schema markup improves the discoverability of videos on platforms like Google, bringing more clicks and shares."
+    }
+  ]
+};
+
+export const websiteSchemaToolIntro = {
+  title: "What is Website Schema Generator?",
+  description: [
+    "A website schema generator is a tool that helps you create structured data for your website. Structured data is a standardized format that communicates the content of your site to search engines, helping them index your pages effectively.",
+    "By using this tool, you can add rich snippets, improve search engine results, and make your content more accessible to users. It’s an essential tool for anyone looking to enhance their online presence."
+  ],
+  image: websiteSchemaImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Website Schema Generator Tool",
+  useCasesIntro: "This tool is designed for various professionals and industries, offering significant benefits:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing experts can use schema to improve website visibility in search results. Adding structured data highlights services, reviews, and events, making it easier for potential clients to find them. Schema also boosts click-through rates by displaying rich snippets, such as ratings, pricing, and availability, directly in the search results."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "For bloggers and website owners, the schema generator helps enhance blog posts, articles, and multimedia content. It ensures better indexing and increases the chances of appearing in featured snippets. By structuring your site’s data, you provide a seamless experience for readers and attract more organic traffic."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Content creators and copywriters can improve the discoverability of their work by adding structured data. This helps their articles rank higher in search results while showcasing metadata like publication date and author details. Schema also helps organize large volumes of written content, making it easier for readers and search engines to navigate."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media professionals can use schema to improve the visibility of campaigns and promotions. Highlighting offers, events, or product launches directly in search results ensures higher engagement. Structured data also supports the integration of multimedia content like videos and images, enhancing cross-platform visibility."
     }
   ]
 };

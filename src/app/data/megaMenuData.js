@@ -157,8 +157,8 @@ export const MegaMenuData = [
                 { name: 'Person Schema Generator', href: '/seo-tools/person-schema-generator', Icon: FaUsers },
                 { name: 'Recipe Schema Generator', href: '/seo-tools/recipe-schema-generator', Icon: FaStarHalf },
                 { name: 'Schema Generator', href: '/seo-tools/schema-generator', Icon: FaSearch },
-                { name: 'Video Schema Generator', href: '#', Icon: FaFileVideo },
-                { name: 'Website Schema Generator', href: '#', Icon: FaLaptopCode },
+                { name: 'Video Schema Generator', href: '/seo-tools/video-schema-generator', Icon: FaFileVideo },
+                { name: 'Website Schema Generator', href: '/seo-tools/website-schema-generator', Icon: FaLaptopCode },
             ],
         },
         {

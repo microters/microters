@@ -670,3 +670,45 @@ export const titleGeneratorToolSteps = {
     }
   ]
 };
+export const videoSchemaToolSteps = {
+  title: "How to Use a Video Schema Generator?",
+  description: "Getting started with a video schema generator is simple and fast. Follow these three steps to improve your video SEO:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Enter Video Details",
+      description: "Input the video title, description, thumbnail URL, and upload date into the tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Generate Schema Markup",
+      description: "Click the “Generate” button to create the structured data code in JSON-LD format."
+    },
+    {
+      id: 3,
+      title: "Step 3: Embed the Code",
+      description: "Copy and paste the generated code into your website’s HTML for the respective video."
+    }
+  ]
+};
+export const websiteSchemaToolSteps = {
+  title: "How to Use Website Schema Generator?",
+  description: "Using the website schema generator is quick and simple. Follow these steps to generate schema markup for your website:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your Website Details",
+      description: "Enter your website information, such as URLs, titles, descriptions, and relevant data, into the provided fields. This ensures the schema reflects your website’s content accurately."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select Schema Type",
+      description: "Choose the schema type you need from the dropdown menu, such as FAQ, article, local business, or product. Each schema type caters to different content requirements, making your data more specific."
+    },
+    {
+      id: 3,
+      title: "Step 3: Generate and Copy Code",
+      description: "Click “Generate,” and the tool will create the schema markup instantly. Copy the generated code and add it to your website’s HTML. It’s that easy!"
+    }
+  ]
+};
