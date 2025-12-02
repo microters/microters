@@ -1292,3 +1292,40 @@ export const wordCounterToolFeatures = {
     }
   ]
 };
+
+export const youtubeShortsDownloaderToolFeatures = {
+  title: "Why Choose ‘Microters’ YouTube Shorts Video Downloader?",
+  description: "Microters’ YouTube Shorts Video Downloader offers several advantages over other tools. Here’s why it stands out:",
+  features: [
+    {
+      id: 1,
+      title: "Free to Use",
+      description: "This tool is completely free. There are no hidden fees or subscription costs, which makes it perfect for users who want a cost-effective solution for downloading videos."
+    },
+    {
+      id: 2,
+      title: "Fast and Easy Downloads",
+      description: "Microters provides fast video downloads with minimal wait time. The process is simple and designed for all user levels, making it accessible to anyone who wants to save content quickly."
+    },
+    {
+      id: 3,
+      title: "No Watermark",
+      description: "With Microters, the videos you download are clean, with no watermarks. This is especially useful if you plan to use the videos for professional purposes or repurpose them for social media sharing."
+    },
+    {
+      id: 4,
+      title: "Supports Multiple Formats",
+      description: "The downloader supports various file formats, so you can download videos in the format that best suits your needs. Whether you prefer MP4 or another format, it’s all available."
+    },
+    {
+      id: 5,
+      title: "High-Quality Downloads",
+      description: "The tool ensures you get high-resolution videos with every download, so you don’t have to worry about losing quality. It’s perfect for those who want to enjoy their videos in the best possible format."
+    },
+    {
+      id: 6,
+      title: "No Software Installation Needed",
+      description: "You can use Microters’ YouTube Shorts Video Downloader directly from your browser, so there’s no need to install any extra software. It’s an easy, hassle-free experience that works on any device."
+    }
+  ]
+};

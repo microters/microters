@@ -203,7 +203,7 @@ export const MegaMenuData = [
             titleColorName: secondaryColorName,
             iconBgClass: secondaryIconBg,
             links: [
-                { name: 'YouTube Video Downloader', href: '#', Icon: FaVideo },
+                { name: 'YouTube Video Downloader', href: '/video-tools/youtube-video-downloader', Icon: FaVideo },
                 { name: 'Shorts Video Downloader', href: '#', Icon: FaVideo },
                 { name: 'Shorts To MP3 Downloader', href: '#', Icon: FaVideo },
                 { name: 'Shorts To MP4 Downloader', href: '#', Icon: FaVideo },

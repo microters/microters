@@ -733,3 +733,24 @@ export const wordCounterToolSteps = {
     }
   ]
 };
+export const youtubeShortsDownloaderToolSteps = {
+  title: "How to Use YouTube Shorts Video Downloader?",
+  description: "To use the YouTube Shorts to Mp4 Downloader tool, follow these simple steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Copy the URL",
+      description: "Go to the YouTube Shorts video you want to download and copy its URL from the address bar."
+    },
+    {
+      id: 2,
+      title: "Step 2: Paste the URL",
+      description: "Open the YouTube Shorts to Mp4 Downloader tool and paste the copied URL into the provided input box."
+    },
+    {
+      id: 3,
+      title: "Step 3: Download",
+      description: "Click the “Download” button, and within seconds, your video will be ready to download in MP4 format."
+    }
+  ]
+};

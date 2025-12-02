@@ -56,8 +56,8 @@ export default function WordCounterPage() {
         features={wordCounterToolFeatures.features}
       />
        <RelatedToolsSection
-        title={schemaGeneratorRelatedToolsData.title} 
-        tools={schemaGeneratorRelatedToolsData.tools} 
+        title={schemaGeneratorRelatedToolsData.title}
+        tools={schemaGeneratorRelatedToolsData.tools}
       />
     </main>
   );

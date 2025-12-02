@@ -1,8 +1,9 @@
 import React from 'react';
-import { FaPenNib, FaParagraph, FaExpandAlt, FaQuestionCircle, FaLayerGroup, FaListOl, FaBriefcase, FaStore, FaBuilding, FaUser, FaBoxOpen, FaUtensils, FaVideo, FaGlobe, FaSignature, FaExclamationCircle, FaSitemap, FaGoogle, FaHeading, FaCode, FaLink, FaRobot } from 'react-icons/fa';
+import { FaPenNib, FaParagraph, FaExpandAlt, FaQuestionCircle, FaLayerGroup, FaListOl, FaBriefcase, FaStore, FaBuilding, FaUser, FaBoxOpen, FaUtensils, FaVideo, FaGlobe, FaSignature, FaExclamationCircle, FaSitemap, FaGoogle, FaHeading, FaCode, FaLink, FaRobot, FaYoutube, FaMusic, FaFileAudio, FaFileVideo } from 'react-icons/fa';
 import { MdTitle, MdOutlineSummarize, MdOutlineArticle, MdOutlineLinearScale, MdEvent } from 'react-icons/md';
 import { TbFileInfo, TbAbc, TbSchema, TbLetterCase, TbSeo, TbNumbers } from 'react-icons/tb';
 import { BiText } from 'react-icons/bi';
+import { FaClapperboard } from 'react-icons/fa6';
 
 export const relatedToolsData = {
   title: "Other writing tools you may be interested in",
@@ -246,6 +247,48 @@ export const schemaGeneratorRelatedToolsData = {
       title: "ULK Web Word Counter",
       icon: <TbNumbers className="text-3xl" />,
       link: "/seo-tools/ulk-web-word-counter/"
+    }
+  ]
+};
+
+export const videoRelatedToolsData = {
+  title: "Other Video tools you may be interested in",
+  tools: [
+    {
+      id: 1,
+      title: "YouTube Video Downloader",
+      icon: <FaYoutube className="text-2xl" />,
+      link: "/video-tools/youtube-video-downloader"
+    },
+    {
+      id: 2,
+      title: "YouTube Shorts Downloader",
+      icon: <FaClapperboard className="text-2xl" />,
+      link: "/video-tools/youtube-shorts-downloader"
+    },
+    {
+      id: 3,
+      title: "YouTube Shorts To MP3",
+      icon: <FaMusic className="text-2xl" />,
+      link: "/video-tools/youtube-shorts-to-mp3-downloader"
+    },
+    {
+      id: 4,
+      title: "YouTube Shorts To MP4",
+      icon: <FaVideo className="text-2xl" />,
+      link: "/video-tools/youtube-shorts-to-mp4-downloader"
+    },
+    {
+      id: 5,
+      title: "YouTube To MP3 Downloader",
+      icon: <FaFileAudio className="text-2xl" />,
+      link: "/video-tools/youtube-to-mp3-downloader"
+    },
+    {
+      id: 6,
+      title: "YouTube To MP4 Downloader",
+      icon: <FaFileVideo className="text-2xl" />,
+      link: "/video-tools/youtube-to-mp4-downloader"
     }
   ]
 };
