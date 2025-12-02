@@ -1107,3 +1107,40 @@ export const thesisGeneratorToolFeatures = {
     }
   ]
 };
+
+export const thesisStatementGeneratorToolFeatures = {
+  title: "Why Choose ‘Microters’ Free AI Thesis Statement Generator Tool?",
+  description: "Discover the standout features of this tool:",
+  features: [
+    {
+      id: 1,
+      title: "100% AI Generated",
+      description: "The tool uses AI technology to create thesis statements based on your inputs. It analyzes data and produces results instantly, saving users significant time. AI ensures consistent quality, allowing users to generate multiple options for comparison and selection effortlessly."
+    },
+    {
+      id: 2,
+      title: "Human Quality",
+      description: "Despite being AI-powered, the tool delivers results that mimic human writing. It focuses on clarity, coherence, and relevance, matching professional standards. This human-like quality makes it a trusted resource for both casual and professional users."
+    },
+    {
+      id: 3,
+      title: "SEO Optimized Paragraphs",
+      description: "The tool generates SEO-friendly thesis statements, helping improve your content’s visibility online. It integrates keywords naturally, ensuring higher search engine rankings. By improving readability and relevance, it enhances content performance across digital platforms."
+    },
+    {
+      id: 4,
+      title: "Easy to Use",
+      description: "Simplicity is key to this tool. Its intuitive interface makes it accessible to users of all skill levels. No technical expertise is required. Just input your data, select options, and receive results instantly, making it perfect for fast-paced tasks."
+    },
+    {
+      id: 5,
+      title: "Multi-language Support (100+ Languages)",
+      description: "With support for over 100 languages, the tool is ideal for users worldwide. It adapts to various languages, ensuring accurate and meaningful output in your preferred language. This feature broadens accessibility, making it suitable for global audiences."
+    },
+    {
+      id: 6,
+      title: "Multi Writing Tone Support",
+      description: "The tool offers multiple writing tones, enabling customization for different needs. Whether formal, casual, persuasive, or academic, it adjusts to your preferences. This versatility makes it perfect for diverse writing tasks, enhancing the user experience."
+    }
+  ]
+};

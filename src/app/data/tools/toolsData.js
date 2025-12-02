@@ -628,3 +628,24 @@ export const thesisGeneratorToolSteps = {
     }
   ]
 };
+export const thesisStatementGeneratorToolSteps = {
+  title: "How To Use Free AI Thesis Statement Generator Tool?",
+  description: "It’s simple to use this tool with just three steps:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Add Your Topic or Paragraphs",
+      description: "Add your topic, paragraphs, or context in the input field. Clearly define the focus of your content to guide the generator."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select Your Desired Tone",
+      description: "Select your desired writing tone from the dropdown. Whether you prefer formal, persuasive, or casual, the tool adapts to your needs seamlessly."
+    },
+    {
+      id: 3,
+      title: "Step 3: Select Your Preferred Language",
+      description: "Choose your preferred language from over 100 options and click “Generate.” You’ll instantly receive a tailored thesis statement in the language and style you selected."
+    }
+  ]
+};

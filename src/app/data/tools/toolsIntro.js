@@ -28,8 +28,9 @@ import sentenceExpanderImg from "@assets/images/tools/sentence-expander.png";
 import sentenceGeneratorImg from "@assets/images/tools/sentence-generator.png";
 import sitemapExtractorImg from "@assets/images/tools/sitemap-extractor.png";
 import thesisGeneratorImg from "@assets/images/tools/thesis-generator.png";
+import thesisStatementGeneratorImg from "@assets/images/tools/thesis-statement-generator.png";
 
-export const acronymToolIntro = {
+export const acronymToolIntro = { 
   title: "What is Free AI Acronym Generator?",
   description: [
     "A Free AI Acronym Generator is a simple yet powerful online tool designed to create acronyms from your input text. It helps you generate meaningful, creative, and sometimes funny acronyms by analyzing the words or letters provided.",
@@ -895,6 +896,35 @@ export const thesisGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media professionals can utilize this tool to craft engaging, thought-provoking posts or case studies. It ensures consistency in tone and messaging across all platforms. It’s also perfect for creating long-form content like reports or presentations that require well-structured arguments and clarity."
+    }
+  ]
+};
+
+export const thesisStatementGeneratorToolIntro = {
+  title: "What is Free AI Thesis Statement Generator?",
+  description: [
+    "A Free AI Thesis Statement Generator is an online tool designed to create clear and concise thesis statements based on your input. It uses advanced algorithms to analyze your topic or context and provide tailored results that suit your writing needs.",
+    "This tool eliminates the guesswork in creating a thesis statement by offering suggestions in seconds. Whether you’re working on essays, blog posts, or academic papers, it simplifies the process, ensuring your thesis is both relevant and effective."
+  ],
+  image: thesisStatementGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free AI Thesis Statement Generator Tool",
+  useCasesIntro: "This tool serves various user groups effectively:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use the generator to create compelling thesis statements for campaigns, ensuring their messaging is clear and targeted. It helps frame strategies around specific goals, leading to better engagement. With precise thesis statements, marketers can align their content with audience expectations, increasing campaign success and brand awareness."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers and site owners can streamline content creation by generating clear thesis statements for blog posts or web pages. This ensures that the content aligns with the topic. It saves time and helps maintain consistency, improving SEO rankings and reader satisfaction by keeping content concise and engaging."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can boost their creativity and productivity using this tool. It simplifies complex ideas, making them easier to present in essays, reports, or books. With a variety of tones available, writers can craft thesis statements suitable for different audiences, enhancing the impact of their work."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can generate thesis-like content for posts, captions, or campaigns. This helps create attention-grabbing content that resonates with followers. The tool ensures messaging stays on point, boosting engagement rates and making social media marketing more effective."
     }
   ]
 };
