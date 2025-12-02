@@ -712,3 +712,24 @@ export const websiteSchemaToolSteps = {
     }
   ]
 };
+export const wordCounterToolSteps = {
+  title: "How to Use Free Online Word Counter Tool?",
+  description: "Using the Free Online Word Counter Tool is simple and efficient.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Paste Your Text",
+      description: "Copy your text and paste it into the input box on the tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Click “Count”",
+      description: "Press the count button to analyze your text."
+    },
+    {
+      id: 3,
+      title: "Step 3: View Results",
+      description: "Instantly see the word count, character count, and other metrics displayed on the screen."
+    }
+  ]
+};

@@ -1255,3 +1255,40 @@ export const websiteSchemaToolFeatures = {
     }
   ]
 };
+
+export const wordCounterToolFeatures = {
+  title: "Why Choose ‘Microters’ Free Online Word Counter Tool?",
+  description: "This tool offers unmatched convenience and accuracy.",
+  features: [
+    {
+      id: 1,
+      title: "Ease of Use",
+      description: "The interface is clean and user-friendly. Anyone can use it without technical knowledge, making it ideal for all skill levels."
+    },
+    {
+      id: 2,
+      title: "Accurate Results",
+      description: "Get precise word and character counts in seconds. This accuracy saves time and reduces errors in your work."
+    },
+    {
+      id: 3,
+      title: "Free and Accessible",
+      description: "Enjoy all features without spending a dime. This tool is accessible from any device with an internet connection."
+    },
+    {
+      id: 4,
+      title: "Supports Multiple Text Formats",
+      description: "Paste text from documents, emails, or social media drafts seamlessly. The tool supports various formats for maximum convenience."
+    },
+    {
+      id: 5,
+      title: "SEO-Focused Features",
+      description: "Get insights to improve keyword usage, ensuring better performance on search engines. This makes it valuable for content creators and marketers."
+    },
+    {
+      id: 6,
+      title: "Data Privacy",
+      description: "Your text is not stored or shared, guaranteeing complete confidentiality. This ensures secure and worry-free usage."
+    }
+  ]
+};

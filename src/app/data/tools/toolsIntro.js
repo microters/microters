@@ -32,6 +32,7 @@ import thesisStatementGeneratorImg from "@assets/images/tools/thesis-statement-g
 import titleGeneratorImg from "@assets/images/tools/title-generator.png";
 import videoSchemaImg from "@assets/images/tools/video-schema.png";
 import websiteSchemaImg from "@assets/images/tools/website-schema.png";
+import wordCounterImg from "@assets/images/tools/word-counter.png";
 
 export const acronymToolIntro = { 
   title: "What is Free AI Acronym Generator?",
@@ -1015,6 +1016,35 @@ export const websiteSchemaToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media professionals can use schema to improve the visibility of campaigns and promotions. Highlighting offers, events, or product launches directly in search results ensures higher engagement. Structured data also supports the integration of multimedia content like videos and images, enhancing cross-platform visibility."
+    }
+  ]
+};
+
+export const wordCounterToolIntro = {
+  title: "What is Free Online Word Counter Tool?",
+  description: [
+    "A Free Online Word Counter Tool is a digital utility that quickly counts words, characters, and spaces in any text. It helps users manage their content effectively by providing instant results and insights.",
+    "This tool is ideal for students, professionals, and content creators who need accurate text analysis. Its straightforward interface and accessibility make it an essential resource for anyone working with written content."
+  ],
+  image: wordCounterImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free Online Word Counter Tool",
+  useCasesIntro: "This tool suits various needs for different user types.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "For marketers, word limits in ads or promotional material can make or break a campaign. This tool ensures your content meets platform-specific guidelines while maintaining creativity. Analyzing email or landing page content helps improve engagement and conversion rates, making this tool indispensable for marketing success."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers use this tool to create SEO-friendly posts by adhering to ideal word counts. This improves their rankings on search engines, boosting visibility. Website owners can ensure meta descriptions and headlines remain within effective character limits, enhancing click-through rates."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers often need to adhere to strict guidelines. This tool helps ensure content fits word limits for articles, books, or academic papers. It’s also useful for fine-tuning drafts, checking readability, and optimizing text for clarity and impact."
+    },
+    {
+      title: "Social Media Marketer",
+      content: "Character limits on platforms like Twitter and LinkedIn make this tool a must-have for social media marketers. It helps create concise yet compelling posts. Additionally, it assists in optimizing hashtags and captions, ensuring maximum reach and engagement."
     }
   ]
 };
