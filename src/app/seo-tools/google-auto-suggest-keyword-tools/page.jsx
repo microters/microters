@@ -15,7 +15,7 @@ export const metadata = {
     "Discover high-intent keyword ideas instantly with our Google Auto Suggest Keyword Tool. Generate real-time keyword suggestions to improve SEO, content planning, and search visibility.",
 };
 
-export default function FAQSchemaGeneratorPage() {
+export default function GoogleAutoSuggestKeywordPage() {
   return (
     <main>
        <div className="bg-[#fef7f5] pt-16 lg:pt-20">
