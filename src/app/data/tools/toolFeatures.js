@@ -1403,3 +1403,40 @@ export const youtubeToMp4DownloaderToolFeatures = {
     }
   ]
 };
+
+export const googleKeywordToolsFeatures = {
+  title: "Why Choose ‘Microters’ Google Auto Suggest Keyword Tools?",
+  description: "Microters stands out for its reliability and efficiency in generating keyword insights. Here’s why:",
+  features: [
+    {
+      id: 1,
+      title: "Free Keywords Cluster",
+      description: "Microters provides a robust, cost-effective solution for keyword clustering. It helps users identify and group keywords seamlessly."
+    },
+    {
+      id: 2,
+      title: "Accurate Keyword Grouping Tool",
+      description: "The tool ensures precision in keyword grouping, making it easier to organize and plan content strategies."
+    },
+    {
+      id: 3,
+      title: "Best Free Keywords Cluster Tool",
+      description: "Users can enjoy top-tier features without subscription fees, offering exceptional value for content creators and marketers."
+    },
+    {
+      id: 4,
+      title: "Advanced Keyword Clustering",
+      description: "With cutting-edge technology, Microters delivers accurate and relevant keyword clusters that align with market trends."
+    },
+    {
+      id: 5,
+      title: "User-Friendly Interface",
+      description: "Its simple and intuitive design ensures that even beginners can use the tool effectively, saving time and effort."
+    },
+    {
+      id: 6,
+      title: "Efficient SERP Keyword Clustering",
+      description: "The tool excels in analyzing search engine results pages (SERP) to create actionable keyword clusters for SEO success."
+    }
+  ]
+};

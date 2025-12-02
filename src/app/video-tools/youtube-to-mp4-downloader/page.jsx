@@ -10,12 +10,12 @@ import { youtubeToMp4DownloaderToolSteps } from "app/data/tools/toolsData";
 import { youtubeToMp4DownloaderToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free YouTube Video Downloader – Download YouTube Videos Instantly",
+  title: "Free YouTube to MP4 Downloader – Convert YouTube Videos to MP4 Instantly",
   description:
-    "Download YouTube videos quickly and easily with our Free YouTube Video Downloader. Save tutorials, music, and your favorite content for offline viewing in just one click.",
+    "Convert YouTube videos to high-quality MP4 format instantly with our Free YouTube to MP4 Downloader. Fast, easy, and secure—use only with content you own or have permission to download.",
 };
 
-export default function YouTubeVideoDownloaderPage() {
+export default function YouTubeToMP4DownloaderPage() {
   return (
     <main>
        <div className="bg-[#fef7f5] pt-16 lg:pt-20">

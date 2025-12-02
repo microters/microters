@@ -169,7 +169,7 @@ export const MegaMenuData = [
                 { name: 'Disclaimer Generator', href: '/seo-tools/disclaimer-generator', Icon: FaFileInvoiceDollar },
                 { name: 'Keywords Cluster',  href: '/seo-tools/keyword-clustering', Icon: FaChartLine },
                 { name: 'XML Sitemap URL Extractor', href: '/seo-tools/xml-sitemap-url-extractor', Icon: FaFileCode },
-                { name: 'Google Auto Suggest Keyword', href: '#', Icon: FaSearch },
+                { name: 'Google Auto Suggest Keyword', href: '/seo-tools/google-auto-suggest-keyword-tools', Icon: FaSearch },
                 { name: 'Headline Generator', href: '/seo-tools/headline-generator', Icon: FaCode },
                 { name: 'HTML Heading Checker', href: '#', Icon: FaCode },
                 { name: 'Job Post Schema', href: '/seo-tools/job-post-schema', Icon: FaCode },
