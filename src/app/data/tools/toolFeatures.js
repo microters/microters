@@ -1144,3 +1144,40 @@ export const thesisStatementGeneratorToolFeatures = {
     }
   ]
 };
+
+export const titleGeneratorToolFeatures = {
+  title: "Why Choose ‘Microters’ Free AI Title Generator Tool",
+  description: "Discover the standout features of this tool:",
+  features: [
+    {
+      id: 1,
+      title: "100% AI Generated",
+      description: "The tool fully automates the title generation process, saving time and effort. You don’t need to brainstorm or edit heavily as the AI generates professional titles for you. By using advanced algorithms, it ensures titles are precise, catchy, and tailored to your input for maximum impact."
+    },
+    {
+      id: 2,
+      title: "Human Quality",
+      description: "Despite being AI-powered, the results mimic human creativity and writing style. This means your titles feel natural, professional, and engaging. Whether you’re writing for a casual audience or a formal one, the tool adjusts to maintain a human touch in its suggestions."
+    },
+    {
+      id: 3,
+      title: "SEO Optimized Paragraphs",
+      description: "The AI ensures titles are optimized with the right keywords to boost your content’s search engine visibility. This makes it easier to rank higher on Google and attract organic traffic. You can focus on producing quality content while the tool handles the SEO optimization for your headlines."
+    },
+    {
+      id: 4,
+      title: "Easy to Use",
+      description: "With an intuitive interface, even beginners can use the tool effortlessly. You simply input your text, make a few selections, and click “Generate.” The simplicity of the design ensures anyone can create titles in seconds without technical knowledge."
+    },
+    {
+      id: 5,
+      title: "Multi-language Support (100+ Languages)",
+      description: "The tool supports over 100 languages, making it ideal for global users. Whether you’re creating content for English, Spanish, French, or any other audience, it has you covered. This feature ensures seamless localization, so your content resonates with people from different regions and languages."
+    },
+    {
+      id: 6,
+      title: "Multi Writing Tone Support",
+      description: "You can select from a variety of tones, including professional, humorous, casual, or emotional. This makes the tool adaptable to various needs and styles. Whether it’s for a corporate press release or a lighthearted blog, the tool provides title options suited to your tone of choice."
+    }
+  ]
+};

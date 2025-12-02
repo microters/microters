@@ -29,6 +29,7 @@ import sentenceGeneratorImg from "@assets/images/tools/sentence-generator.png";
 import sitemapExtractorImg from "@assets/images/tools/sitemap-extractor.png";
 import thesisGeneratorImg from "@assets/images/tools/thesis-generator.png";
 import thesisStatementGeneratorImg from "@assets/images/tools/thesis-statement-generator.png";
+import titleGeneratorImg from "@assets/images/tools/title-generator.png";
 
 export const acronymToolIntro = { 
   title: "What is Free AI Acronym Generator?",
@@ -925,6 +926,35 @@ export const thesisStatementGeneratorToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can generate thesis-like content for posts, captions, or campaigns. This helps create attention-grabbing content that resonates with followers. The tool ensures messaging stays on point, boosting engagement rates and making social media marketing more effective."
+    }
+  ]
+};
+
+export const titleGeneratorToolIntro = {
+  title: "What is Free AI Title Generator?",
+  description: [
+    "A Free AI Title Generator is an intelligent tool designed to create captivating titles based on your input. Whether you need titles for blogs, articles, videos, or marketing campaigns, this tool quickly generates options tailored to your content.",
+    "The generator works by analyzing the keywords, tone, and context you provide, ensuring that the suggested titles resonate with your audience. With features like customizable tone and multilingual support, it’s an ideal solution for creators worldwide."
+  ],
+  image: titleGeneratorImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free AI Title Generator Tool",
+  useCasesIntro: "The Microters Free AI Title Generator is perfect for professionals across various fields. Here’s how it helps:",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing teams can use the generator to brainstorm ad campaign headlines or product taglines. It ensures that your titles are compelling and tailored to attract your target market. Additionally, this tool simplifies A/B testing by providing multiple options for marketing copy, helping you find the title that resonates best with your audience."
+    },
+    {
+      title: "Blogger & Site Owner",
+      content: "Bloggers can save hours of brainstorming by generating article titles that are SEO-friendly and engaging. With the right titles, blogs are more likely to rank higher in search results. Website owners can use it to craft creative page titles and meta descriptions, ensuring a professional appearance and improved site visibility."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can use the tool to spark creativity and generate titles for books, essays, or other projects. It reduces the pressure of coming up with ideas while delivering professional-quality results. The tool adapts to different tones and genres, making it versatile for fiction, non-fiction, academic writing, and more."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can create catchy headlines for posts, captions, and ads. These titles help improve engagement rates and attract clicks. The multilingual feature ensures social media campaigns are localized effectively, making it easier to connect with diverse audiences globally."
     }
   ]
 };

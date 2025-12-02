@@ -1,4 +1,4 @@
-import { FaBezierCurve, FaBriefcase, FaChartLine, FaCode, FaCopy, FaFileCode, FaFileInvoiceDollar, FaFileVideo, FaInfoCircle, FaLaptopCode, FaLeaf, FaLink, FaMapMarkerAlt, FaMedkit, FaQuestionCircle, FaRobot, FaSearch, FaShieldAlt, FaShopify, FaShoppingBag, FaStarHalf, FaUsers, FaVideo, FaVideoSlash, FaWordpress } from "react-icons/fa";
+import { FaBezierCurve, FaBriefcase, FaBuilding, FaChartLine, FaCode, FaCopy, FaFileCode, FaFileInvoiceDollar, FaFileVideo, FaInfoCircle, FaLaptopCode, FaLeaf, FaLink, FaMapMarkerAlt, FaMedkit, FaQuestionCircle, FaRobot, FaSearch, FaShieldAlt, FaShopify, FaShoppingBag, FaStarHalf, FaUsers, FaVideo, FaVideoSlash, FaWordpress } from "react-icons/fa";
 import { FaArrowUpRightFromSquare, FaClapperboard, FaPhotoFilm, FaSquareUpRight, FaWebflow } from "react-icons/fa6";
 import Frame1Image from '@assets/images/Frame1.png'; 
 import Frame19Bg from '@assets/images/Frame-19.png';
@@ -177,6 +177,7 @@ export const MegaMenuData = [
                 { name: 'Meta Tags Checker', href: '/seo-tools/meta-tags-checker', Icon: FaCopy },
                 { name: 'Organization Schema', href: '/seo-tools/organization-schema-generator', Icon: FaShopify },
                 { name: 'Product Schema', href: '/seo-tools/product-schema-generator', Icon: FaShoppingBag },
+                { name: 'Title Generator', href: '/seo-tools/title-generator', Icon: FaBuilding },
                 { name: 'Robots.txt Validator', href: '/seo-tools/robots-txt-validator', Icon: FaRobot },
                 { name: 'ULK Web Word Counter', href: '/seo-tools/ulk-web-word-counter', Icon: FaCode },
             ],

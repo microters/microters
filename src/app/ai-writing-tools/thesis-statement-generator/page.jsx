@@ -3,7 +3,6 @@ import RelatedToolsSection from "app/components/common/RelatedTools";
 import ToolFeaturesSection from "app/components/common/ToolFeatures";
 import ToolIntroSection from "app/components/common/ToolIntro";
 import ToolStepsSection from "app/components/common/ToolSteps";
-import ThesisGenerator from "app/components/tools/ThesisGenerator";
 import ThesisStatementGenerator from "app/components/tools/ThesisStatementGenerator";
 import { relatedToolsData } from "app/data/tools/relatedToolsData";
 import { thesisStatementGeneratorToolFeatures } from "app/data/tools/toolFeatures";
@@ -11,9 +10,9 @@ import { thesisStatementGeneratorToolSteps } from "app/data/tools/toolsData";
 import { thesisStatementGeneratorToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free AI Thesis Generator – Create Strong Thesis Statements Instantly",
+  title: "Free AI Thesis Statement Generator – Craft Strong Thesis Statements Instantly",
   description:
-    "Generate clear, compelling thesis statements in seconds with our Free AI Thesis Generator. Ideal for students, researchers, and writers who need structured, high-quality academic content fast.",
+    "Create clear, powerful thesis statements in seconds with our Free AI Thesis Statement Generator. Perfect for students, writers, and researchers looking for high-quality academic writing support.",
 };
 
 export default function ThesisStatementGeneratorPage() {

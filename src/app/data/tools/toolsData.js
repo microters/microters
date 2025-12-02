@@ -649,3 +649,24 @@ export const thesisStatementGeneratorToolSteps = {
     }
   ]
 };
+export const titleGeneratorToolSteps = {
+  title: "How To Use Free AI Title Generator Tool?",
+  description: "Using the Free AI Title Generator is simple and user-friendly. Follow these three steps to generate a perfect title:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Add Your Topic or Paragraphs",
+      description: "Add your topic, paragraph, or context in the designated field. Input any text or idea you have, and the tool will analyze it to create titles that match your content."
+    },
+    {
+      id: 2,
+      title: "Step 2: Select Your Desired Tone",
+      description: "Choose your desired writing tone from the dropdown menu. Whether you need a formal, funny, professional, or casual tone, this feature ensures your title aligns with your audience."
+    },
+    {
+      id: 3,
+      title: "Step 3: Select Your Preferred Language",
+      description: "Select your preferred language. With support for over 100 languages, you can generate titles in the language that best fits your audience. Click “Generate” to receive your list of AI-powered title suggestions."
+    }
+  ]
+};
