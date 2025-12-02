@@ -10,9 +10,9 @@ import { websiteSchemaToolSteps } from "app/data/tools/toolsData";
 import { websiteSchemaToolIntro } from "app/data/tools/toolsIntro";
 
 export const metadata = {
-  title: "Free Video Schema Generator – Create JSON-LD Video Markup Instantly",
+  title: "Free Website Schema Generator – Create JSON-LD Website Markup Instantly",
   description:
-    "Generate accurate JSON-LD Video Schema markup in seconds with our Free Video Schema Generator. Improve video SEO, enhance search visibility, and help search engines understand your video content.",
+    "Generate accurate JSON-LD Website Schema markup easily with our Free Website Schema Generator. Improve SEO, enhance search visibility, and help search engines understand your website structure.",
 };
 
 export default function WebsiteSchemaGeneratorPage() {
