@@ -754,3 +754,45 @@ export const youtubeShortsDownloaderToolSteps = {
     }
   ]
 };
+export const youtubeToMp3DownloaderToolSteps = {
+  title: "How to Use Free YouTube To Mp3 Downloader?",
+  description: "Follow these simple steps to convert YouTube videos to MP3:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Copy the Video Link",
+      description: "Find the YouTube video you want to convert and copy its URL from the browser’s address bar."
+    },
+    {
+      id: 2,
+      title: "Step 2: Paste the Link into the Downloader",
+      description: "Open the Free YouTube To Mp3 Downloader tool, and paste the copied URL into the tool’s input box."
+    },
+    {
+      id: 3,
+      title: "Step 3: Download the MP3 File",
+      description: "Click the “Download” button, and the tool will quickly convert the video to MP3. Once the conversion is complete, you can save the MP3 file to your device."
+    }
+  ]
+};
+export const youtubeToMp4DownloaderToolSteps = {
+  title: "How to Use Free YouTube To MP4 Downloader?",
+  description: "Follow these simple steps to convert YouTube videos into MP4 format:",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Copy the Video URL",
+      description: "Go to YouTube, find the video you want to download, and copy its URL from the browser’s address bar."
+    },
+    {
+      id: 2,
+      title: "Step 2: Paste the URL into the Downloader",
+      description: "Open the Free YouTube To MP4 Downloader Tool and paste the copied URL into the tool’s input field."
+    },
+    {
+      id: 3,
+      title: "Step 3: Download the MP4 File",
+      description: "Hit the “Download” button to start the conversion. Once done, the MP4 file will be ready for you to save and watch on your device"
+    }
+  ]
+};

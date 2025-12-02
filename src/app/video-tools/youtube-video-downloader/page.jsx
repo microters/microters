@@ -15,7 +15,7 @@ export const metadata = {
     "Download YouTube videos quickly and easily with our Free YouTube Video Downloader. Save tutorials, music, and your favorite content for offline viewing in just one click.",
 };
 
-export default function SiteMapUrlExtractorPage() {
+export default function YouTubeVideoDownloaderPage() {
   return (
     <main>
        <div className="bg-[#fef7f5] pt-16 lg:pt-20">

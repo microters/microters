@@ -34,6 +34,7 @@ import videoSchemaImg from "@assets/images/tools/video-schema.png";
 import websiteSchemaImg from "@assets/images/tools/website-schema.png";
 import wordCounterImg from "@assets/images/tools/word-counter.png";
 import youtubeShortsDownloaderImg from "@assets/images/tools/youtube-shorts-downloader.png";
+import youtubeToMp3DownloaderImg from "@assets/images/tools/youtube-to-mp3-downloader.png";
 
 export const acronymToolIntro = { 
   title: "What is Free AI Acronym Generator?",
@@ -1075,6 +1076,35 @@ export const youtubeShortsDownloaderToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers know the importance of staying on top of trends. With the YouTube Shorts to MP4 Downloader, they can download videos that are relevant to their social media campaigns. These downloaded videos can be reposted or shared across platforms to increase engagement and attract new followers. The ability to download YouTube Shorts also helps social media marketers curate content that aligns with their audience’s interests."
+    }
+  ]
+};
+
+export const youtubeToMp3DownloaderToolIntro = {
+  title: "What is Free YouTube To Mp3 Downloader?",
+  description: [
+    "The Free YouTube To Mp3 Downloader is a simple tool designed to convert YouTube videos into high-quality MP3 audio files. It allows users to extract sound from videos for offline listening, making content accessible anytime, anywhere.",
+    "This tool is perfect for anyone who wants to listen to YouTube videos offline in MP3 format. It’s ideal for professionals, content creators, and everyday users."
+  ],
+  image: youtubeToMp3DownloaderImg,
+  useCasesTitle: "Use cases of ‘Microters’ Free YouTube To Mp3 Downloader Tool",
+  useCasesIntro: "This tool is perfect for anyone who wants to listen to YouTube videos offline in MP3 format. It’s ideal for professionals, content creators, and everyday users.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketing professionals can use the Free YouTube To Mp3 Downloader to extract audio content from YouTube videos for use in campaigns, podcasts, and other promotional materials. This tool makes it easy to collect relevant audio and incorporate it into marketing strategies. By saving audio from YouTube, marketers can curate valuable content for their audience. Whether it’s background music, interviews, or sound bites, the Free YouTube To Mp3 Downloader tool is an invaluable resource."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "Blogger and website owners can convert YouTube content into MP3 to enhance their blog posts and articles. Adding relevant audio content to posts can increase user engagement and provide additional value to visitors. With this tool, bloggers can quickly download audio from YouTube and use it in various content types. It’s an efficient way to gather audio for podcasts, tutorials, or other forms of content that require sound."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers often need to extract and listen to YouTube videos for inspiration or reference. The Free YouTube To Mp3 Downloader tool offers a straightforward way to convert videos into MP3 files, allowing writers to focus on their work without distractions. Writing professionals can use this tool to gather audio resources like interviews, lectures, or podcasts. This audio can then be played back and used to enhance their writing process."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media marketers can benefit from this tool by using it to download YouTube audio that aligns with their content strategies. By converting videos to MP3 format, they can easily incorporate music, quotes, and speeches into social media campaigns. This downloader is a time-saver for social media marketers who need quick access to high-quality audio files. It helps them enhance their content and improve audience engagement with compelling audio."
     }
   ]
 };
