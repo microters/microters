@@ -817,3 +817,24 @@ export const googleKeywordToolsSteps = {
     }
   ]
 };
+export const htmlHeadingCheckerToolSteps = {
+  title: "How to Use Free HTML Heading Checker Tool",
+  description: "Using this tool is straightforward and doesn’t require technical skills.",
+  steps: [
+    {
+      id: 1,
+      title: "Step 1: Input Your URL",
+      description: "Paste your website or page URL into the tool."
+    },
+    {
+      id: 2,
+      title: "Step 2: Run the Analysis",
+      description: "Click “Analyze” to scan the heading tags on your page."
+    },
+    {
+      id: 3,
+      title: "Step 3: Review Suggestions",
+      description: "Check the results and make updates to improve heading structure and SEO."
+    }
+  ]
+};

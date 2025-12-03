@@ -37,6 +37,7 @@ import youtubeShortsDownloaderImg from "@assets/images/tools/youtube-shorts-down
 import youtubeToMp3DownloaderImg from "@assets/images/tools/youtube-to-mp3-downloader.png";
 import youtubeToMp4DownloaderImg from "@assets/images/tools/youtube-to-mp4-downloader.png";
 import googleKeywordToolsImg from "@assets/images/tools/google-keyword-tools.png";
+import htmlHeadingCheckerImg from "@assets/images/tools/html-heading-checker.png";
 
 export const acronymToolIntro = { 
   title: "What is Free AI Acronym Generator?",
@@ -1165,6 +1166,35 @@ export const googleKeywordToolsToolIntro = {
     {
       title: "Social Media Marketers",
       content: "Social media marketers can create engaging posts by identifying popular search terms. This increases visibility and interaction on platforms like Instagram and Twitter. By using keyword clustering examples, marketers can align social content with trending topics, boosting audience reach."
+    }
+  ]
+};
+
+export const htmlHeadingCheckerToolIntro = {
+  title: "What is Free HTML Heading Checker Tool?",
+  description: [
+    "The Free HTML Heading Checker Tool helps you examine your website’s heading tags (H1, H2, H3, etc.). It checks the hierarchy and ensures your content follows SEO-friendly practices.",
+    "Using this tool, you can identify errors in heading structures, such as missing or misused tags, and optimize them to make your site easier to navigate for users and search engines."
+  ],
+  image: htmlHeadingCheckerImg,
+  useCasesTitle: "Use Cases of ‘Microters’ Free HTML Heading Checker Tool",
+  useCasesIntro: "Microters’ tool benefits a wide range of users, making heading optimization simple and effective.",
+  useCases: [
+    {
+      title: "Marketing Professionals",
+      content: "Marketers can use the tool to ensure their landing pages and content follow proper heading structures. This makes it easier for search engines to understand and rank their pages. It also helps marketers create a clear hierarchy in their content, improving readability and audience engagement."
+    },
+    {
+      title: "Blogger & Site Owners",
+      content: "For bloggers and site owners, this tool ensures that articles are optimized for search engines with the correct headings. It checks for missing tags, ensuring better visibility. By using the right headings, site owners can provide a seamless experience for readers, improving session times and engagement rates."
+    },
+    {
+      title: "Writing Professionals",
+      content: "Writers can use the tool to format articles with proper heading tags, enhancing readability and SEO. This ensures that their content meets both user and algorithm standards. It also provides guidance on balancing keyword placement within headings for maximum visibility."
+    },
+    {
+      title: "Social Media Marketers",
+      content: "Social media professionals can use the tool to optimize web pages linked in their campaigns. Proper headings improve content previews on platforms and encourage higher click-through rates. This tool helps social marketers ensure shared links meet both audience and platform standards."
     }
   ]
 };

@@ -171,7 +171,7 @@ export const MegaMenuData = [
                 { name: 'XML Sitemap URL Extractor', href: '/seo-tools/xml-sitemap-url-extractor', Icon: FaFileCode },
                 { name: 'Google Auto Suggest Keyword', href: '/seo-tools/google-auto-suggest-keyword-tools', Icon: FaSearch },
                 { name: 'Headline Generator', href: '/seo-tools/headline-generator', Icon: FaCode },
-                { name: 'HTML Heading Checker', href: '#', Icon: FaCode },
+                { name: 'HTML Heading Checker', href: '/seo-tools/html-heading-checker', Icon: FaCode },
                 { name: 'Job Post Schema', href: '/seo-tools/job-post-schema', Icon: FaCode },
                 { name: 'Keyword Grouping', href: '/seo-tools/keyword-grouping', Icon: FaSearch },
                 { name: 'Meta Tags Checker', href: '/seo-tools/meta-tags-checker', Icon: FaCopy },

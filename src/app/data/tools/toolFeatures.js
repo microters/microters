@@ -1440,3 +1440,40 @@ export const googleKeywordToolsFeatures = {
     }
   ]
 };
+
+export const htmlHeadingCheckerToolFeatures = {
+  title: "Why Choose ‘Microters’ Free HTML Heading Checker Tool?",
+  description: "Microters provides a reliable and easy-to-use tool for improving your website’s heading structure.",
+  features: [
+    {
+      id: 1,
+      title: "Simple and User-Friendly",
+      description: "The tool’s clean interface makes it accessible to all users, regardless of technical experience. You can check and improve your headings in just a few clicks, saving time and effort."
+    },
+    {
+      id: 2,
+      title: "100% Free",
+      description: "Microters’ tool is completely free, providing advanced heading analysis without any hidden charges. You can use it as often as needed to ensure your content remains optimized."
+    },
+    {
+      id: 3,
+      title: "Improves SEO Rankings",
+      description: "Correctly structured headings enhance search engine rankings by making your content easier to understand. Higher rankings mean more traffic and better visibility for your website."
+    },
+    {
+      id: 4,
+      title: "Enhances Content Readability",
+      description: "Proper headings create a logical flow, improving the reading experience for your audience. This keeps users engaged and encourages longer session durations."
+    },
+    {
+      id: 5,
+      title: "Regular Updates",
+      description: "Microters ensures the tool remains up-to-date with the latest SEO guidelines. This guarantees accurate results and helps you adapt to algorithm changes effortlessly."
+    },
+    {
+      id: 6,
+      title: "Detailed Insights",
+      description: "The tool provides in-depth reports on heading structure, helping you identify and fix issues efficiently. This makes it easier to optimize your content for both users and search engines."
+    }
+  ]
+};
