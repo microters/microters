@@ -1,5 +1,7 @@
-import Footer from "./components/common/Footer";
-import Header from "./components/common/Header";
+
+import { ToastContainer } from "react-toastify";
+import { AuthProvider } from "./(dashboard)/providers";
+import ClientLayout from "./ClientLayout";
 import "./globals.css";
 
 export const metadata = {
@@ -12,9 +14,26 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
       >
-        <Header/>
-        <main>{children}</main>
-        <Footer/>
+        <AuthProvider>
+          <ClientLayout>
+            {children}
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              enableMultiContainer
+              containerId="global" 
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+              className="custom-toast-container"
+            />
+          </ClientLayout>
+        </AuthProvider>
       </body>
     </html>
   );

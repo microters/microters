@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  password      String?   
+  image         String?
+  role          Role      @default(USER) 
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Category {
+  id              String   @id @default(cuid())
+  name            String
+  slug            String   @unique
+  description     String?  @db.Text
+  status          String   @default("DRAFT") 
+  metaTitle       String?
+  metaDescription String?  @db.Text
+  posts Post[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("categories")
+}
+
+model Post {
+  id              String    @id @default(cuid())
+  title           String
+  slug            String    @unique
+  content         String?   @db.Text
+  excerpt         String?   @db.Text
+  featuredImage   String?
+  status          String    @default("DRAFT")
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?   @db.Text
+
+  // Relations
+  categoryId      String?
+  category        Category? @relation(fields: [categoryId], references: [id])
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("posts")
+}
