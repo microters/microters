@@ -125,7 +125,7 @@ export default function BlogPostsPage() {
               </button>
             )}
             <Link
-                href="/dashboard/blog/posts/new"
+                href="/dashboard/blog-posts/new"
                 className="flex items-center gap-2 px-4 py-2.5 bg-[#f35d36] hover:bg-[#d84e2a] text-white text-sm font-semibold rounded-lg shadow-sm transition-all hover:scale-105"
                 >
                 <FiPlus className="w-4 h-4" /> <span>Add New Post</span>
