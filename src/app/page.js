@@ -12,6 +12,7 @@ import ServicesSection from "./components/home/Services";
 import VenturesContent from "./components/home/VenturesContent";
 import VerticalAccordion from "./components/home/VerticalAccordion";
 import TestimonialsSection from "./components/common/Testimonials";
+import BlogSection from "./components/home/Blogs";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <ContributionsSection/>
       <CtaSection/>
       <TestimonialsSection/>
+      <BlogSection/>
       <CtaBeforeFooter/>
     </div>
   );

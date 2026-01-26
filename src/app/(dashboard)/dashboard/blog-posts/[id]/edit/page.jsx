@@ -23,7 +23,7 @@ export default function EditPostPage({ params }) {
         setInitialData(data);
       } catch (error) {
         toastError("Failed to load post.");
-        router.push("/dashboard/blog/posts");
+        router.push("/dashboard/blog-posts");
       } finally {
         setIsLoading(false);
       }
@@ -43,7 +43,7 @@ export default function EditPostPage({ params }) {
       if (!response.ok) throw new Error("Failed to update post.");
 
       toastSuccess("Post updated successfully!");
-      router.push("/dashboard/blog/posts");
+      router.push("/dashboard/blog-posts");
     } catch (error) {
       toastError(error.message);
     } finally {
@@ -57,7 +57,13 @@ export default function EditPostPage({ params }) {
     { label: "Edit Post" },
   ];
 
-  if (isLoading) return <div className="p-10 text-center">Loading...</div>;
+  if (isLoading) {
+    return (
+      <div className="flex h-96 items-center justify-center">
+        <div className="w-8 h-8 border-2 border-gray-200 border-t-[#f35d36] rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">

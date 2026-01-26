@@ -26,7 +26,7 @@ export default function AddCategoryPage() {
       }
       
       toastSuccess('Category created successfully!');
-      router.push('/dashboard/blog/categories');
+      router.push('/dashboard/blog-categories');
     } catch (error) {
       console.error(error);
       toastError(error.message);

@@ -53,10 +53,10 @@ export function PostTable({
         <table className="w-full text-sm text-left">
           <thead className="text-xs uppercase bg-gray-50/50 text-gray-500 font-semibold">
             <tr>
-              <th className="p-4 w-4">
+              <th scope="col" className="p-4 w-4">
                 <input 
                   type="checkbox"
-                  className="w-4 h-4 text-[#f35d36] border-gray-300 rounded focus:ring-[#f35d36]"
+                  className="custom-checkbox"
                   onChange={onSelectAll}
                   checked={allSelectedOnPage}
                 />
@@ -74,7 +74,7 @@ export function PostTable({
                 <td className="w-4 p-4">
                     <input 
                       type="checkbox"
-                      className="w-4 h-4 text-[#f35d36] border-gray-300 rounded focus:ring-[#f35d36]"
+                      className="custom-checkbox"
                       checked={selectedPostIds.includes(post.id)}
                       onChange={(e) => onSelectOne(e, post.id)}
                     />
@@ -83,7 +83,7 @@ export function PostTable({
                 {/* Post Title & Image */}
                 <td className="px-6 py-4">
                     <div className="flex items-center gap-4">
-                        <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0 border border-gray-200">
+                        <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-gray-100 shrink-0 border border-gray-200">
                             {post.featuredImage ? (
                                 <Image src={post.featuredImage} alt={post.title} fill className="object-cover" />
                             ) : (
@@ -116,17 +116,17 @@ export function PostTable({
                 </td>
 
                 <td className="px-6 py-4 text-right">
-                  <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="flex items-center justify-end gap-2">
                     <Link 
-                      href={`/dashboard/blog/posts/${post.id}/edit`}
-                      className="p-2 text-gray-500 hover:text-[#f35d36] hover:bg-orange-50 rounded-lg transition-colors" 
+                      href={`/dashboard/blog-posts/${post.id}/edit`}
+                      className="p-2 text-[#f35d36] bg-orange-50 rounded-lg transition-colors" 
                       title="Edit"
                     >
                       <FiEdit className="w-4 h-4" />
                     </Link>
                     <button 
                         onClick={() => setPostToDelete(post)} 
-                        className="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors" 
+                        className="p-2 text-red-600 bg-red-50 rounded-lg transition-colors" 
                         title="Delete"
                     >
                         <FiTrash2 className="w-4 h-4" />

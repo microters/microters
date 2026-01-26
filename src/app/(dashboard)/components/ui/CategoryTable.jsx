@@ -100,7 +100,7 @@ export function CategoryTable({
                     </Link>
                     <button 
                         onClick={() => handleDeleteClick(cat)} 
-                        className="p-2 text-red-600 bg-red-50 rounded-lg transition-colors" 
+                        className="p-2 text-red-600 bg-red-50 rounded-lg transition-colors"
                         title="Delete"
                     >
                         <FiTrash2 className="w-4 h-4" />
