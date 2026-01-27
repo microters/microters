@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FiSave, FiImage, FiX, FiRefreshCw, FiGlobe, FiLayout, FiCheck } from 'react-icons/fi';
-import { TinyMCEEditor } from 'app/components/TinyMCEEditor';
 import { toastError, toastSuccess } from 'lib/toast';
+import { TinyMCEEditor } from './TinyMCEEditor';
 
 export function PostForm({ onSave, initialData, isSaving }) {
   
