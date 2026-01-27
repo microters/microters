@@ -279,6 +279,250 @@ input.PhoneInputInput:focus-visible {
   transform: scale(1);
 }
 
+/* BlockNoteEditor */
+#tinyMCE p {
+  @apply text-slate-600 leading-relaxed mb-6;
+  font-size: 1.125rem;
+}
+
+/* Headings */
+#tinyMCE h1,
+#tinyMCE h2,
+#tinyMCE h3,
+#tinyMCE h4,
+#tinyMCE h5 {
+  color: #212c4a;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#tinyMCE h1,
+#tinyMCE h2{
+  position: relative;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+#tinyMCE h1::before,
+#tinyMCE h1::after,
+#tinyMCE h2::before,
+#tinyMCE h2::after {
+  content: "";
+  height: 3px;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#tinyMCE h1::before,
+#tinyMCE h2::before{
+  width: 100%;
+  background-color: #DCE7FE;
+  z-index: 0;
+}
+#tinyMCE h1::after,
+#tinyMCE h2::after{
+  width: 40%;
+  background-color: #f35d36;
+}
+
+/* Links */
+#tinyMCE a {
+  color: #f35d36 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+#tinyMCE a:hover {
+  border-bottom-color: #f35d36;
+}
+
+/* --- Lists --- */
+
+/* Unordered List */
+#tinyMCE ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+#tinyMCE ul > li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #475569;
+}
+
+#tinyMCE ul > li::before {
+  content: ''; 
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #f35d36;
+}
+
+/* Nested List */
+#tinyMCE ul ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+#tinyMCE ul ul li::before {
+  background-color: #212c4a;
+  border-radius: 50%;
+}
+
+/* Ordered List */
+#tinyMCE ol {
+  counter-reset: main-counter;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+#tinyMCE ol > li {
+  counter-increment: main-counter;
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Custom Number Badge */
+#tinyMCE ol > li::before {
+  content: counter(main-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #f35d36;
+  color: #f35d36;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(243, 93, 54, 0.15);
+}
+
+/* --- Blockquotes --- */
+#tinyMCE blockquote {
+  background-color: #fff7ed;
+  border-left: 4px solid #f35d36;
+  padding: 1.5rem 2rem;
+  border-radius: 0 12px 12px 0;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #212c4a;
+  font-weight: 500;
+}
+
+/* --- Images --- */
+#tinyMCE img {
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+
+/* --- Tables --- */
+#tinyMCE .table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin: 2rem 0;
+}
+
+#tinyMCE table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tinyMCE th {
+  background-color: #f8fafc;
+  color: #212c4a;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  text-align: left;
+}
+
+#tinyMCE td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+#tinyMCE tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Code Blocks --- */
+#tinyMCE .code-wrapper {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+}
+
+#tinyMCE pre {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  margin: 0;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Copy Button */
+#tinyMCE .copy-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+#tinyMCE .code-wrapper:hover .copy-btn {
+  opacity: 1;
+}
+
+#tinyMCE .copy-btn:hover {
+  background-color: #f35d36;
+  border-color: #f35d36;
+  color: white;
+}
+
+#tinyMCE .copy-btn.copied {
+  background-color: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
 /* Custom Toast */
 .custom-toast-container .Toastify__toast {
   width: 400px;

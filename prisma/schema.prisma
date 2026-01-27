@@ -55,8 +55,28 @@ model Post {
   // Relations
   categoryId      String?
   category        Category? @relation(fields: [categoryId], references: [id])
+  comments        Comment[]
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
 
   @@map("posts")
+}
+
+model Comment {
+  id          String   @id @default(cuid())
+  content     String   @db.Text
+  authorName  String
+  authorEmail String
+  status      String   @default("PENDING")
+  
+  // Relations
+  postId      String
+  post        Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  
+  // Self-relation for threaded replies
+  parentId    String?
+  parent      Comment? @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies     Comment[] @relation("CommentReplies")
+
+  createdAt   DateTime @default(now())
 }
