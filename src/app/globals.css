@@ -523,6 +523,23 @@ input.PhoneInputInput:focus-visible {
   color: white;
 }
 
+/* Blog Swiper */
+.blog-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #d1d5db;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.blog-swiper .swiper-pagination-bullet-active {
+  background: #f35d36;
+  width: 24px;
+  border-radius: 5px;
+}
+.blog-swiper {
+  padding-bottom: 50px !important; 
+}
+
 /* Custom Toast */
 .custom-toast-container .Toastify__toast {
   width: 400px;

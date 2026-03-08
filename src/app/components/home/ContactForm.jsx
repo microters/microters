@@ -16,7 +16,8 @@ const needsOptions = [
     { value: 'leads', label: 'Need More Leads' },
     { value: 'budget', label: 'All Budget' },
 ];
-const RECAPTCHA_SITE_KEY = "6LeY1bwaAAAAABc90p872B87r0T_s-Jp_v1-A9cZ";
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+console.log(RECAPTCHA_SITE_KEY);
 
 const ContactFormSection = () => {
     const recaptchaRef = useRef(null);
@@ -46,25 +47,47 @@ const ContactFormSection = () => {
     };
 
     const onSubmit = useCallback(async (data) => {
-        setSubmitMessage(null);
-        
-        if (!data.captchaToken) {
-            setSubmitMessage({ type: 'error', message: 'Please complete the CAPTCHA validation.' });
+    setSubmitMessage(null);
+    
+    if (!data.captchaToken) {
+        setSubmitMessage({ type: 'error', message: 'Please complete the CAPTCHA validation.' });
+        return;
+    }
+
+    try {
+        const verifyRes = await fetch('/api/verify-captcha', {
+            method: 'POST',
+            body: JSON.stringify({ token: data.captchaToken }),
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        const verifyData = await verifyRes.json();
+        if (!verifyData.success) {
+            setSubmitMessage({ type: 'error', message: 'Bot detected! Verification failed.' });
             return;
         }
 
-        console.log('Form Submitted with Token:', data.captchaToken, data);
-        
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        setSubmitMessage({ type: 'success', message: 'Thank you! Your message has been sent.' });
-        reset();
-        if (recaptchaRef.current) {
-             recaptchaRef.current.reset();
-             setValue('captchaToken', null); 
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            setSubmitMessage({ type: 'success', message: 'Thank you! Your message has been sent via Titan Email.' });
+            reset();
+            recaptchaRef.current?.reset();
+            setValue('captchaToken', null);
+        } else {
+            throw new Error('SMTP failed');
         }
 
-    }, [reset, setValue]);
+    } catch (error) {
+        setSubmitMessage({ type: 'error', message: 'Could not send email. Please check your SMTP settings.' });
+    }
+}, [reset, setValue]);
 
     return (
         <div className="px-4 md:px-6">
@@ -179,7 +202,7 @@ const ContactFormSection = () => {
                             />
                         </div>
                         
-                        {/* --- Row 4: Your Needs (Select) --- */}
+                        {/* --- Row 4: Your Needs --- */}
                         <Controller
                             name="yourNeeds"
                             control={control}

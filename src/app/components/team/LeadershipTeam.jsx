@@ -73,7 +73,7 @@ const LeadershipTeam = () => {
 
                 <div className="flex justify-start gap-3 mt-8">
                   {member.socials.facebook && (
-                    <Link href={member.socials.facebook} target="_blank" className="w-8 h-8 rounded-full bg-[#a9afbe] text-white flex items-center justify-center hover:bg-[#f35d36] transition-colors duration-300">
+                    <Link href={member.socials.facebook} target="_blank" className="w-10 h-10 rounded-full bg-[#a9afbe] text-white flex items-center justify-center hover:bg-[#f35d36] transition-colors duration-300">
                       <FaFacebookF size={14} />
                     </Link>
                   )}

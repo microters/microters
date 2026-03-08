@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { signOut } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import { 
   FiHome, 
   FiFileText, 
@@ -42,11 +42,21 @@ const sidebarLinks = [
 ];
 
 export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
+  const { data: session } = useSession();
   const pathname = usePathname();
 
-  // Auto-open submenu if we are currently on a child page
-  const activeSubmenu = sidebarLinks.find(link => 
-    link.submenu && pathname.startsWith(link.basePath)
+  const filteredLinks = sidebarLinks.filter(link => {
+    if (link.title === 'Blogs') {
+      return session?.user?.role === 'ADMIN';
+    }
+    if (link.title === 'Settings') {
+      return session?.user?.role === 'ADMIN';
+    }
+    return true;
+  });
+
+  const activeSubmenu = filteredLinks.find(link => 
+      link.submenu && pathname.startsWith(link.basePath)
   )?.title || '';
   
   const [openSubmenu, setOpenSubmenu] = useState(activeSubmenu);
@@ -97,7 +107,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
           {/* Navigation Links */}
           <nav className="p-4 mt-4 space-y-2">
             <ul>
-              {sidebarLinks.map((link) => {
+              {filteredLinks.map((link) => {
                 const Icon = link.icon;
                 const isSubmenuOpen = openSubmenu === link.title;
                 const isActive = pathname === link.href;

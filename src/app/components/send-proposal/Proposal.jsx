@@ -1,21 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { budgetOptions, servicesList, timelineSteps } from "app/data/proposalData";
 
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
 const ProposalSection = () => {
-  const [captchaValue, setCaptchaValue] = useState(null);
+  const recaptchaRef = useRef(null);
+  const [submitMessage, setSubmitMessage] = useState(null);
   
   const {
     handleSubmit,
     control,
-    formState: { errors },
-    reset
+    formState: { errors, isSubmitting },
+    reset,
+    setValue
   } = useForm({
+    mode: 'onBlur',
     defaultValues: {
       services: [],
       budget: "",
@@ -25,20 +30,57 @@ const ProposalSection = () => {
       website: "",
       company: "",
       skype: "",
-      message: ""
+      message: "",
+      captchaToken: null,
     }
   });
 
-  const onSubmit = (data) => {
-    if (!captchaValue) {
-      alert("Please verify that you are not a robot.");
+  const onCaptchaChange = (value) => {
+    setValue('captchaToken', value);
+    if (value) setSubmitMessage(null);
+  };
+
+  const onSubmit = useCallback(async (data) => {
+    setSubmitMessage(null);
+    
+    if (!data.captchaToken) {
+      setSubmitMessage({ type: 'error', message: 'Please complete the CAPTCHA validation.' });
       return;
     }
-    console.log("Proposal Data:", data);
-    alert("Proposal request sent successfully!");
-    reset();
-    setCaptchaValue(null);
-  };
+
+    try {
+      const verifyRes = await fetch('/api/verify-captcha', {
+        method: 'POST',
+        body: JSON.stringify({ token: data.captchaToken }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+      const verifyData = await verifyRes.json();
+
+      if (!verifyData.success) {
+        setSubmitMessage({ type: 'error', message: 'Verification failed. Please try again.' });
+        return;
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitMessage({ type: 'success', message: 'Proposal request sent successfully!' });
+        reset();
+        recaptchaRef.current?.reset();
+        setValue('captchaToken', null);
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (error) {
+      setSubmitMessage({ type: 'error', message: 'Something went wrong. Please try again.' });
+    }
+  }, [reset, setValue]);
 
   // --- STYLES ---
  const baseInputStyles = `
@@ -232,8 +274,15 @@ const ProposalSection = () => {
               </div>
 
               {/* 5. ReCAPTCHA */}
-              <div>
-                <ReCAPTCHA sitekey="YOUR_SITE_KEY" onChange={setCaptchaValue} />
+              <div className="space-y-2">
+                <ReCAPTCHA 
+                  ref={recaptchaRef}
+                  sitekey={RECAPTCHA_SITE_KEY} 
+                  onChange={onCaptchaChange} 
+                />
+                {errors.captchaToken && (
+                  <p className="text-red-500 text-xs mt-1">{errors.captchaToken.message}</p>
+                )}
               </div>
 
               {/* 6. Submit Button */}

@@ -35,9 +35,11 @@ export default function DashboardPage() {
     return null;
   }
 
+  console.log("Logged in role:", session.user.role);
+
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      {session.user.role === 'ADMIN' 
+    <div className="min-h-screen bg-gray-50">
+      {session.user.role === 'ADMIN'
         ? <AdminDashboardView user={session.user} /> 
         : <UserDashboardView user={session.user} />
       }

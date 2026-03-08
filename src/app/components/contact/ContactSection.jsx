@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 import PhoneInput from 'react-phone-number-input';
@@ -19,15 +19,20 @@ import {
   FaQuora 
 } from "react-icons/fa";
 
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
 const ContactSection = () => {
-  const [captchaValue, setCaptchaValue] = useState(null);
+  const recaptchaRef = useRef(null);
+  const [submitMessage, setSubmitMessage] = useState(null);
   
   const {
     handleSubmit,
     control,
-    formState: { errors },
-    reset
+    formState: { errors, isSubmitting },
+    reset,
+    setValue
   } = useForm({
+    mode: 'onBlur',
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -36,24 +41,61 @@ const ContactSection = () => {
       email: "",
       phone: "",
       needs: "",
-      message: ""
+      message: "",
+      captchaToken: null,
     }
   });
 
-  const onSubmit = (data) => {
-    if (!captchaValue) {
-      alert("Please verify that you are not a robot.");
-      return;
+  const onCaptchaChange = (value) => {
+    setValue('captchaToken', value);
+    if (value) {
+      setSubmitMessage(null);
     }
-    console.log("Form Data:", data);
-    alert("Form submitted successfully!");
-    reset();
-    setCaptchaValue(null); 
   };
 
-  const onCaptchaChange = (value) => {
-    setCaptchaValue(value);
-  };
+  const onSubmit = useCallback(async (data) => {
+    setSubmitMessage(null);
+    
+    if (!data.captchaToken) {
+      setSubmitMessage({ type: 'error', message: 'Please complete the CAPTCHA validation.' });
+      return;
+    }
+
+    try {
+      const verifyRes = await fetch('/api/verify-captcha', {
+        method: 'POST',
+        body: JSON.stringify({ token: data.captchaToken }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      const verifyData = await verifyRes.json();
+      if (!verifyData.success) {
+        setSubmitMessage({ type: 'error', message: 'Bot detected! Verification failed.' });
+        return;
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitMessage({ type: 'success', message: 'Thank you! Your message has been sent.' });
+        reset();
+        recaptchaRef.current?.reset();
+        setValue('captchaToken', null);
+      } else {
+        throw new Error('Email submission failed');
+      }
+
+    } catch (error) {
+      setSubmitMessage({ type: 'error', message: 'Something went wrong. Please check your settings.' });
+    }
+  }, [reset, setValue]);
+
 
   // --- STYLES ---
   const inputClasses = `
@@ -251,7 +293,12 @@ const ContactSection = () => {
 
               {/* Recaptcha */}
               <div className="pt-2">
-                <ReCAPTCHA sitekey="YOUR_SITE_KEY" onChange={onCaptchaChange} />
+                <ReCAPTCHA 
+                  ref={recaptchaRef}
+                  sitekey={RECAPTCHA_SITE_KEY} 
+                  onChange={onCaptchaChange} 
+                />
+                {errors.captchaToken && <p className={errorClasses}>{errors.captchaToken.message}</p>}
               </div>
 
               {/* Submit Button */}
@@ -345,7 +392,6 @@ const ContactSection = () => {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </div>
