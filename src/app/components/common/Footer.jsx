@@ -48,6 +48,13 @@ const IconLinkList = ({ title, links }) => (
   </div>
 );
 
+const socialLinks = [
+  { icon: FaFacebookF, href: "https://www.facebook.com/microters", label: "Facebook" },
+  { icon: FaTwitter, href: "https://x.com/microterss", label: "X" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/microters", label: "LinkedIn" },
+  { icon: FaYoutube, href: "https://www.youtube.com/@Microters", label: "YouTube" },
+];
+
 const menuLinks = {
   "Help & Support": [
     {
@@ -107,19 +114,19 @@ const Footer = () => {
 
               {/* Social Links */}
               <div className="flex space-x-3">
-                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube].map(
-                  (Icon, index) => (
+                  {socialLinks.map((social, index) => (
                     <Link
                       key={index}
-                      href="#"
+                      href={social.href}
+                      target="_blank"          
+                      rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-[#545f7d] flex items-center justify-center hover:bg-[#f35d36] transition-colors"
-                      aria-label={`Link to social media ${Icon.name}`}
+                      aria-label={`Follow us on ${social.label}`}
                     >
-                      <Icon className="w-5 h-5 text-white" />
+                      <social.icon className="w-5 h-5 text-white" />
                     </Link>
-                  )
-                )}
-              </div>
+                  ))}
+                </div>
             </div>
           </div>
 
