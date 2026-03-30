@@ -8,7 +8,7 @@ export async function GET(req) {
     const categoryName = searchParams.get('category');
     
     const page = parseInt(searchParams.get('page')) || 1;
-    const limit = 3;
+    const limit = 9;
     const skip = (page - 1) * limit;
 
     let whereClause = { status: 'PUBLISHED' };
