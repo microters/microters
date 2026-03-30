@@ -50,7 +50,8 @@ export default function BlogSection() {
         {/* Section Header */}
         <div className="mb-10 max-w-4xl">
           <h2 className="text-4xl md:text-6xl font-extrabold text-[#15151e] leading-tight">
-            <strong>Get solution from our</strong> Research, Tips & Advices
+            <strong>
+              </strong> Research, Tips & Advices
           </h2>
           <p className="mt-4 app-paragraph">
             Dive into a treasure trove of insights! Our blog section is your go-to resource for staying ahead in the ever-evolving world of digital marketing.

@@ -232,7 +232,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import * as cheerio from 'cheerio';
-import { FiClock, FiFolder, FiUser, FiArrowRight } from 'react-icons/fi';
+import { FiClock, FiUser, FiArrowRight } from 'react-icons/fi';
 
 // Components
 import BlogSocialMedia from 'app/components/ui/BlogSocialMedia';
