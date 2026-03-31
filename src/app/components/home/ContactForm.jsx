@@ -17,7 +17,6 @@ const needsOptions = [
     { value: 'budget', label: 'All Budget' },
 ];
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-console.log(RECAPTCHA_SITE_KEY);
 
 const ContactFormSection = () => {
     const recaptchaRef = useRef(null);
@@ -27,12 +26,12 @@ const ContactFormSection = () => {
         defaultValues: {
             firstName: '',
             lastName: '',
-            websiteUrl: '',
+            website: '',
             jobTitle: '',
-            workEmail: '',
-            phoneNumber: '',
-            yourNeeds: 'traffic',
-            helpText: '',
+            email: '',
+            phone: '',
+            needs: 'traffic',
+            message: '',
             captchaToken: null,
         }
     });
@@ -141,7 +140,7 @@ const ContactFormSection = () => {
                         {/* --- Row 2: URL & Job Title --- */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <Controller
-                                name="websiteUrl"
+                                name="website"
                                 control={control}
                                 rules={{ required: 'Website URL is required', pattern: { value: /^(ftp|http|https):\/\/[^ "]+$/, message: 'Invalid URL format' } }}
                                 render={({ field }) => (
@@ -172,7 +171,7 @@ const ContactFormSection = () => {
                         {/* --- Row 3: Email & Phone --- */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <Controller
-                                name="workEmail"
+                                name="email"
                                 control={control}
                                 rules={{ required: 'Email is required', pattern: { value: /^\S+@\S+$/i, message: 'Invalid email format' } }}
                                 render={({ field }) => (
@@ -204,7 +203,7 @@ const ContactFormSection = () => {
                         
                         {/* --- Row 4: Your Needs --- */}
                         <Controller
-                            name="yourNeeds"
+                            name="needs"
                             control={control}
                             rules={{ required: 'Please select your needs' }}
                             render={({ field }) => (
@@ -223,7 +222,7 @@ const ContactFormSection = () => {
 
                         {/* --- Row 5: How can we help? (Textarea) --- */}
                         <Controller
-                            name="helpText"
+                            name="message"
                             control={control}
                             rules={{ required: 'Please describe how we can help you' }}
                             render={({ field }) => (

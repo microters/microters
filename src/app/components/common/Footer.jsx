@@ -8,7 +8,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaYoutube,
-  FaCaretRight
+  FaCaretRight,
 } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 
@@ -22,8 +22,8 @@ const SiteLogo = () => (
     <Image
       src={microtersLogoImage}
       alt="Microters Logo"
-      width={200} 
-      height={100} 
+      width={200}
+      height={100}
       className="w-full h-auto"
       quality={100}
     />
@@ -49,10 +49,22 @@ const IconLinkList = ({ title, links }) => (
 );
 
 const socialLinks = [
-  { icon: FaFacebookF, href: "https://www.facebook.com/microters", label: "Facebook" },
+  {
+    icon: FaFacebookF,
+    href: "https://www.facebook.com/microters",
+    label: "Facebook",
+  },
   { icon: FaTwitter, href: "https://x.com/microterss", label: "X" },
-  { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/microters", label: "LinkedIn" },
-  { icon: FaYoutube, href: "https://www.youtube.com/@Microters", label: "YouTube" },
+  {
+    icon: FaLinkedinIn,
+    href: "https://www.linkedin.com/company/microters",
+    label: "LinkedIn",
+  },
+  {
+    icon: FaYoutube,
+    href: "https://www.youtube.com/@Microters",
+    label: "YouTube",
+  },
 ];
 
 const menuLinks = {
@@ -81,13 +93,33 @@ const Footer = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitting },
   } = useForm();
-  const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubscription = (data) => {
-    console.log("Subscription submitted:", data.email);
-    setIsSubscribed(true);
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const handleSubscription = async (data) => {
+    setSubmitMessage("");
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: data.email }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitMessage("success");
+        reset();
+      } else {
+        setSubmitMessage("error");
+      }
+    } catch (error) {
+      setSubmitMessage("error");
+    }
   };
 
   return (
@@ -114,19 +146,19 @@ const Footer = () => {
 
               {/* Social Links */}
               <div className="flex space-x-3">
-                  {socialLinks.map((social, index) => (
-                    <Link
-                      key={index}
-                      href={social.href}
-                      target="_blank"          
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-[#545f7d] flex items-center justify-center hover:bg-[#f35d36] transition-colors"
-                      aria-label={`Follow us on ${social.label}`}
-                    >
-                      <social.icon className="w-5 h-5 text-white" />
-                    </Link>
-                  ))}
-                </div>
+                {socialLinks.map((social, index) => (
+                  <Link
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-[#545f7d] flex items-center justify-center hover:bg-[#f35d36] transition-colors"
+                    aria-label={`Follow us on ${social.label}`}
+                  >
+                    <social.icon className="w-5 h-5 text-white" />
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -201,7 +233,7 @@ const Footer = () => {
 
             {/* Email Subscription Form */}
             <div className="mt-6">
-              {isSubscribed ? (
+              {submitMessage === "success" ? (
                 <p className="text-green-400 text-sm font-semibold">
                   Thank you for subscribing!
                 </p>
@@ -213,23 +245,36 @@ const Footer = () => {
                   <input
                     type="email"
                     placeholder="Your email here"
+                    disabled={isSubmitting}
                     className="w-full px-5 py-3 text-base bg-transparent text-slate-700 placeholder-slate-400 border-none focus:outline-none focus:ring-0 rounded-l-full"
                     {...register("email", {
-                      required: true,
-                      pattern: /^\S+@\S+$/i,
+                      required: "Email is required",
+                      pattern: {
+                        value: /^\S+@\S+$/i,
+                        message: "Invalid email format",
+                      },
                     })}
                   />
                   <button
                     type="submit"
-                    className="bg-[#f35d36] hover:bg-[#212c4a] text-white font-semibold py-3 px-8 rounded-full transition-colors shrink-0"
+                    disabled={isSubmitting}
+                    className={`bg-[#f35d36] hover:bg-[#212c4a] text-white font-semibold py-3 px-8 rounded-full transition-colors shrink-0 flex items-center ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}`}
                   >
-                    Subscribe
+                    {isSubmitting ? "Processing..." : "Subscribe"}
                   </button>
                 </form>
               )}
+
+              {/* Error Message */}
+              {submitMessage === "error" && (
+                <p className="text-red-400 text-xs mt-1 pl-4">
+                  Something went wrong. Try again.
+                </p>
+              )}
+
               {errors.email && (
                 <p className="text-red-400 text-xs mt-1 pl-4">
-                  Valid email is required.
+                  {errors.email.message || "Valid email is required."}
                 </p>
               )}
             </div>
@@ -241,7 +286,8 @@ const Footer = () => {
       <div className="bg-[#212c4a] border-t border-white/10 py-4">
         <div className="container px-4 text-center">
           <p className="text-base text-white">
-            Copyright © {new Date().getFullYear()} by Microters. All Rights Reserved
+            Copyright © {new Date().getFullYear()} by Microters. All Rights
+            Reserved
           </p>
         </div>
       </div>

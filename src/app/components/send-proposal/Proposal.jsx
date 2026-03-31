@@ -3,24 +3,28 @@
 import React, { useCallback, useRef, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
-import { budgetOptions, servicesList, timelineSteps } from "app/data/proposalData";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import {
+  budgetOptions,
+  servicesList,
+  timelineSteps,
+} from "app/data/proposalData";
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 const ProposalSection = () => {
   const recaptchaRef = useRef(null);
   const [submitMessage, setSubmitMessage] = useState(null);
-  
+
   const {
     handleSubmit,
     control,
     formState: { errors, isSubmitting },
     reset,
-    setValue
+    setValue,
   } = useForm({
-    mode: 'onBlur',
+    mode: "onBlur",
     defaultValues: {
       services: [],
       budget: "",
@@ -32,58 +36,71 @@ const ProposalSection = () => {
       skype: "",
       message: "",
       captchaToken: null,
-    }
+    },
   });
 
   const onCaptchaChange = (value) => {
-    setValue('captchaToken', value);
+    setValue("captchaToken", value);
     if (value) setSubmitMessage(null);
   };
 
-  const onSubmit = useCallback(async (data) => {
-    setSubmitMessage(null);
-    
-    if (!data.captchaToken) {
-      setSubmitMessage({ type: 'error', message: 'Please complete the CAPTCHA validation.' });
-      return;
-    }
+  const onSubmit = useCallback(
+    async (data) => {
+      setSubmitMessage(null);
 
-    try {
-      const verifyRes = await fetch('/api/verify-captcha', {
-        method: 'POST',
-        body: JSON.stringify({ token: data.captchaToken }),
-        headers: { 'Content-Type': 'application/json' }
-      });
-      const verifyData = await verifyRes.json();
-
-      if (!verifyData.success) {
-        setSubmitMessage({ type: 'error', message: 'Verification failed. Please try again.' });
+      if (!data.captchaToken) {
+        setSubmitMessage({
+          type: "error",
+          message: "Please complete the CAPTCHA validation.",
+        });
         return;
       }
 
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
+      try {
+        // 1. Verify Captcha
+        const verifyRes = await fetch("/api/verify-captcha", {
+          method: "POST",
+          body: JSON.stringify({ token: data.captchaToken }),
+          headers: { "Content-Type": "application/json" },
+        });
+        const verifyData = await verifyRes.json();
 
-      const result = await response.json();
+        if (!verifyData.success) {
+          setSubmitMessage({ type: "error", message: "Verification failed." });
+          return;
+        }
 
-      if (result.success) {
-        setSubmitMessage({ type: 'success', message: 'Proposal request sent successfully!' });
-        reset();
-        recaptchaRef.current?.reset();
-        setValue('captchaToken', null);
-      } else {
-        throw new Error('Submission failed');
+        const response = await fetch("/api/proposal", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          setSubmitMessage({
+            type: "success",
+            message: "Proposal request sent successfully!",
+          });
+          reset();
+          recaptchaRef.current?.reset();
+          setValue("captchaToken", null);
+        } else {
+          throw new Error("Submission failed");
+        }
+      } catch (error) {
+        setSubmitMessage({
+          type: "error",
+          message: "Something went wrong. Please try again.",
+        });
       }
-    } catch (error) {
-      setSubmitMessage({ type: 'error', message: 'Something went wrong. Please try again.' });
-    }
-  }, [reset, setValue]);
+    },
+    [reset, setValue],
+  );
 
   // --- STYLES ---
- const baseInputStyles = `
+  const baseInputStyles = `
     w-full bg-white border rounded-[4px] px-4 py-3 text-gray-700 placeholder-gray-400
     focus:outline-none focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] 
     transition-all duration-300 ease-in-out
@@ -95,7 +112,9 @@ const ProposalSection = () => {
         {label} {required && <span className="text-[#f35d36]">*</span>}
       </label>
       {children}
-      {error && <p className="text-red-500 text-xs mt-1 ml-1">{error.message}</p>}
+      {error && (
+        <p className="text-red-500 text-xs mt-1 ml-1">{error.message}</p>
+      )}
     </div>
   );
 
@@ -106,11 +125,11 @@ const ProposalSection = () => {
           {/* ================= LEFT SIDE: FORM (60%) ================= */}
           <div className="w-full lg:w-3/5 p-8 lg:p-12">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-              
               {/* 1. Services Checkboxes */}
               <div>
                 <h4 className="block text-lg font-bold text-[#15151e] mb-6">
-                  What is it that you're looking for help with? <span className="text-[#f35d36]">*</span>
+                  What is it that you're looking for help with?{" "}
+                  <span className="text-[#f35d36]">*</span>
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <Controller
@@ -120,7 +139,10 @@ const ProposalSection = () => {
                     render={({ field }) => (
                       <>
                         {servicesList.map((service) => (
-                          <label key={service} className="flex items-center space-x-3 cursor-pointer group">
+                          <label
+                            key={service}
+                            className="flex items-center space-x-3 cursor-pointer group"
+                          >
                             <input
                               type="checkbox"
                               value={service}
@@ -135,14 +157,20 @@ const ProposalSection = () => {
                               // Checkbox Color: 'accent-[#f35d36]' handles the brand color natively
                               className="w-5 h-5 border-gray-300 rounded accent-[#f35d36] focus:ring-[#f35d36] cursor-pointer"
                             />
-                            <span className="text-gray-600 text-sm group-hover:text-[#f35d36] transition-colors">{service}</span>
+                            <span className="text-gray-600 text-sm group-hover:text-[#f35d36] transition-colors">
+                              {service}
+                            </span>
                           </label>
                         ))}
                       </>
                     )}
                   />
                 </div>
-                {errors.services && <p className="text-red-500 text-xs mt-1">{errors.services.message}</p>}
+                {errors.services && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.services.message}
+                  </p>
+                )}
               </div>
 
               <hr className="border-gray-200" />
@@ -150,7 +178,8 @@ const ProposalSection = () => {
               {/* 2. Budget Radio Buttons */}
               <div>
                 <h4 className="block text-lg font-bold text-[#15151e] mb-6">
-                  What is your monthly budget? <span className="text-[#f35d36]">*</span>
+                  What is your monthly budget?{" "}
+                  <span className="text-[#f35d36]">*</span>
                 </h4>
                 <Controller
                   name="budget"
@@ -174,7 +203,11 @@ const ProposalSection = () => {
                     </div>
                   )}
                 />
-                {errors.budget && <p className="text-red-500 text-xs mt-1">{errors.budget.message}</p>}
+                {errors.budget && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.budget.message}
+                  </p>
+                )}
               </div>
 
               {/* 3. Contact Info Fields */}
@@ -185,14 +218,14 @@ const ProposalSection = () => {
                   rules={{ required: "Name is required" }}
                   render={({ field }) => (
                     <LegendWrapper label="Name" required error={errors.name}>
-                      <input 
-                        {...field} 
-                        className={`${baseInputStyles} ${errors.name ? "border-red-500" : "border-gray-300"}`} 
+                      <input
+                        {...field}
+                        className={`${baseInputStyles} ${errors.name ? "border-red-500" : "border-gray-300"}`}
                       />
                     </LegendWrapper>
                   )}
                 />
-                
+
                 {/* Phone Input */}
                 <Controller
                   name="contactNo"
@@ -214,13 +247,20 @@ const ProposalSection = () => {
                 <Controller
                   name="email"
                   control={control}
-                  rules={{ required: "Email is required", pattern: { value: /^\S+@\S+$/i, message: "Invalid email" } }}
+                  rules={{
+                    required: "Email is required",
+                    pattern: { value: /^\S+@\S+$/i, message: "Invalid email" },
+                  }}
                   render={({ field }) => (
-                    <LegendWrapper label="Your Email" required error={errors.email}>
-                      <input 
-                        {...field} 
-                        type="email" 
-                        className={`${baseInputStyles} ${errors.email ? "border-red-500" : "border-gray-300"}`} 
+                    <LegendWrapper
+                      label="Your Email"
+                      required
+                      error={errors.email}
+                    >
+                      <input
+                        {...field}
+                        type="email"
+                        className={`${baseInputStyles} ${errors.email ? "border-red-500" : "border-gray-300"}`}
                       />
                     </LegendWrapper>
                   )}
@@ -232,7 +272,11 @@ const ProposalSection = () => {
                   control={control}
                   render={({ field }) => (
                     <LegendWrapper label="Website">
-                      <input {...field} type="url" className={`${baseInputStyles} border-gray-300`} />
+                      <input
+                        {...field}
+                        type="url"
+                        className={`${baseInputStyles} border-gray-300`}
+                      />
                     </LegendWrapper>
                   )}
                 />
@@ -242,9 +286,13 @@ const ProposalSection = () => {
                   name="company"
                   control={control}
                   render={({ field }) => (
-                     <LegendWrapper label="Your Company">
-                       <input {...field} type="text" className={`${baseInputStyles} border-gray-300`} />
-                     </LegendWrapper>
+                    <LegendWrapper label="Your Company">
+                      <input
+                        {...field}
+                        type="text"
+                        className={`${baseInputStyles} border-gray-300`}
+                      />
+                    </LegendWrapper>
                   )}
                 />
 
@@ -254,7 +302,11 @@ const ProposalSection = () => {
                   control={control}
                   render={({ field }) => (
                     <LegendWrapper label="Your Skype ID">
-                      <input {...field} type="text" className={`${baseInputStyles} border-gray-300`} />
+                      <input
+                        {...field}
+                        type="text"
+                        className={`${baseInputStyles} border-gray-300`}
+                      />
                     </LegendWrapper>
                   )}
                 />
@@ -267,7 +319,11 @@ const ProposalSection = () => {
                   control={control}
                   render={({ field }) => (
                     <LegendWrapper label="Your Message">
-                       <textarea {...field} rows={4} className={`${baseInputStyles} border-gray-300`} />
+                      <textarea
+                        {...field}
+                        rows={4}
+                        className={`${baseInputStyles} border-gray-300`}
+                      />
                     </LegendWrapper>
                   )}
                 />
@@ -275,29 +331,58 @@ const ProposalSection = () => {
 
               {/* 5. ReCAPTCHA */}
               <div className="space-y-2">
-                <ReCAPTCHA 
+                <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey={RECAPTCHA_SITE_KEY} 
-                  onChange={onCaptchaChange} 
+                  sitekey={RECAPTCHA_SITE_KEY}
+                  onChange={onCaptchaChange}
                 />
                 {errors.captchaToken && (
-                  <p className="text-red-500 text-xs mt-1">{errors.captchaToken.message}</p>
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.captchaToken.message}
+                  </p>
                 )}
               </div>
 
               {/* 6. Submit Button */}
-              <button type="submit" className="bg-[#f35d36] hover:bg-[#d64d29] text-white font-bold text-lg py-4 px-8 rounded-sm transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                Get A Proposal
-              </button>
+              {submitMessage && (
+                <div 
+                  className={`p-4 rounded-md text-sm font-medium mb-4 ${
+                    submitMessage.type === 'success' 
+                      ? 'bg-green-50 text-green-700 border border-green-200' 
+                      : 'bg-red-50 text-red-700 border border-red-200'
+                  }`}
+                >
+                  {submitMessage.message}
+                </div>
+              )}
 
+              {/* 7. Submit Button */}
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className={`w-full md:w-auto bg-[#f35d36] hover:bg-[#d64d29] text-white font-bold text-lg py-4 px-8 rounded-sm transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed`}
+              >
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending Request...
+                  </span>
+                ) : (
+                  "Get A Proposal"
+                )}
+              </button>
             </form>
           </div>
 
           {/* ================= RIGHT SIDE: INFO (40%) ================= */}
           <div className="w-full lg:w-2/5 bg-[#29375d] p-8 lg:p-12 text-white flex flex-col justify-center relative overflow-hidden">
-            
             <div className="relative z-10">
-              <h2 className="text-3xl font-bold mb-2">How Do We Get Started?</h2>
+              <h2 className="text-3xl font-bold mb-2">
+                How Do We Get Started?
+              </h2>
               <p className="text-[#bfc3cf] mb-10 leading-relaxed">
                 Discover the Microters approach in just four steps...
               </p>
@@ -305,35 +390,33 @@ const ProposalSection = () => {
               {/* Timeline Container */}
               {/* Added 'ml-6' to give room for the dots on the left */}
               <div className="ml-6 border-l-4 border-dashed border-gray-500/30 space-y-8 pl-10 relative">
-                
                 {timelineSteps.map((step, index) => (
-                    <div key={index} className="relative group">
-                    
+                  <div key={index} className="relative group">
                     {/* --- THE ANIMATED DOT --- */}
                     <div className="absolute -left-[58px] top-1 w-[34px] h-[34px] flex items-center justify-center z-10">
-                        
-                        {/* 1. The Pulsing Ring (Animation) */}
-                        <div className="absolute w-full h-full rounded-full border-[3px] border-[#fabeaf54] opacity-25 animate-pulse-ring box-border"></div>
-                        
-                        {/* 2. The Static Ring (Background) */}
-                        <div className="absolute w-full h-full rounded-full bg-[#29375d] border-[3px] border-[#fabeaf54] opacity-25 box-border"></div>
-                        
-                        {/* 3. The Inner Solid Dot */}
-                        <div className="relative w-[18px] h-[18px] bg-[#f35d36] rounded-full shadow-sm"></div>
+                      {/* 1. The Pulsing Ring (Animation) */}
+                      <div className="absolute w-full h-full rounded-full border-[3px] border-[#fabeaf54] opacity-25 animate-pulse-ring box-border"></div>
+
+                      {/* 2. The Static Ring (Background) */}
+                      <div className="absolute w-full h-full rounded-full bg-[#29375d] border-[3px] border-[#fabeaf54] opacity-25 box-border"></div>
+
+                      {/* 3. The Inner Solid Dot */}
+                      <div className="relative w-[18px] h-[18px] bg-[#f35d36] rounded-full shadow-sm"></div>
                     </div>
 
                     {/* Text Content */}
                     <div>
-                        <h4 className="text-xl font-bold mb-2 text-white">{step.title}</h4>
-                        <p className="text-[#bfc3cf] text-sm leading-relaxed">
+                      <h4 className="text-xl font-bold mb-2 text-white">
+                        {step.title}
+                      </h4>
+                      <p className="text-[#bfc3cf] text-sm leading-relaxed">
                         {step.desc}
-                        </p>
+                      </p>
                     </div>
-                    </div>
+                  </div>
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </div>
