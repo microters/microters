@@ -10,6 +10,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+
 export default function BlogSection() {
   const [slides, setSlides] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -17,19 +18,17 @@ export default function BlogSection() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // 👇 UPDATED: Fetch from the public API
         const res = await fetch('/api/blog/posts');
-        
         if (!res.ok) throw new Error('Failed to fetch');
         
         const data = await res.json();
         
-        // Ensure data is an array before chunking
-        if (Array.isArray(data)) {
+        const postsArray = data.posts || []; 
+
+        if (Array.isArray(postsArray)) {
             const chunks = [];
-            // Chunk into groups of 3 (1 Big + 2 Small)
-            for (let i = 0; i < data.length; i += 3) {
-                chunks.push(data.slice(i, i + 3));
+            for (let i = 0; i < postsArray.length; i += 3) {
+                chunks.push(postsArray.slice(i, i + 3));
             }
             setSlides(chunks);
         }
@@ -43,7 +42,6 @@ export default function BlogSection() {
     fetchPosts();
   }, []);
 
-  // Show Section Header even if loading, so layout doesn't jump
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -87,7 +85,7 @@ export default function BlogSection() {
                   {/* === LEFT COLUMN: 1 BIG CARD === */}
                   <div className="h-full">
                     {group[0] && (
-                      <div className="h-full bg-white border border-gray-100 rounded-4xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
+                      <div className="h-full bg-white border border-[#d4d7df] rounded-4xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col">
                         
                         {/* Image inside padding */}
                         <div className="relative w-full aspect-16/10 rounded-2xl overflow-hidden mb-6 bg-gray-100">
@@ -130,7 +128,7 @@ export default function BlogSection() {
                     {/* --- RIGHT: Small Cards --- */}
                     <div className="flex flex-col gap-6 h-full">
                     {group.slice(1).map((post) => (
-                        <div key={post.id} className="flex-1 bg-white rounded-2xl border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow group flex flex-row gap-4 items-center">
+                        <div key={post.id} className="flex-1 bg-white rounded-2xl border border-[#d4d7df] p-5 shadow-sm hover:shadow-xl transition-shadow group flex flex-row gap-4 items-center">
                         <div className="relative w-60 h-60 shrink-0 rounded-2xl overflow-hidden bg-gray-100">
                             {post.featuredImage ? (
                             <Image 

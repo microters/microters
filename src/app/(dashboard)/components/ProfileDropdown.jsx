@@ -52,7 +52,7 @@ export function ProfileDropdown({ user }) {
             <p className="text-xs text-gray-500 truncate">{user?.email}</p>
           </div>
           
-          <div className="py-1">
+          {/* <div className="py-1">
             <Link href="/dashboard/settings" 
                 className="flex items-center gap-3 px-4 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-[#f35d36] transition-colors"
                 onClick={() => setIsOpen(false)}
@@ -60,7 +60,7 @@ export function ProfileDropdown({ user }) {
               <FiSettings className="w-4 h-4" />
               Profile Settings
             </Link>
-          </div>
+          </div> */}
 
           <div className="border-t border-gray-100 py-1">
             <button 

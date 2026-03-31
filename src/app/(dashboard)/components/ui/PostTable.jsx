@@ -34,8 +34,6 @@ export function PostTable({
   selectedPostIds,
   onSelectAll,
   onSelectOne,
-  currentPage,
-  itemsPerPage,
   allSelectedOnPage
 }) {
   const [postToDelete, setPostToDelete] = useState(null);
@@ -93,7 +91,13 @@ export function PostTable({
                             )}
                         </div>
                         <div>
-                            <div className="font-medium text-[#212c4a] line-clamp-1">{post.title}</div>
+                            <Link 
+                              href={`/blog/${post.slug}`} 
+                              target="_blank"
+                              className="font-medium text-[#212c4a] line-clamp-1 hover:text-[#f35d36] hover:underline transition-colors"
+                            >
+                              {post.title}
+                            </Link>
                             <div className="text-xs text-gray-400 font-mono">/{post.slug}</div>
                         </div>
                     </div>

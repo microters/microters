@@ -159,13 +159,13 @@ const HeaderMain = () => {
 
                         {/* Menu Items */}
                         <div className="flex flex-col">
-                          <Link
+                          {/* <Link
                             href="/dashboard/profile"
                             className="px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-[#f35d36] flex items-center gap-3 transition-colors"
                             onClick={() => setIsProfileOpen(false)}
                           >
                             <FaUser className="w-4 h-4" /> View Profile
-                          </Link>
+                          </Link> */}
 
                           <Link
                             href="/dashboard"
@@ -175,13 +175,13 @@ const HeaderMain = () => {
                             <FaThLarge className="w-4 h-4" /> Dashboard
                           </Link>
 
-                          <Link
+                          {/* <Link
                             href="/dashboard/settings"
                             className="px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-[#f35d36] flex items-center gap-3 transition-colors"
                             onClick={() => setIsProfileOpen(false)}
                           >
                             <FaCog className="w-4 h-4" /> Settings
-                          </Link>
+                          </Link> */}
 
                           {/* Logout Button */}
                           <button

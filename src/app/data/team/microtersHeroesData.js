@@ -3,7 +3,6 @@ import shawonImg from "@assets/images/team/shawon.png";
 import asadImg from "@assets/images/team/asad.png";
 import rubelImg from "@assets/images/team/rubel.png";
 import salamImg from "@assets/images/team/salam.png";
-import jubaerImg from "@assets/images/team/jubaer.jpg";
 import rahatImg from "@assets/images/team/rahat.png";
 export const microtersHeroesData = [
   {
@@ -12,7 +11,7 @@ export const microtersHeroesData = [
     title: "SEO Project Manager",
     image: borhanImg,
     socials: {
-      facebook: "https://www.facebook.com/mrborhanuddin.seo",
+      facebook: "https://www.facebook.com/mdborhanuddin.mgt",
       twitter: "https://twitter.com/mrborhanuddin",
       linkedin: "https://www.linkedin.com/in/mrborhanuddin/"
     }
@@ -42,7 +41,7 @@ export const microtersHeroesData = [
   {
     id: 4,
     name: "Yasin hamid Rubel",
-    title: "Digital marketing Executive",
+    title: "Digital Marketing Executive",
     image: rubelImg,
     socials: {
       facebook: "https://www.facebook.com/rubel.chowdhury11",
@@ -63,17 +62,6 @@ export const microtersHeroesData = [
   },
   {
     id: 6,
-    name: "Md Hasan Jobair",
-    title: "Media Buyer",
-    image: jubaerImg,
-    socials: {
-      facebook: "https://www.facebook.com/mdhasanjobair",
-      twitter: "https://x.com/mdhasanjobair",
-      linkedin: "https://www.linkedin.com/in/mdhasanjobair/"
-    }
-  },
-  {
-    id: 7,
     name: "Kazi Rahat",
     title: "SEO Executive",
     image: rahatImg,
