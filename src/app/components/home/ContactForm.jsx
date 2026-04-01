@@ -65,11 +65,15 @@ const ContactFormSection = () => {
             setSubmitMessage({ type: 'error', message: 'Bot detected! Verification failed.' });
             return;
         }
+        const selectedLabel = needsOptions.find(opt => opt.value === data.needs)?.label || data.needs;
 
         const response = await fetch('/api/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data),
+            body: JSON.stringify({
+                ...data,
+                needs: selectedLabel
+            }),
         });
 
         const result = await response.json();
@@ -150,7 +154,7 @@ const ContactFormSection = () => {
                                             <FaGlobe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                                             <input {...field} placeholder="www.demo.com" className="w-full p-3 pl-10 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200" />
                                         </div>
-                                        {errors.websiteUrl && <p className="text-red-500 text-sm mt-1">{errors.websiteUrl.message}</p>}
+                                        {errors.website && <p className="text-red-500 text-sm mt-1">{errors.websiteUrl.message}</p>}
                                     </div>
                                 )}
                             />
@@ -178,7 +182,7 @@ const ContactFormSection = () => {
                                     <div>
                                         <label className="block text-sm font-semibold mb-2">Work Email <span className="text-[#f35d36]">*</span></label>
                                         <input {...field} placeholder="sample@email.com" type="email" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200" />
-                                        {errors.workEmail && <p className="text-red-500 text-sm mt-1">{errors.workEmail.message}</p>}
+                                        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.workEmail.message}</p>}
                                     </div>
                                 )}
                             />
@@ -215,7 +219,7 @@ const ContactFormSection = () => {
                                         ))}
                                     </select>
                                     <FaChevronDown className="absolute right-3 top-1/2 mt-3 text-gray-500 pointer-events-none" size={16} />
-                                    {errors.yourNeeds && <p className="text-red-500 text-sm mt-1">{errors.yourNeeds.message}</p>}
+                                    {errors.needs && <p className="text-red-500 text-sm mt-1">{errors.yourNeeds.message}</p>}
                                 </div>
                             )}
                         />
@@ -229,7 +233,7 @@ const ContactFormSection = () => {
                                 <div>
                                     <label className="block text-sm font-semibold mb-2">How can we help you? <span className="text-[#f35d36]">*</span></label>
                                     <textarea {...field} placeholder="Enter your question here..." rows="4" className="w-full p-3 border border-gray-300 bg-white rounded-lg focus:outline-none focus:bg-white focus:border-[#f35d36] focus:ring-1 focus:ring-[#f35d36] transition duration-200 resize-none"></textarea>
-                                    {errors.helpText && <p className="text-red-500 text-sm mt-1">{errors.helpText.message}</p>}
+                                    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
                                 </div>
                             )}
                         />

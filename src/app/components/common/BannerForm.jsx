@@ -15,33 +15,35 @@ const BannerForm = () => {
     } = useForm();
 
     const onSubmit = async (data) => {
-        setSubmitStatus(null);
-        try {
-            const response = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    firstName: "Banner Lead",
-                    lastName: "Quick Request",
-                    workEmail: data.email,
-                    websiteUrl: data.website,
-                    yourNeeds: "Proposal Request",
-                    helpText: `User requested a proposal for website: ${data.website}`,
-                }),
-            });
+    setSubmitStatus(null);
+    try {
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                firstName: "Banner Lead",
+                lastName: "Quick Request",
+                email: data.email,
+                website: data.website,
+                needs: "Proposal Request",
+                message: `User requested a proposal for website: ${data.website}`,
+                phone: "Not Provided",
+                jobTitle: "Banner User"
+            }),
+        });
 
-            const result = await response.json();
+        const result = await response.json();
 
-            if (result.success) {
-                setSubmitStatus({ type: "success", message: "Proposal request sent successfully!" });
-                reset();
-            } else {
-                throw new Error("Failed to send");
-            }
-        } catch (error) {
-            setSubmitStatus({ type: "error", message: "Something went wrong. Please try again." });
+        if (result.success) {
+            setSubmitStatus({ type: "success", message: "Proposal request sent successfully!" });
+            reset();
+        } else {
+            throw new Error("Failed to send");
         }
-    };
+    } catch (error) {
+        setSubmitStatus({ type: "error", message: "Something went wrong. Please try again." });
+    }
+};
 
     // Tailwind classes
     const primaryRingClass = "focus:ring-[#f35d36]";
