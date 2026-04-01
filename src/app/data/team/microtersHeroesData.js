@@ -40,7 +40,7 @@ export const microtersHeroesData = [
   },
   {
     id: 4,
-    name: "Yasin hamid Rubel",
+    name: "Yasin Hamid Rubel",
     title: "Digital Marketing Executive",
     image: rubelImg,
     socials: {

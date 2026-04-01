@@ -490,13 +490,12 @@ const ContactSection = () => {
               <div className="flex flex-wrap gap-3">
                 {[
                   { Icon: FaFacebookF, link: "https://facebook.com/microters" },
-                  { Icon: FaTwitter, link: "https://twitter.com" },
-                  { Icon: FaLinkedinIn, link: "https://linkedin.com" },
-                  { Icon: FaYoutube, link: "https://youtube.com" },
-                  { Icon: FaInstagram, link: "https://instagram.com" },
-                  { Icon: FaPinterestP, link: "https://pinterest.com" },
-                  { Icon: FaTiktok, link: "https://tiktok.com" },
-                  { Icon: FaQuora, link: "https://quora.com" },
+                  { Icon: FaTwitter, link: "https://x.com/microterss" },
+                  { Icon: FaLinkedinIn, link: "https://www.linkedin.com/company/microters/" },
+                  { Icon: FaYoutube, link: "https://www.youtube.com/channel/UCnUe75Y9iRieacBvWvn61fA" },
+                  { Icon: FaInstagram, link: "https://www.instagram.com/microterss" },
+                  { Icon: FaPinterestP, link: "https://www.pinterest.com/microters/" },
+                  { Icon: FaTiktok, link: "https://www.tiktok.com/@microters" },
                 ].map((social, index) => (
                   <a
                     key={index}
