@@ -13,13 +13,15 @@ import {
   FiLogOut, 
   FiX, 
   FiChevronDown,
-  FiChevronRight
+  FiChevronRight,
+  FiUsers
 } from 'react-icons/fi';
 import microtersLogoImage from "@assets/images/footer_logo.png";
 
 // 1. Menu Structure
 const sidebarLinks = [
   { title: 'Overview', href: '/dashboard', icon: FiHome },
+  { title: 'Users', href: '/dashboard/users', icon: FiUsers },
   { 
     title: 'Blogs', 
     icon: FiFileText,
@@ -46,14 +48,11 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const pathname = usePathname();
 
   const filteredLinks = sidebarLinks.filter(link => {
-    if (link.title === 'Blogs') {
-      return session?.user?.role === 'ADMIN';
-    }
-    if (link.title === 'Settings') {
-      return session?.user?.role === 'ADMIN';
-    }
-    return true;
-  });
+  if (link.title === 'Blogs' || link.title === 'Settings' || link.title === 'Users') {
+    return session?.user?.role === 'ADMIN';
+  }
+  return true;
+});
 
   const activeSubmenu = filteredLinks.find(link => 
       link.submenu && pathname.startsWith(link.basePath)
