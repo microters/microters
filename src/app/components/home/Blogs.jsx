@@ -168,25 +168,6 @@ export default function BlogSection() {
             ))}
             </Swiper>
         )}
-
-        {/* Styles remain the same */}
-        <style jsx global>{`
-          .blog-swiper .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            background: #d1d5db;
-            opacity: 1;
-            transition: all 0.3s;
-          }
-          .blog-swiper .swiper-pagination-bullet-active {
-            background: #f35d36;
-            width: 24px;
-            border-radius: 5px;
-          }
-          .blog-swiper {
-            padding-bottom: 50px !important; 
-          }
-        `}</style>
       </div>
     </section>
   );
