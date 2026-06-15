@@ -53,7 +53,7 @@ export default function EditPostPage({ params }) {
 
   const breadcrumbs = [
     { label: "Dashboard", href: "/dashboard" },
-    { label: "Posts", href: "/dashboard/blog/posts" },
+    { label: "Posts", href: "/dashboard/blog-posts" },
     { label: "Edit Post" },
   ];
 
