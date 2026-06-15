@@ -38,7 +38,7 @@ const YouTubeToMP4Downloader = () => {
   const [loading, setLoading] = useState(false);
   const [videoData, setVideoData] = useState(null);
   const [countdown, setCountdown] = useState(5);
-
+const API_KEY = process.env.NEXT_PUBLIC_VIDEOTERS_API_KEY;
   // --- COUNTDOWN EFFECT ---
   useEffect(() => {
     let timer;
@@ -64,10 +64,12 @@ const YouTubeToMP4Downloader = () => {
     setVideoData(null);
 
     try {
-      const response = await fetch("https://ytd.mhnazmul.com/getFormats", {
+      console.log("[fetchFormats] Calling API with URL:", url);
+      const response = await fetch("https://api.videoters.com/api/fetchFormats", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "X-API-Key": API_KEY,
         },
         body: JSON.stringify({ url }),
       });
@@ -77,7 +79,9 @@ const YouTubeToMP4Downloader = () => {
       }
 
       const data = await response.json();
-      setVideoData(data);
+      console.log("[fetchFormats] API response:", data);
+      // নতুন API videoThumbnail পাঠায়, thumbnail না
+      setVideoData({ ...data, thumbnail: data.videoThumbnail });
       toast.success("Video found!");
     } catch (err) {
       console.error("Error fetching formats:", err);
@@ -88,11 +92,10 @@ const YouTubeToMP4Downloader = () => {
   };
 
   // --- DOWNLOAD HANDLER ---
-  const handleDownload = (type, itag) => {
+  const handleDownload = () => {
     try {
-      const downloadUrl = `https://ytd.mhnazmul.com/download${type}?url=${encodeURIComponent(
-        url
-      )}&itag=${itag}`;
+      const downloadUrl = `https://api.videoters.com/stream?url=${encodeURIComponent(url)}&audio=1&key=${API_KEY}`;
+      console.log("[handleDownload] MP3 download URL:", downloadUrl);
 
       const link = document.createElement("a");
       link.href = downloadUrl;
@@ -103,6 +106,7 @@ const YouTubeToMP4Downloader = () => {
 
       toast.success("Download started!");
     } catch (e) {
+      console.error("[handleDownload] Error:", e);
       toast.error("Download failed to start.");
     }
   };

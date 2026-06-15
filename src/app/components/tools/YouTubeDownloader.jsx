@@ -47,7 +47,22 @@ const YouTubeDownloader = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [videoData, setVideoData] = useState(null);
+const API_KEY = process.env.NEXT_PUBLIC_VIDEOTERS_API_KEY;
 
+const getEmbedUrl = (youtubeUrl) => {
+  try {
+    const urlObj = new URL(youtubeUrl);
+    let videoId = urlObj.searchParams.get("v");
+    if (!videoId) {
+      videoId = urlObj.pathname.split("/").filter(Boolean)[0];
+    }
+    console.log("[getEmbedUrl] Extracted videoId:", videoId);
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : "";
+  } catch (e) {
+    console.error("[getEmbedUrl] URL parse error:", e);
+    return "";
+  }
+};
   // --- FETCH HANDLER ---
   const fetchFormats = async () => {
     if (!url.trim()) {
@@ -59,10 +74,12 @@ const YouTubeDownloader = () => {
     setVideoData(null);
 
     try {
-      const response = await fetch("https://ytd.mhnazmul.com/getFormats", {
+      console.log("[fetchFormats] Calling new API with URL:", url);
+      const response = await fetch("https://api.videoters.com/api/fetchFormats", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "X-API-Key": API_KEY,
         },
         body: JSON.stringify({ url }),
       });
@@ -72,7 +89,8 @@ const YouTubeDownloader = () => {
       }
 
       const data = await response.json();
-      setVideoData(data);
+      console.log("[fetchFormats] API response received:", data);
+      setVideoData({ ...data, embedUrl: getEmbedUrl(url) });
       toast.success("Video found!");
     } catch (err) {
       console.error("Error fetching formats:", err);
@@ -83,21 +101,30 @@ const YouTubeDownloader = () => {
   };
 
   // --- DOWNLOAD HANDLER ---
-  const handleDownload = (type, itag) => {
+  const handleDownload = (qualityLabel, isAudio = false) => {
     try {
-      const downloadUrl = `https://ytd.mhnazmul.com/download${type}?url=${encodeURIComponent(
-        url
-      )}&itag=${itag}`;
-      
+      let downloadUrl;
+      if (isAudio) {
+        downloadUrl = `https://api.videoters.com/stream?url=${encodeURIComponent(url)}&audio=1&key=${API_KEY}`;
+        console.log("[handleDownload] Audio download triggered. URL:", downloadUrl);
+      } else {
+        const quality = qualityLabel
+          ? qualityLabel.replace(/[^0-9]/g, "") || "best"
+          : "best";
+        downloadUrl = `https://api.videoters.com/stream?url=${encodeURIComponent(url)}&quality=${quality}&key=${API_KEY}`;
+        console.log("[handleDownload] Video download triggered. Quality:", quality, "URL:", downloadUrl);
+      }
+
       const link = document.createElement("a");
       link.href = downloadUrl;
       link.setAttribute("download", "");
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       toast.success("Download started!");
     } catch (e) {
+      console.error("[handleDownload] Error:", e);
       toast.error("Download failed to start.");
     }
   };
@@ -180,27 +207,43 @@ const YouTubeDownloader = () => {
                   </h5>
                   
                   <div className="grid gap-3 max-h-[400px] overflow-y-auto custom-scrollbar pr-2">
+                      {/* MP3 Audio Download — new API supports this */}
+                      <div className="bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 rounded-lg p-4 flex items-center justify-between transition-all group">
+                          <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-colors bg-purple-500/20 text-purple-400 group-hover:bg-purple-500/30">
+                                  <FaMusic />
+                              </div>
+                              <div>
+                                  <div className="text-white font-bold text-sm">Audio Only</div>
+                                  <div className="text-xs text-gray-400 uppercase font-mono">mp3 • Audio</div>
+                              </div>
+                          </div>
+                          <button
+                              onClick={() => handleDownload(null, true)}
+                              className="bg-[#f35d36] hover:bg-[#d64d29] text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-colors flex items-center gap-2"
+                          >
+                              Download <FaDownload />
+                          </button>
+                      </div>
+
+                      {/* Video Formats */}
                       {videoData.formats.map((format, index) => (
                           <div key={index} className="bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 rounded-lg p-4 flex items-center justify-between transition-all group">
                               <div className="flex items-center gap-3">
-                                  <div className={`w-10 h-10 rounded-full flex items-center justify-center text-lg transition-colors ${
-                                      format.type === 'audio' 
-                                      ? 'bg-purple-500/20 text-purple-400 group-hover:bg-purple-500/30' 
-                                      : 'bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30'
-                                  }`}>
-                                      {format.type === 'audio' ? <FaMusic /> : <FaVideo />}
+                                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-colors bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30">
+                                      <FaVideo />
                                   </div>
                                   <div>
                                       <div className="text-white font-bold text-sm">
-                                          {format.qualityLabel || "Audio Only"}
+                                          {format.qualityLabel || "Unknown"}
                                       </div>
                                       <div className="text-xs text-gray-400 uppercase font-mono">
-                                          {format.container} • {format.type === 'audio' ? 'Audio' : 'Video'}
+                                          {format.type} • Video
                                       </div>
                                   </div>
                               </div>
                               <button
-                                  onClick={() => handleDownload(format.type === 'audio' ? 'Audio' : 'Video', format.itag)}
+                                  onClick={() => handleDownload(format.qualityLabel)}
                                   className="bg-[#f35d36] hover:bg-[#d64d29] text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-colors flex items-center gap-2"
                               >
                                   Download <FaDownload />
