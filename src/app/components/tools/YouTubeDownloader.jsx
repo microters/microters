@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Link from "next/link"; // Import Link for navigation
+import Link from "next/link";
+import axios from "axios"; // ✅ Add axios
 import {
   FaYoutube,
   FaLink,
@@ -15,6 +16,10 @@ import {
   FaStar,
   FaArrowRight,
 } from "react-icons/fa6";
+
+// ✅ API Configuration (File 1 এর মতো)
+const API_BASE = "https://api.videoters.com";
+const API_KEY = '95a661856e8f6d7b65b43ce6c7943c9b09c0be46c4f2d90528b81076fe984434';
 
 // --- STYLES ---
 const baseInputStyles = `
@@ -47,26 +52,35 @@ const YouTubeDownloader = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [videoData, setVideoData] = useState(null);
-const API_KEY = process.env.NEXT_PUBLIC_VIDEOTERS_API_KEY;
+  const [downloadProgress, setDownloadProgress] = useState(null); // ✅ Progress tracking
 
-const getEmbedUrl = (youtubeUrl) => {
-  try {
-    const urlObj = new URL(youtubeUrl);
-    let videoId = urlObj.searchParams.get("v");
-    if (!videoId) {
-      videoId = urlObj.pathname.split("/").filter(Boolean)[0];
+  // ✅ Get Embed URL (File 1 থেকে)
+  const getEmbedUrl = (youtubeUrl) => {
+    try {
+      const urlObj = new URL(youtubeUrl);
+      let videoId = urlObj.searchParams.get("v");
+      if (!videoId) {
+        videoId = urlObj.pathname.split("/").filter(Boolean)[0];
+      }
+      console.log("[getEmbedUrl] Extracted videoId:", videoId);
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : "";
+    } catch (e) {
+      console.error("[getEmbedUrl] URL parse error:", e);
+      return "";
     }
-    console.log("[getEmbedUrl] Extracted videoId:", videoId);
-    return videoId ? `https://www.youtube.com/embed/${videoId}` : "";
-  } catch (e) {
-    console.error("[getEmbedUrl] URL parse error:", e);
-    return "";
-  }
-};
-  // --- FETCH HANDLER ---
+  };
+
+  // ✅ IMPROVED FETCH - File 1 এর মতো axios সহ
   const fetchFormats = async () => {
     if (!url.trim()) {
       toast.warning("Please enter a valid YouTube URL.");
+      return;
+    }
+
+    // ✅ URL validation (File 1 থেকে)
+    const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+/;
+    if (!youtubeRegex.test(url)) {
+      toast.error("Please enter a valid YouTube URL");
       return;
     }
 
@@ -74,58 +88,150 @@ const getEmbedUrl = (youtubeUrl) => {
     setVideoData(null);
 
     try {
-      console.log("[fetchFormats] Calling new API with URL:", url);
-      const response = await fetch("https://api.videoters.com/api/fetchFormats", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-API-Key": API_KEY,
-        },
-        body: JSON.stringify({ url }),
-      });
+      console.log("[fetchFormats] Calling API:", `${API_BASE}/api/fetchFormats`);
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch video data");
+      // ✅ Use axios like File 1 (better error handling)
+      const response = await axios.post(
+        `${API_BASE}/api/fetchFormats`,
+        { url },
+        {
+          headers: { "X-API-Key": API_KEY }
+        }
+      );
+
+      console.log("[fetchFormats] API response:", response.data);
+
+      if (response.data.formats && response.data.formats.length > 0) {
+        setVideoData({
+          ...response.data,
+          embedUrl: getEmbedUrl(url)
+        });
+        toast.success("Video found!");
+      } else {
+        toast.error("No formats available for this video.");
       }
-
-      const data = await response.json();
-      console.log("[fetchFormats] API response received:", data);
-      setVideoData({ ...data, embedUrl: getEmbedUrl(url) });
-      toast.success("Video found!");
     } catch (err) {
-      console.error("Error fetching formats:", err);
-      toast.error("Error fetching video. Please check the URL.");
+      console.error("[fetchFormats] Error:", err);
+      const errorMessage = err?.response?.data?.detail || 
+                          err.message || 
+                          'Failed to extract video information';
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
   };
 
-  // --- DOWNLOAD HANDLER ---
-  const handleDownload = (qualityLabel, isAudio = false) => {
+  // ✅ IMPROVED DOWNLOAD - File 1 এর প্রগ্রেস ট্র্যাকিং সহ
+  const handleDownload = async (qualityLabel, isAudio = false) => {
     try {
-      let downloadUrl;
-      if (isAudio) {
-        downloadUrl = `https://api.videoters.com/stream?url=${encodeURIComponent(url)}&audio=1&key=${API_KEY}`;
-        console.log("[handleDownload] Audio download triggered. URL:", downloadUrl);
-      } else {
-        const quality = qualityLabel
-          ? qualityLabel.replace(/[^0-9]/g, "") || "best"
-          : "best";
-        downloadUrl = `https://api.videoters.com/stream?url=${encodeURIComponent(url)}&quality=${quality}&key=${API_KEY}`;
-        console.log("[handleDownload] Video download triggered. Quality:", quality, "URL:", downloadUrl);
+      let quality = "best";
+      let fileFormat = "mp4";
+
+      if (!isAudio && qualityLabel) {
+        const qualityMatch = qualityLabel.match(/(\d+)/);
+        quality = qualityMatch ? qualityMatch[1] : "best";
       }
 
-      const link = document.createElement("a");
-      link.href = downloadUrl;
-      link.setAttribute("download", "");
+      if (isAudio) {
+        fileFormat = "mp3";
+      }
+
+      console.log("[handleDownload] Quality:", quality, "Format:", fileFormat);
+
+      // ✅ Build stream URL
+      const streamUrl = `${API_BASE}/stream?url=${encodeURIComponent(url)}&quality=${quality}&format=${fileFormat}&key=${API_KEY}`;
+
+      // ✅ Show progress modal
+      setDownloadProgress({
+        show: true,
+        quality: qualityLabel || "Audio",
+        filename: `video_${quality}p.${fileFormat}`,
+        status: 'starting',
+        message: 'Initializing download...',
+        percent: 0
+      });
+
+      // ✅ Fetch with progress tracking (File 1 থেকে)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 600000); // 10 min timeout
+
+      const response = await fetch(streamUrl, {
+        signal: controller.signal
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        throw new Error(`Download failed with status ${response.status}`);
+      }
+
+      const contentLength = response.headers.get('content-length');
+      const total = contentLength ? parseInt(contentLength, 10) : 0;
+
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error('No reader available');
+
+      const chunks = [];
+      let received = 0;
+
+      // ✅ Read stream with progress
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        chunks.push(value);
+        received += value.length;
+
+        const percent = total > 0 ? Math.round((received / total) * 100) : 0;
+        const receivedMB = (received / 1048576).toFixed(1);
+        const totalMB = total > 0 ? (total / 1048576).toFixed(1) : '?';
+
+        setDownloadProgress(prev => prev ? {
+          ...prev,
+          status: 'downloading',
+          message: `Downloading: ${percent}% (${receivedMB}MB / ${totalMB}MB)`,
+          percent
+        } : null);
+
+        console.log(`[Progress] ${percent}% - ${receivedMB}MB / ${totalMB}MB`);
+      }
+
+      // ✅ Create blob and download
+      const blob = new Blob(chunks, { type: `video/${fileFormat}` });
+      const blobUrl = URL.createObjectURL(blob);
+
+      setDownloadProgress(prev => prev ? {
+        ...prev,
+        status: 'completed',
+        message: `Ready! ${(received / 1048576).toFixed(1)}MB`,
+        percent: 100
+      } : null);
+
+      // ✅ Trigger download
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = `video_${quality}p.${fileFormat}`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
 
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+
+      // Auto close after 3 seconds
+      setTimeout(() => {
+        setDownloadProgress(null);
+      }, 3000);
+
       toast.success("Download started!");
-    } catch (e) {
-      console.error("[handleDownload] Error:", e);
-      toast.error("Download failed to start.");
+
+    } catch (err) {
+      console.error("[handleDownload] Error:", err);
+      setDownloadProgress(prev => prev ? {
+        ...prev,
+        status: 'error',
+        message: 'Download failed. Please try again.'
+      } : null);
+      toast.error(err.message || "Download failed to start.");
     }
   };
 
@@ -167,6 +273,62 @@ const getEmbedUrl = (youtubeUrl) => {
           </button>
         </div>
 
+        {/* --- PROGRESS MODAL --- */}
+        {downloadProgress?.show && (
+          <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+            <div className="rounded-xl p-6 max-w-md w-full border border-gray-700 bg-[#121214]">
+              <div className="text-center">
+                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 border ${
+                  downloadProgress.status === 'completed' ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-500' : 
+                  downloadProgress.status === 'error' ? 'bg-red-500/10 border-red-500/20 text-red-400' : 'bg-neutral-800 border-neutral-700 text-neutral-400'
+                }`}>
+                  {downloadProgress.status === 'completed' && '✅'}
+                  {downloadProgress.status === 'error' && '❌'}
+                  {['downloading', 'starting'].includes(downloadProgress.status) && <FaDownload className="animate-bounce" />}
+                </div>
+
+                <h3 className="text-base font-semibold text-neutral-200 tracking-tight mb-1">
+                  {downloadProgress.status === 'completed' ? '✅ Download Complete!' : '📥 Downloading...'}
+                </h3>
+
+                <span className="inline-block px-2.5 py-0.5 rounded text-xs font-mono mb-3 text-white bg-blue-500">
+                  {downloadProgress.quality}
+                </span>
+
+                <p className="text-neutral-500 font-mono text-xs mb-4 truncate px-4">
+                  {downloadProgress.filename}
+                </p>
+
+                <p className={`text-xs font-medium ${
+                  downloadProgress.status === 'error' ? 'text-red-400' : 'text-emerald-500'
+                }`}>
+                  {downloadProgress.message}
+                </p>
+
+                {['downloading', 'processing'].includes(downloadProgress.status) && (
+                  <div className="mt-4">
+                    <div className="h-1.5 bg-neutral-900 rounded-full overflow-hidden border border-neutral-800">
+                      <div 
+                        className="h-full bg-emerald-500 rounded-full transition-all duration-300"
+                        style={{ width: `${downloadProgress.percent || 5}%` }} 
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {(downloadProgress.status === 'completed' || downloadProgress.status === 'error') && (
+                  <button
+                    onClick={() => setDownloadProgress(null)}
+                    className="mt-5 w-full py-2 bg-neutral-800 border border-neutral-700 hover:bg-neutral-700 text-neutral-300 text-xs font-medium rounded transition-colors"
+                  >
+                    Close
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* --- RESULTS SECTION --- */}
         {videoData && (
           <div className="mt-10 border-t border-gray-200 pt-10 animate-fade-in-up">
@@ -187,69 +349,71 @@ const getEmbedUrl = (youtubeUrl) => {
                     {videoData.videoTitle}
                   </h4>
                   <div className="rounded-xl overflow-hidden border border-gray-700 shadow-lg aspect-video bg-black relative group">
+                    {videoData.embedUrl && (
                       <iframe
-                      width="100%"
-                      height="100%"
-                      src={videoData.embedUrl}
-                      title="YouTube video player"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0"
-                    ></iframe>
+                        width="100%"
+                        height="100%"
+                        src={videoData.embedUrl}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0"
+                      ></iframe>
+                    )}
                   </div>
                 </div>
 
                 {/* Download Options List */}
                 <div>
                   <h5 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-3 flex items-center gap-2">
-                      <FaDownload className="text-[#f35d36]"/> Available Qualities
+                    <FaDownload className="text-[#f35d36]"/> Available Qualities
                   </h5>
                   
                   <div className="grid gap-3 max-h-[400px] overflow-y-auto custom-scrollbar pr-2">
-                      {/* MP3 Audio Download — new API supports this */}
-                      <div className="bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 rounded-lg p-4 flex items-center justify-between transition-all group">
-                          <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-colors bg-purple-500/20 text-purple-400 group-hover:bg-purple-500/30">
-                                  <FaMusic />
-                              </div>
-                              <div>
-                                  <div className="text-white font-bold text-sm">Audio Only</div>
-                                  <div className="text-xs text-gray-400 uppercase font-mono">mp3 • Audio</div>
-                              </div>
-                          </div>
-                          <button
-                              onClick={() => handleDownload(null, true)}
-                              className="bg-[#f35d36] hover:bg-[#d64d29] text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-colors flex items-center gap-2"
-                          >
-                              Download <FaDownload />
-                          </button>
+                    {/* MP3 Audio Download */}
+                    <div className="bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 rounded-lg p-4 flex items-center justify-between transition-all group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-colors bg-purple-500/20 text-purple-400 group-hover:bg-purple-500/30">
+                          <FaMusic />
+                        </div>
+                        <div>
+                          <div className="text-white font-bold text-sm">Audio Only</div>
+                          <div className="text-xs text-gray-400 uppercase font-mono">mp3 • Audio</div>
+                        </div>
                       </div>
+                      <button
+                        onClick={() => handleDownload(null, true)}
+                        className="bg-[#f35d36] hover:bg-[#d64d29] text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-colors flex items-center gap-2"
+                      >
+                        Download <FaDownload />
+                      </button>
+                    </div>
 
-                      {/* Video Formats */}
-                      {videoData.formats.map((format, index) => (
-                          <div key={index} className="bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 rounded-lg p-4 flex items-center justify-between transition-all group">
-                              <div className="flex items-center gap-3">
-                                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-colors bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30">
-                                      <FaVideo />
-                                  </div>
-                                  <div>
-                                      <div className="text-white font-bold text-sm">
-                                          {format.qualityLabel || "Unknown"}
-                                      </div>
-                                      <div className="text-xs text-gray-400 uppercase font-mono">
-                                          {format.type} • Video
-                                      </div>
-                                  </div>
-                              </div>
-                              <button
-                                  onClick={() => handleDownload(format.qualityLabel)}
-                                  className="bg-[#f35d36] hover:bg-[#d64d29] text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-colors flex items-center gap-2"
-                              >
-                                  Download <FaDownload />
-                              </button>
+                    {/* Video Formats */}
+                    {videoData.formats?.map((format, index) => (
+                      <div key={index} className="bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 rounded-lg p-4 flex items-center justify-between transition-all group">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg transition-colors bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30">
+                            <FaVideo />
                           </div>
-                      ))}
+                          <div>
+                            <div className="text-white font-bold text-sm">
+                              {format.qualityLabel || "Unknown"}
+                            </div>
+                            <div className="text-xs text-gray-400 uppercase font-mono">
+                              {format.type} • Video
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          onClick={() => handleDownload(format.qualityLabel)}
+                          className="bg-[#f35d36] hover:bg-[#d64d29] text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-colors flex items-center gap-2"
+                        >
+                          Download <FaDownload />
+                        </button>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
