@@ -204,9 +204,6 @@ export const MegaMenuData = [
             iconBgClass: secondaryIconBg,
             links: [
                 { name: 'YouTube Video Downloader', href: '/video-tools/youtube-video-downloader', Icon: FaVideo },
-                { name: 'Shorts Video Downloader', href: '#', Icon: FaVideo },
-                { name: 'Shorts To MP3 Downloader', href: '#', Icon: FaVideo },
-                { name: 'Shorts To MP4 Downloader', href: '#', Icon: FaVideo },
                 { name: 'YouTube To MP3 Downloader', href: '/video-tools/youtube-to-mp3-downloader', Icon: FaVideo },
                 { name: 'YouTube To MP4 Downloader', href: '/video-tools/youtube-to-mp4-downloader', Icon: FaVideo },
             ],

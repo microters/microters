@@ -61,7 +61,7 @@ const YouTubeToMP3Downloader = () => {
     setVideoData(null);
 
     try {
-      const response = await fetch("https://ytd.mhnazmul.com/getFormats", {
+      const response = await fetch("https://api.videoters.com/getFormats", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const YouTubeToMP3Downloader = () => {
   // --- DOWNLOAD HANDLER ---
   const handleDownload = (type, itag) => {
     try {
-      const downloadUrl = `https://ytd.mhnazmul.com/download${type}?url=${encodeURIComponent(
+      const downloadUrl = `https://api.videoters.com/download${type}?url=${encodeURIComponent(
         url
       )}&itag=${itag}`;
 
@@ -169,42 +169,30 @@ const YouTubeToMP3Downloader = () => {
                     </h4>
                   </div>
 
-                  <div className="grid gap-3 max-h-[300px] overflow-y-auto custom-scrollbar pr-2">
-                    {videoData.formats
-                      .filter((format) => format.type === "audio")
-                      .map((format, index) => (
-                        <div
-                          key={index}
-                          className="bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 rounded-lg p-4 flex items-center justify-between transition-all group"
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
-                              <FaMusic />
-                            </div>
-                            <div>
-                              <div className="text-white font-bold text-sm">
-                                {format.qualityLabel || "High Quality"} (MP3)
-                              </div>
-                              <div className="text-xs text-gray-400 uppercase font-mono">
-                                {format.container} • Audio
-                              </div>
-                            </div>
-                          </div>
-
-                          <button
-                            onClick={() => handleDownload("Audio", format.itag)}
-                            className="bg-[#f35d36] hover:bg-[#d64d29] text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-colors flex items-center gap-2"
-                          >
-                            Download <FaDownload />
-                          </button>
+                  <div className="grid gap-3 pr-2">
+                    {/* নতুন API audio format আলাদা return করে না,
+                        তাই /stream?audio=1 দিয়ে সরাসরি MP3 download */}
+                    <div className="bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 rounded-lg p-4 flex items-center justify-between transition-all group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                          <FaMusic />
                         </div>
-                      ))}
-                    {videoData.formats.filter((f) => f.type === "audio")
-                      .length === 0 && (
-                      <p className="text-gray-500 text-center italic py-4">
-                        No audio streams found for this video.
-                      </p>
-                    )}
+                        <div>
+                          <div className="text-white font-bold text-sm">
+                            Best Quality (MP3)
+                          </div>
+                          <div className="text-xs text-gray-400 uppercase font-mono">
+                            mp3 • Audio
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => handleDownload()}
+                        className="bg-[#f35d36] hover:bg-[#d64d29] text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-colors flex items-center gap-2"
+                      >
+                        Download <FaDownload />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
