@@ -1,5 +1,6 @@
 import CtaBeforeFooter from "app/components/common/CTABeforeFooter";
 import PageHeader from "app/components/PageHeader";
+import Link from "next/link";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -27,7 +28,7 @@ export default function PrivacyPolicyPage() {
               This Privacy Policy explains what information the App collects, how it is used, and what choices you have. By installing and using amiBidesh, you agree to the practices described here.
             </p>
             <p>
-              <strong>Contact:</strong> info@microters.com <br />
+              <strong>Contact:</strong> <Link href="mailto:info@microters.com" className="text-[#15151e] underline hover:text-[#f35d36] transition-colors">info@microters.com</Link> <br />
               <strong>Developer:</strong> Microters LLC
             </p>
 
@@ -196,7 +197,7 @@ export default function PrivacyPolicyPage() {
               For questions, concerns, or requests regarding this Privacy Policy or your data:
             </p>
             <p className="bg-gray-50 p-4 rounded-lg border border-gray-100">
-              <strong>Email:</strong> info@microters.com <br />
+              <strong>Email:</strong> <Link href="mailto:info@microters.com" className="text-[#15151e] underline hover:text-[#f35d36] transition-colors">info@microters.com</Link> <br />
               <strong>Developer:</strong> Microters LLC <br />
               <strong>App package:</strong> com.microters.amibidesh
             </p>
