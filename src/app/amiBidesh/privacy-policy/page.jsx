@@ -82,6 +82,19 @@ export default function PrivacyPolicyPage() {
               Our server-side services for remittance rates and migrant news perform their own data fetching and caching for performance. <strong>These services do not receive any personal information about you</strong> — they serve the same cached data to all users.
             </p>
 
+            <h4 className="text-[#15151e] text-xl font-semibold mt-6 mb-2">3.4 Device-Level Backup (Optional)</h4>
+            <p>
+              If you have enabled Android's standard backup service (Settings &rarr; Google &rarr; Backup) on your device, your Google account may automatically include amiBidesh's data in your device backup. This backup is:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Stored in <em>your own Google Drive</em>, not on our servers.</li>
+              <li>Controlled by <em>you</em> through your Android device settings.</li>
+              <li>Used to restore your data if you reinstall the App on the same or a new device (signed in with the same Google account).</li>
+            </ul>
+            <p>
+              We do not access, read, or process this backup. It is between you and Google. You can disable this at any time in your device's backup settings.
+            </p>
+
             {/* 4. How We Use Information */}
             <h3 className="text-[#15151e] text-2xl lg:text-3xl font-bold mt-10 mb-2">
               4. How We Use Information
@@ -150,7 +163,7 @@ export default function PrivacyPolicyPage() {
               7. Children's Privacy
             </h3>
             <p>
-              amiBidesh is not directed at children under 13. We do not knowingly collect information from children. If you believe a child has provided personal information through the App, please contact us at info@microters.com and we will help remove it.
+              amiBidesh is not directed at children under 13. We do not knowingly collect information from children. If you believe a child has provided personal information through the App, please contact us at <Link href="mailto:info@microters.com" className="text-[#15151e] underline hover:text-[#f35d36] transition-colors">info@microters.com</Link> and we will help remove it.
             </p>
 
             {/* 8. Your Rights and Choices */}
