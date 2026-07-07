@@ -138,7 +138,7 @@ export default function PrivacyPolicyPage() {
                     <td className="px-4 py-3">None — only public rate data is fetched</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 font-semibold text-[#15151e]">rates.pluginic.com (our server)</td>
+                    <td className="px-4 py-3 font-semibold text-[#15151e]">rates.appiters.com (our server)</td>
                     <td className="px-4 py-3">Aggregated remittance rates and news</td>
                     <td className="px-4 py-3">None — only anonymous requests</td>
                   </tr>
